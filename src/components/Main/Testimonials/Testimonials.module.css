@@ -1,0 +1,67 @@
+.testimonials {
+	border-bottom: 1px solid var(--border-primary);
+}
+.testimonialsBlock {
+	display: flex;
+	width: 1365px;
+	flex-direction: column;
+	align-items: center;
+	gap: 64px;
+	margin: 0 auto;
+}
+.titleSubtitle {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+.titleH2 {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	align-self: stretch;
+}
+.titleSmall {
+	color: var(--content-secondary);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--second-family);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.titleBig {
+	color: var(--content-primary);
+	text-align: right;
+	font-family: var(--font-family);
+	font-size: 88px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 88px;
+	letter-spacing: 0;
+}
+.subTitleBlock {
+	display: flex;
+	width: 735px;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.subTitle {
+	color: var(--content-secondary);
+	text-align: center;
+	font-family: var(--font-family);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0;
+}

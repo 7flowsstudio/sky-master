@@ -47,6 +47,59 @@
 		},
 		"btn": "Start training"
 	},
+	"HowItWorks": {
+		"h6": "How it Works",
+		"h2_1": "How the Training",
+		"h2_2": "Is Carried Out.",
+		"card_1": {
+			"count": "01",
+			"title_1": "Knowledge",
+			"title_2": "first",
+			"description": "Learn the basics of drone operation, safety protocols, legal regulations, and the role of drones in combat. Get the knowledge that keeps you alive and effective."
+		},
+		"card_2": {
+			"count": "02",
+			"title_1": "Real",
+			"title_2": "Missions",
+			"description": "Field training on open grounds, simulating real-life scenarios: reconnaissance, coordination, navigation. Practice with expert instructors."
+		},
+		"card_3": {
+			"count": "03",
+			"title_1": "Earn",
+			"title_2": "Certification",
+			"description": "At the end — internal assessment and certification that proves your readiness and skills."
+		}
+	},
+	"Testimonials": {
+		"title_small": "testimonials",
+		"title_large": "From Our Graduates.",
+		"description": "Voices of those who completed the training. Honest feedback, shared openly and without filters.",
+		"slide_1": {
+			"name": "Andriy",
+			"civil": "Communications Officer",
+			"text": "Training gave me a clear understanding of how to use drones for reconnaissance. Field practice showed how to operate drones in real conditions, under stress and limited time."
+		},
+		"slide_2": {
+			"name": "Maryna",
+			"civil": "Civilian Drone Operator",
+			"text": "I had no prior experience, but after the course I can confidently fly a drone. The simulator helped me learn fast, and real flights built my skills."
+		},
+		"slide_3": {
+			"name": "Oleh",
+			"civil": "Engineer",
+			"text": "They explain complex technical things simply. Now I can set up radio systems and batteries myself — it boosted my confidence a lot."
+		},
+		"slide_4": {
+			"name": "Serhiy",
+			"civil": "Military Recon Specialist",
+			"text": "This course feels as close to combat as possible. Tasks on precision and stability during the final test felt like a real mission."
+		},
+		"slide_5": {
+			"name": "Iryna",
+			"civil": "Volunteer",
+			"text": "I wanted to be more useful. Now I can not only deliver drones but also launch them, collecting data for the units."
+		}
+	},
 	"LocaleLayout": {
 		"title": "SkyMaster",
 		"description": "Become an operator prepared for real missions."
