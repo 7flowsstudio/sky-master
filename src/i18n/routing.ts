@@ -2,15 +2,15 @@ import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-	locales: ["pl", "ua", "en", "de"] as const,
-	defaultLocale: "de",
+	locales: ["en", "ua"] as const,
+	defaultLocale: "en",
 	pathnames: {
 		"/": "/",
-		"/admin": "/admin",
-		"/admin_authorization": "/admin_authorization",
-		"/psyhology": "psyhology",
-		"/barber": "barber",
-		"/blog": "blog",
+		"/programs": "/programs",
+		"/corporate": "/corporate",
+		"/about": "/about",
+		"/contacts": "/contacts",
+		"/training": "/training",
 	},
 });
 
