@@ -1,20 +1,63 @@
 {
-	"Hero": {
-		"button_1": "Psychologist",
-		"button_2": "Barber"
+	"Header": {
+		"menu": ["Programs", "Corporate", "About skymaster", "Contacts"],
+		"link": "Start training"
 	},
-
+	"Hero": {
+		"title_h1": "Drone Skills",
+		"title_h2": "That Save Lives.",
+		"description": "Become an operator prepared for real missions. Real training programs for military, corporate teams, and individual learners.",
+		"swiperFact": [
+			{ "id": 0, "stat": "3,872", "descr": "Graduates employed" },
+			{
+				"id": 1,
+				"stat": "98%",
+				"descr": "successfully pass the certification"
+			},
+			{ "id": 2, "stat": "4+", "descr": "years on teh market" }
+		],
+		"descr_bottom_text_1": "Become an operator prepared for real missions.",
+		"descr_bottom_text_2": "Real training programs for military, corporate teams, and individual learners.",
+		"text_btn_cta": "See programs"
+	},
+	"OurParthners": {
+		"title": "our partners"
+	},
+	"OurPrograms": {
+		"titleSection": "our programs",
+		"tite_1": "Training Designed",
+		"tite_2": "for Real Missions.",
+		"cart_1": {
+			"cart_name": "FPV Basic",
+			"local": "kyiv",
+			"date": "sep 12 – 26, 2025",
+			"description_event": "FPV piloting from scratch: full theory, simulator practice, and daytime flights. Learn how to set up radio systems, video links, and batteries. Final test — accuracy and stability drills."
+		},
+		"cart_2": {
+			"cart_name": "FPV Pro",
+			"local": "kyiv",
+			"date": "sep 24 – 29, 2025",
+			"description_event": "Advanced training for pilots with basic skills. Complex scenarios, recovery after failures, fast reboots. Intensive practice with timed routes and accuracy tasks."
+		},
+		"cart_3": {
+			"cart_name": "Tactical Start",
+			"local": "kyiv",
+			"date": "oct 03 – 07, 2025",
+			"description_event": "Basic military drone training. Safe flight principles, quick launch, and aerial reconnaissance. Field tasks in small groups under instructor guidance."
+		},
+		"btn": "Start training"
+	},
 	"LocaleLayout": {
-		"title": "gloria-life.beauty",
-		"description": "Life blog of a psychologist about spiritual development"
+		"title": "SkyMaster",
+		"description": "Become an operator prepared for real missions."
 	},
 	"LocaleSwitcher": {
 		"label": "Change language",
 		"locale": "{locale, select, en {en} ua {ua} other {Unknown}}"
 	},
 	"Manifest": {
-		"description": "gloria-life.beauty",
-		"name": "gloria-life.beauty"
+		"description": "Become an operator prepared for real missions.",
+		"name": "SkyMaster"
 	},
 	"PageLayout": {
 		"links": {
@@ -24,7 +67,7 @@
 				"title": "Docs"
 			},
 			"source": {
-				"description": "Check out the source code for this example on GitHub.",
+				"description": "Перегляньте вихідний код цього прикладу на GitHub.",
 				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
 				"title": "Source code"
 			}
@@ -35,7 +78,7 @@
 		"title": "Page not found"
 	},
 	"Error": {
-		"description": "Unfortunately a problem has occurred.You can try reloading this page",
+		"description": "<p>Unfortunately a problem has occurred.</p><p>You can try <retry>reloading this page</retry>.</p>",
 		"title": "Something went wrong!"
 	}
 }

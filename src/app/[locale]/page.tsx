@@ -1,3 +1,7 @@
+import Hero from "@/components/Main/Hero/Hero";
+import HowItWorks from "@/components/Main/HowItWorks/HowItWorks";
+import OurParthners from "@/components/Main/OurParthners/OurParthners";
+import OurPrograms from "@/components/Main/OurPrograms/OurPrograms";
 import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 
@@ -11,5 +15,12 @@ export default async function IndexPage({ params }: Props) {
 	setRequestLocale(locale);
 	// console.log("LOCKALE", locale);
 
-	return <>qwretryhgdfszfbhdgfxv</>;
+	return (
+		<>
+			<Hero />
+			<OurParthners />
+			<OurPrograms />
+			<HowItWorks />
+		</>
+	);
 }
