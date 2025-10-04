@@ -1,0 +1,151 @@
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("/fonts/SpaceGrotesk-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-ThinItalic.ttf") format("truetype");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-ExtraLight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-ExtraLightItalic.ttf") format("truetype");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-LightItalic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Italic.ttf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-SemiBoldItalic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-BoldItalic.ttf") format("truetype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-ExtraBoldItalic.ttf") format("truetype");
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Azeret Mono";
+	src: url("/fonts/AzeretMono-BlackItalic.ttf") format("truetype");
+	font-weight: 900;
+	font-style: italic;
+}

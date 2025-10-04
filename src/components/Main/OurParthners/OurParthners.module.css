@@ -1,0 +1,40 @@
+.ourParthnersWrapper {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 0px;
+	gap: 24px;
+	border-top: 1px solid #242424;
+}
+.ourParthnersTitle {
+	color: var(--content-secondary);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--second-family);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 120%;
+	letter-spacing: 1.12px;
+	text-transform: uppercase;
+}
+.ourParthnersList {
+	display: flex;
+	width: 100%;
+	max-width: 1360px;
+	align-items: center;
+	gap: 120px;
+	margin: 0 auto;
+}
+.ourParthnersItem {
+	display: flex;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+}
+.imgParthners {
+	height: 50px;
+	width: auto;
+}

@@ -1,0 +1,38 @@
+.droneImg {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-45%);
+	z-index: -1;
+}
+.adWrap {
+	background-color: transparent;
+	width: 1026.885px;
+	height: 684.59px;
+	transform: rotate(2.462deg);
+	flex-shrink: 0;
+	aspect-ratio: 1026.89/684.59;
+
+	opacity: 0.6;
+	/* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
+}
+@media screen and (min-width: 375px) {
+	.adWrap.lazyLoaded {
+		/* background-color: lightgray; */
+		background-image: url("/img/hero/drone_transparent_x1.png");
+		background-size: 100% 100%;
+		background-position: 50% center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	@media screen and (min-resolution: 2dppx),
+		(min-resolution: 192dpi),
+		(-webkit-min-device-pixel-ratio: 2) {
+		.adWrap.lazyLoaded {
+			background-image: url("/img/hero/drone_transparent_x2.png");
+			background-size: 100% 100%;
+			background-position: 50% center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}

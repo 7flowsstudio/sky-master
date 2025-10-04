@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">) {
 		title: t("title"),
 		description: t("description"),
 		icons: {
-			icon: "/icon.png",
+			icon: "/symbol_logo.png",
 		},
 	};
 }

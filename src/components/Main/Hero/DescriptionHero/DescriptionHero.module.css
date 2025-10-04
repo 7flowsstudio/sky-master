@@ -1,0 +1,79 @@
+.descriptionList {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 44px;
+}
+.descrText {
+	display: flex;
+	width: 620px;
+	flex-direction: column;
+	align-items: flex-start;
+	color: var(--content-primary);
+
+	font-family: var(--font-family);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0;
+}
+.descrText span {
+	color: var(--content-secondary);
+}
+.descrBaner {
+	width: 325px;
+	height: 136px;
+	flex-shrink: 0;
+	display: flex;
+}
+.linkBtnList {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: var(--background-inverse);
+}
+.linkItem,
+.linkText {
+	height: 50%;
+}
+.linkItem {
+	position: relative;
+	padding: 8px;
+	display: flex;
+	justify-content: flex-end;
+}
+.linkIconWrap {
+	width: 28px;
+	height: 28px;
+	display: inline-flex;
+	padding: 2px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	background: var(--background-brand);
+}
+.linkIcon {
+	width: 12px;
+	height: 12px;
+	stroke: var(--content-icon);
+}
+.linkText {
+	display: flex;
+	padding: 8px;
+	align-items: flex-end;
+}
+.textBtn {
+	width: 118px;
+	color: var(--content-primaryinverse);
+	leading-trim: both;
+	text-edge: cap;
+
+	font-family: var(--second-family);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 20px;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}

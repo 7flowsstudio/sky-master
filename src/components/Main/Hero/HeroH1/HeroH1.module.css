@@ -1,0 +1,50 @@
+.hOneBlock {
+	display: flex;
+	justify-content: space-between;
+	height: 520px;
+}
+.heroWraperTitleH1 {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	white-space: nowrap;
+	width: 100%;
+	/* height: 120px; */
+	position: relative;
+	padding-top: 40px;
+}
+.rectangleH1,
+.rectangleH1_1 {
+	flex-shrink: 0;
+	opacity: 0.3;
+	background: var(--background-brand);
+	mix-blend-mode: plus-lighter;
+}
+.rectangleH1 {
+	position: absolute;
+	left: 10%;
+	top: 18%;
+	width: 580px;
+	height: 115px;
+}
+.rectangleH1_1 {
+	position: absolute;
+	right: 7%;
+	bottom: 13%;
+	width: 221px;
+	height: 75px;
+}
+.heroTitle {
+	color: var(--content-primary);
+	font-family: var(--font-family);
+	font-size: 120px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+.heroTitle span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

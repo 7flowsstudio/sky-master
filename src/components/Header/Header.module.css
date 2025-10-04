@@ -1,0 +1,122 @@
+.navbar {
+	width: 100%;
+	max-width: 1360px;
+	height: 40px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.navLogo,
+.navigationLink {
+	width: 25%;
+}
+.navLogo {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.navLogoIcon {
+	stroke: var(--content-primary);
+}
+.leftIcon {
+	width: 25px;
+	height: 25px;
+}
+.rightIcon {
+	width: 102px;
+	height: 20px;
+	stroke: var(--black);
+	fill: var(--content-primary);
+}
+.navigationList {
+	display: inline-flex;
+	align-items: center;
+	gap: 40px;
+}
+.navItemLink {
+	color: var(--content-secondary);
+	leading-trim: both;
+	text-edge: cap;
+
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 1px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+}
+.font {
+	font-family: var(--second-family);
+	font-style: normal;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.navItemLink::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 1px;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: -4px;
+	font-size: 20px;
+	background-color: var(--border-hover);
+	display: block;
+	opacity: 0;
+	transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navItemLink:hover:after,
+.navItemLink:focus:after {
+	opacity: 1;
+}
+.navigationLink {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 24px;
+}
+.localSwitcher {
+	height: 16px;
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+.navLinkBtn {
+	display: inline-flex;
+	padding: 8px 16px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	background: var(--background-brand);
+
+	color: var(--Content-Primary, #fff);
+	leading-trim: both;
+	text-edge: cap;
+
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0;
+}
+.navLinkWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+.navLinkIcon {
+	stroke: var(--content-icon);
+	fill: none;
+	width: 12px;
+	height: 12px;
+}
+.lineBottom {
+	width: 100%;
+	height: 1px;
+	flex-shrink: 0;
+	background: var(--content-primary);
+	opacity: 0.1;
+}
