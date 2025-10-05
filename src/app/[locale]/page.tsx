@@ -2,6 +2,8 @@ import Hero from "@/components/Main/Hero/Hero";
 import HowItWorks from "@/components/Main/HowItWorks/HowItWorks";
 import OurParthners from "@/components/Main/OurParthners/OurParthners";
 import OurPrograms from "@/components/Main/OurPrograms/OurPrograms";
+import SkyMaster from "@/components/Main/SkyMaster/SkyMaster";
+import TakeControl from "@/components/Main/TakeControl/TakeControl";
 import Testimonials from "@/components/Main/Testimonials/Testimonials";
 import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
@@ -23,6 +25,8 @@ export default async function IndexPage({ params }: Props) {
 			<OurPrograms />
 			<HowItWorks />
 			<Testimonials />
+			<SkyMaster />
+			<TakeControl />
 		</>
 	);
 }

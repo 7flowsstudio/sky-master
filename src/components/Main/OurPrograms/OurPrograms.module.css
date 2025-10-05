@@ -147,37 +147,3 @@
 	line-height: 24px;
 	letter-spacing: -1px;
 }
-.cardBtn {
-	display: flex;
-	padding: 16px 24px;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
-	background: var(--background-brand);
-
-	color: var(--content-primary);
-	leading-trim: both;
-	text-edge: cap;
-
-	/* Heading/Heading S */
-	font-family: var(--second-family);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 20px;
-	letter-spacing: 0;
-	text-transform: uppercase;
-}
-.descrBlock {
-	width: 24px;
-	height: 24px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.descrIcon {
-	width: 12px;
-	height: 12px;
-	flex-shrink: 0;
-	stroke: var(--content-icon);
-}

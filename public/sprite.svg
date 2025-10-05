@@ -48,5 +48,37 @@
 <path d="M0.656 30.288l14.411-29.717h3.211l-14.411 29.717h-3.211z"></path>
 </symbol>
 
+<symbol id="icon-skymaster-1" viewBox="0 0 32 32">
+<path stroke-width="1.8551" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M14.43 0.9l16.377 11.916"></path>
+<path stroke-width="1.8551" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M31.072 14.403l-11.916 16.377"></path>
+<path stroke-width="1.8551" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M17.305 31.046l-16.377-11.916"></path>
+<path stroke-width="1.8551" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M12.844 1.238l-11.916 16.377"></path>
+</symbol>
+
+<symbol id="icon-skymaster-2" viewBox="0 0 32 32">
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M15.983 15.308v-14.852"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M17.684 14.699l10.502-10.502"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M3.741 28.642l10.502-10.502"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M3.741 4.197l10.502 10.502"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M17.684 18.14l10.502 10.502"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M15.983 17.12v14.852"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M0 16.282h14.852"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M17.004 16.282h14.852"></path>
+</symbol>
+
+<symbol id="icon-skymaster-3" viewBox="0 0 32 32">
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M21.178 17.043v-16.587"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M14.928 21.635h16.587"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M10.12 15.385v16.587"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M0 10.853h16.587"></path>
+</symbol>
+
+<symbol id="icon-skymaster-4" viewBox="0 0 32 32">
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M15.983 15.308v-14.852"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M15.983 17.12v14.852"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M0 16.282h14.852"></path>
+<path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M17.004 16.282h14.852"></path>
+</symbol>
+
   </defs>
 </svg>

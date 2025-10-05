@@ -44,8 +44,7 @@
 			"local": "kyiv",
 			"date": "oct 03 – 07, 2025",
 			"description_event": "Basic military drone training. Safe flight principles, quick launch, and aerial reconnaissance. Field tasks in small groups under instructor guidance."
-		},
-		"btn": "Start training"
+		}
 	},
 	"HowItWorks": {
 		"h6": "How it Works",
@@ -99,6 +98,37 @@
 			"civil": "Volunteer",
 			"text": "I wanted to be more useful. Now I can not only deliver drones but also launch them, collecting data for the units."
 		}
+	},
+	"Skymaster": {
+		"title_small": "why choose skymaster",
+		"title_big": "Excellence in Flight.",
+		"flight": {
+			"item_1": {
+				"title": "Expert Instructors",
+				"text": "Our trainers are experienced pilots with both military and civilian backgrounds."
+			},
+			"item_2": {
+				"title": "Mission-Focused Curriculum",
+				"text": "Each course is designed to train for real-world tasks."
+			},
+			"item_3": {
+				"title": "Advanced Simulations",
+				"text": "Practice flights in realistic conditions before your first takeoff."
+			},
+			"item_4": {
+				"title": "Career Support",
+				"text": "We assist graduates with employment opportunities and professional growth."
+			}
+		},
+		"flight_head": {
+			"title": "For Those Who Stand Guard",
+			"text": "Active service members receive free access to the first SkyMaster course. We value your contribution and want to support your professional growth."
+		}
+	},
+	"CTA_BTN": "Start training",
+	"TakeControl": {
+		"title_litle": "Master the Sky: ",
+		"title_big": "Take Control of Drones and Soar Beyond Limits"
 	},
 	"LocaleLayout": {
 		"title": "SkyMaster",

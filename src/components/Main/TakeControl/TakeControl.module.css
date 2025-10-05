@@ -1,0 +1,103 @@
+.takeControlWrapper {
+	padding-top: 1px solid var(--background-primary);
+}
+.takeControlBlock {
+	width: 100%;
+	height: 680px;
+	flex-shrink: 0;
+	border: 6px solid var(--border-inverse);
+	display: flex;
+}
+.takeControlLeft,
+.takeControlRight {
+	width: 50%;
+	height: 100%;
+}
+.takeControlLeft {
+	background: var(--background-primary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
+}
+.takeControlDescr {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+}
+.title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	align-self: stretch;
+}
+.titleLitle {
+	color: var(--content-primary);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--second-family);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.title_big {
+	color: var(--content-primary);
+	font-family: var(--font-family);
+	font-size: 88px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 88px;
+	letter-spacing: 0;
+}
+.takeControlRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+	/* overflow: hidden; */
+	/* width: 100%; */
+	/* height: 624px; */
+	/* border: 1px solid blue; */
+}
+@media screen and (min-width: 375px) {
+	.takeControlRight {
+		background-image: url("/img/takecontrol/background_x1.png");
+		background-size: 100% 100%;
+		background-position: 50% center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	@media screen and (min-resolution: 2dppx),
+		(min-resolution: 192dpi),
+		(-webkit-min-device-pixel-ratio: 2) {
+		.takeControlRight {
+			background-image: url("/img/takecontrol/background_x2.png");
+			background-size: 100% 100%;
+			background-position: 50% center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}
+.soldier {
+	min-width: 780px;
+	height: 666px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.drone {
+	position: absolute;
+	top: 0;
+	left: -290px;
+	width: 632px;
+	height: 422px;
+	z-index: 0;
+}

@@ -3,6 +3,7 @@ import s from "./OurPrograms.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import StartButton from "@/components/UI/StartButton/StartButton";
 
 const OurPrograms = () => {
 	const t = useTranslations("OurPrograms");
@@ -72,14 +73,7 @@ const OurPrograms = () => {
 									<div className={s.programsContentBottom}>
 										<h4 className={s.cardDescription}>{item.descr}</h4>
 										<div className={s.cardBtnBlock}>
-											<button type="button" className={s.cardBtn}>
-												{t("btn")}
-												<div className={s.descrBlock}>
-													<svg className={s.descrIcon}>
-														<use href="/sprite.svg#icon-arrow-top-right"></use>
-													</svg>
-												</div>
-											</button>
+											<StartButton />
 										</div>
 									</div>
 								</div>
