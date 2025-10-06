@@ -3,10 +3,12 @@
 }
 .takeControlBlock {
 	width: 100%;
+	max-width: 1360px;
 	height: 680px;
 	flex-shrink: 0;
 	border: 6px solid var(--border-inverse);
 	display: flex;
+	margin: 0 auto;
 }
 .takeControlLeft,
 .takeControlRight {

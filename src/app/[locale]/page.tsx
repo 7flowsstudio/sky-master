@@ -1,3 +1,4 @@
+import Gallary from "@/components/Main/Gallary/Gallary";
 import Hero from "@/components/Main/Hero/Hero";
 import HowItWorks from "@/components/Main/HowItWorks/HowItWorks";
 import OurParthners from "@/components/Main/OurParthners/OurParthners";
@@ -27,6 +28,7 @@ export default async function IndexPage({ params }: Props) {
 			<Testimonials />
 			<SkyMaster />
 			<TakeControl />
+			<Gallary />
 		</>
 	);
 }

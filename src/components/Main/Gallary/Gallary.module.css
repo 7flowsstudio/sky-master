@@ -1,0 +1,56 @@
+.gallaryWrapper {
+	padding-top: 1px solid var(--border-primary);
+	padding: 124px 0;
+}
+.gallaryBlock {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 64px;
+	margin: 0 auto;
+}
+.titleH2 {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+.titleSmall {
+	color: var(--content-secondary);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--second-family);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.titleBig {
+	width: 75%;
+}
+.title_big_1,
+.title_big_2 {
+	color: var(--content-primary);
+	text-align: left;
+	font-family: var(--font-family);
+	font-size: 88px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 88px;
+	letter-spacing: 0;
+}
+.title_big_2 {
+	text-align: right;
+}
+.gallerySwiperWrapper {
+	/* height: 545px; */
+	width: 100%;
+	border: 2px solid red;
+	padding: 2px;
+}

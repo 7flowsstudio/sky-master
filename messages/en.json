@@ -130,6 +130,19 @@
 		"title_litle": "Master the Sky: ",
 		"title_big": "Take Control of Drones and Soar Beyond Limits"
 	},
+	"Gallery": {
+		"title_small": "gallery",
+		"title_big_1": "Flight in Focus",
+		"title_big_2": "Academy Highlights.",
+		"slider": [
+			"Master precision flight with hands-on drone training.",
+			"Learn together, analyze, and perfect every flight skill.",
+			"Train in VR, master drone control safely anywhere.",
+			"Elevate your skills with real-world drone flights.",
+			"Handle advanced drones with confidence and precision.",
+			"Experience high-stakes drone operations firsthand."
+		]
+	},
 	"LocaleLayout": {
 		"title": "SkyMaster",
 		"description": "Become an operator prepared for real missions."
