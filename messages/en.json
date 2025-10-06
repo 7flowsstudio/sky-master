@@ -143,6 +143,19 @@
 			"Experience high-stakes drone operations firsthand."
 		]
 	},
+	"CorparateTraning": {
+		"title_small": "Your Flight Starts Here",
+		"title_big_1": "Corporate",
+		"title_big_2": "Flight",
+		"title_big_3": "Training.",
+		"type": [
+			"FPV Basic",
+			"Tactical Start",
+			"Night Ops",
+			"FPV Pro",
+			"Mapping Basics"
+		]
+	},
 	"LocaleLayout": {
 		"title": "SkyMaster",
 		"description": "Become an operator prepared for real missions."

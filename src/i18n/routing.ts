@@ -11,6 +11,11 @@ export const routing = defineRouting({
 		"/about": "/about",
 		"/contacts": "/contacts",
 		"/training": "/training",
+		"/fpv_basic": "/fpv_basic",
+		"/tactical_start": "/tactical_start",
+		"/night_ops": "/night_ops",
+		"/fpv_pro": "/fpv_pro",
+		"/mapping_basics": "/mapping_basics",
 	},
 });
 

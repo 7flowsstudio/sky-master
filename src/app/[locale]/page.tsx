@@ -1,3 +1,4 @@
+import CorporateTraning from "@/components/Main/CorporateTraning/CorporateTraning";
 import Gallary from "@/components/Main/Gallary/Gallary";
 import Hero from "@/components/Main/Hero/Hero";
 import HowItWorks from "@/components/Main/HowItWorks/HowItWorks";
@@ -21,14 +22,15 @@ export default async function IndexPage({ params }: Props) {
 
 	return (
 		<>
-			<Hero />
+			{/* <Hero />
 			<OurParthners />
 			<OurPrograms />
 			<HowItWorks />
 			<Testimonials />
 			<SkyMaster />
 			<TakeControl />
-			<Gallary />
+			<Gallary /> */}
+			<CorporateTraning />
 		</>
 	);
 }
