@@ -17,7 +17,6 @@ const Header = () => {
 	];
 	return (
 		<>
-			{" "}
 			<WrapperForComponents paddingTop={17} paddingBottom={15}>
 				<nav className={s.navbar}>
 					<div className={s.navLogo}>

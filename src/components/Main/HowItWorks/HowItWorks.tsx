@@ -15,7 +15,7 @@ const HowItWorks = () => {
 			description: t("card_1.description"),
 		},
 		{
-			id: 2,
+			id: 1,
 			count: t("card_2.count"),
 			title_1: t("card_2.title_1"),
 			title_2: t("card_2.title_2"),

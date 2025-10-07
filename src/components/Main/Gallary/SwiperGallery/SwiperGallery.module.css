@@ -63,6 +63,7 @@
 	letter-spacing: -1px;
 }
 .img {
-	width: 325px;
-	height: 325px;
+	width: 100%;
+	aspect-ratio: 325 / 325;
+	/* height: 325px; */
 }

@@ -156,6 +156,10 @@
 			"Mapping Basics"
 		]
 	},
+	"Footer": {
+		"menu": ["Programs", "Corporate", "About skymaster", "Contacts"],
+		"rights": "© 2025 SkyMaster. All rights reserved."
+	},
 	"LocaleLayout": {
 		"title": "SkyMaster",
 		"description": "Become an operator prepared for real missions."
