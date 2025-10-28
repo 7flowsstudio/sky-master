@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import s from "./TestimonialsSwiper.module.css";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const Testimonials = () => {
 	const t = useTranslations("Testimonials");
@@ -16,35 +17,35 @@ const Testimonials = () => {
 	const sliderList = [
 		{
 			id: 0,
-			img: "/",
+			img: "/img/testimonials/elipse_1.png",
 			name: t("slide_1.name"),
 			civil: t("slide_1.civil"),
 			text: t("slide_1.text"),
 		},
 		{
 			id: 1,
-			img: "/",
+			img: "/img/testimonials/elipse_2.png",
 			name: t("slide_2.name"),
 			civil: t("slide_2.civil"),
 			text: t("slide_2.text"),
 		},
 		{
 			id: 2,
-			img: "/",
+			img: "/img/testimonials/elipse_3.png",
 			name: t("slide_3.name"),
 			civil: t("slide_3.civil"),
 			text: t("slide_3.text"),
 		},
 		{
 			id: 3,
-			img: "/",
+			img: "/img/testimonials/elipse_4.png",
 			name: t("slide_4.name"),
 			civil: t("slide_4.civil"),
 			text: t("slide_4.text"),
 		},
 		{
 			id: 4,
-			img: "/",
+			img: "/img/testimonials/elipse_5.png",
 			name: t("slide_5.name"),
 			civil: t("slide_5.civil"),
 			text: t("slide_5.text"),
@@ -55,16 +56,16 @@ const Testimonials = () => {
 		<div className={s.sliderContainer}>
 			<Swiper
 				className={s.swiper}
-				centeredSlides={true}
-				// spaceBetween={20}
-				// slidesPerView={1}
-				// pagination={{ clickable: true }}
-				navigation={{
-					nextEl: ".hero-next",
-					prevEl: ".hero-prev",
-				}}
-				modules={[Pagination, Navigation]}
 				loop={true}
+				slidesPerView={4}
+				spaceBetween={20}
+				slidesOffsetBefore={-170} // зсуває перший слайд вправо
+				slidesOffsetAfter={0} // залишає місце для половини останнього
+				navigation={{
+					nextEl: ".test-next",
+					prevEl: ".test-prev",
+				}}
+				modules={[Navigation, Pagination]}
 				breakpoints={{
 					320: { slidesPerView: 1, spaceBetween: 4 },
 					768: { slidesPerView: 2, spaceBetween: 4 },
@@ -73,12 +74,38 @@ const Testimonials = () => {
 			>
 				{sliderList?.map((img, index) => (
 					<SwiperSlide key={index} className={s.slide}>
-						<div key={index} className={s.Item}>
-							{index}
+						<div key={index} className={s.itemSlide}>
+							<div className={s.itemContent}>
+								<div className={s.info}>
+									<Image
+										src={img.img}
+										width={44}
+										height={44}
+										alt={`user_` + (img.id + 1)}
+									/>
+									<div className={s.infoUser}>
+										<h4 className={s.infoTitle}>{img.name}</h4>
+										<p className={s.infoText}>{img.civil}</p>
+									</div>
+								</div>
+								<div className={s.text}>{img.text}</div>
+							</div>
 						</div>
 					</SwiperSlide>
 				))}
 			</Swiper>
+			<div className={s.arrows}>
+				<button className={`test-prev ${s.navButton} ${s.prevButton}`}>
+					<svg className={`${s.navButton_icon} ${s.left}`}>
+						<use href="/sprite.svg#icon-arrow-top-right"></use>
+					</svg>
+				</button>
+				<button className={`test-next ${s.navButton} ${s.nextButton}`}>
+					<svg className={`${s.navButton_icon} ${s.right}`}>
+						<use href="/sprite.svg#icon-arrow-top-right"></use>
+					</svg>
+				</button>
+			</div>
 		</div>
 	);
 };
@@ -86,14 +113,4 @@ const Testimonials = () => {
 export default Testimonials;
 
 {
-	/* <button className={`hero-prev ${s.navButton} ${s.prevButton}`}>
-						<svg className={s.navButton_icon}>
-							<use href="/sprite.svg#icon-left-errow"></use>
-						</svg>
-					</button>
-					<button className={`hero-next ${s.navButton} ${s.nextButton}`}>
-						<svg className={`${s.navButton_icon} ${s.right}`}>
-							<use href="/sprite.svg#icon-left-errow"></use>
-						</svg>
-					</button> */
 }

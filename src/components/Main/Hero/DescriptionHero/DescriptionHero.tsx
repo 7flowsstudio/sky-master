@@ -3,6 +3,8 @@ import React from "react";
 import s from "./DescriptionHero.module.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import StartTrainingHero from "../StartTrainingHero/StartTrainingHero";
 
 const DescriptionHero = () => {
 	const t = useTranslations("Hero");
@@ -22,16 +24,21 @@ const DescriptionHero = () => {
 				/>
 				<ul className={s.linkBtnList}>
 					<li className={s.linkItem}>
-						<div className={s.linkIconWrap}>
-							<svg className={s.linkIcon}>
-								<use href="/sprite.svg#icon-arrow-top-right"></use>
-							</svg>
-						</div>
+						<Link href="/programs">
+							<div className={s.linkIconWrap}>
+								<svg className={s.linkIcon}>
+									<use href="/sprite.svg#icon-arrow-top-right"></use>
+								</svg>
+							</div>
+						</Link>
 					</li>
 					<li className={s.linkText}>
 						<h5 className={s.textBtn}>{t("text_btn_cta")}</h5>
 					</li>
 				</ul>
+			</li>
+			<li className={s.descrBtn}>
+				<StartTrainingHero />
 			</li>
 		</ul>
 	);

@@ -80,5 +80,13 @@
 <path stroke-width="1.9394" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M17.004 16.282h14.852"></path>
 </symbol>
 
+<symbol id="icon-burger-menu" viewBox="0 0 40 32">
+<path stroke-width="5" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M0 2.5h40M0 15.132h40M0 29.167h40"></path>
+</symbol>
+
+<symbol id="icon-burger-close" viewBox="0 0 49 32">
+<path stroke-width="6.1538" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M1.527 2.69l44.292 25.326M1.527 27.305l44.307-24.615"></path>
+</symbol>
+
   </defs>
 </svg>

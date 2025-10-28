@@ -1,19 +1,38 @@
-.droneImg {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-45%);
-	z-index: -1;
+@media screen and (min-width: 375px) and (max-width: 499px) {
+	.droneImg {
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-45%);
+		z-index: -1;
+	}
 }
-.adWrap {
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	.droneImg {
+		position: absolute;
+		top: 18%;
+		left: 50%;
+		transform: translateX(-45%);
+		z-index: -1;
+	}
+}
+
+/* .adWrap {
 	background-color: transparent;
 	width: 1026.885px;
 	height: 684.59px;
 	transform: rotate(2.462deg);
 	flex-shrink: 0;
 	aspect-ratio: 1026.89/684.59;
-
 	opacity: 0.6;
-	/* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
+} */
+.adWrap {
+	background-color: transparent;
+	width: clamp(454px, calc((1026 / 1280) * 100vw), 1026px);
+	transform: rotate(2.462deg);
+	flex-shrink: 0;
+	aspect-ratio: 1026 / 684;
+	opacity: 0.6;
 }
 @media screen and (min-width: 375px) {
 	.adWrap.lazyLoaded {
@@ -34,5 +53,14 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.droneImg {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-45%);
+		z-index: -1;
 	}
 }

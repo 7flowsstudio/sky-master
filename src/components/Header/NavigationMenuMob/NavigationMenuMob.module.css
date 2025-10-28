@@ -1,0 +1,25 @@
+.menuWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	height: 100%;
+	padding-bottom: 24px;
+}
+.headerMenu {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px 10px 0px;
+	border-bottom: 1px solid var(--background-brandhover);
+}
+.menuBody {
+	padding: 0 10px;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}

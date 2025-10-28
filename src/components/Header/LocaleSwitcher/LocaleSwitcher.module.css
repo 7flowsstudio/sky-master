@@ -52,3 +52,8 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
+@media screen and (max-width: 1279px) {
+	.nav__select {
+		color: var(--content-primary);
+	}
+}

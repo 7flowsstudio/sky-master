@@ -3,9 +3,16 @@
 		"menu": ["Programs", "Corporate", "About skymaster", "Contacts"],
 		"link": "Start training"
 	},
+	"MenuMobile": [
+		"Home",
+		"Programs",
+		"Corporate",
+		"About skymaster",
+		"Contacts"
+	],
 	"Hero": {
 		"title_h1": "Drone Skills",
-		"title_h2": "That Save Lives.",
+		"title_h2": "That\u200B Save\u00A0Lives.",
 		"description": "Become an operator prepared for real missions. Real training programs for military, corporate teams, and individual learners.",
 		"swiperFact": [
 			{ "id": 0, "stat": "3,872", "descr": "Graduates employed" },

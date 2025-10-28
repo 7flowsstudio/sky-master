@@ -16,6 +16,9 @@ export const routing = defineRouting({
 		"/night_ops": "/night_ops",
 		"/fpv_pro": "/fpv_pro",
 		"/mapping_basics": "/mapping_basics",
+		"/privacy": "/privacy",
+		"/policy": "/policy",
+		"/terms": "/terms",
 	},
 });
 

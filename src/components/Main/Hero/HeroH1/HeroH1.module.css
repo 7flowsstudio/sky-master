@@ -1,7 +1,11 @@
 .hOneBlock {
 	display: flex;
-	justify-content: space-between;
-	height: 520px;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	/* height: 520px; */
+	height: clamp(375px, calc((450 / 375) * 100vw), 520px);
 }
 .heroWraperTitleH1 {
 	display: flex;
@@ -9,10 +13,11 @@
 	justify-content: flex-start;
 	white-space: nowrap;
 	width: 100%;
-	/* height: 120px; */
+	height: calc((300 / 375) * 100vw);
 	position: relative;
 	padding-top: 40px;
 }
+
 .rectangleH1,
 .rectangleH1_1 {
 	flex-shrink: 0;
@@ -22,29 +27,84 @@
 }
 .rectangleH1 {
 	position: absolute;
-	left: 10%;
-	top: 18%;
+	left: -5%;
+	top: 20%;
 	width: 580px;
-	height: 115px;
+	width: clamp(115px, calc((181 / 375) * 100vw), 580px);
+	aspect-ratio: 181 / 40;
 }
 .rectangleH1_1 {
 	position: absolute;
-	right: 7%;
-	bottom: 13%;
-	width: 221px;
-	height: 75px;
+	right: -15%;
+	bottom: 5%;
+	width: clamp(170px, calc((170 / 375) * 100vw), 221px);
+	aspect-ratio: 170 / 32;
 }
 .heroTitle {
 	color: var(--content-primary);
 	font-family: var(--font-family);
-	font-size: 120px;
+	font-size: clamp(56px, calc((56 / 375) * 100vw), calc((120 / 1280) * 100vw));
 	font-style: normal;
 	font-weight: 700;
 	line-height: 120px;
 	letter-spacing: -2px;
 }
 .heroTitle span {
+	white-space: normal;
+	line-height: normal;
+	text-align-last: right;
+	white-space: pre-wrap;
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+@media screen and (max-width: 767px) {
+	.heroWraperTitleH1 {
+		height: calc((300 / 375) * 100vw);
+	}
+	.heroTitle {
+		color: var(--content-primary);
+		font-family: var(--font-family);
+		font-size: clamp(
+			56px,
+			calc((56 / 375) * 100vw),
+			calc((120 / 1280) * 100vw)
+		);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120px;
+		letter-spacing: -2px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.hOneBlock {
+		display: flex;
+		justify-content: space-between;
+		/* height: 520px; */
+		height: clamp(375px, calc((520 / 1280) * 100vw), 520px);
+	}
+	.rectangleH1 {
+		position: absolute;
+		left: 10%;
+		top: 18%;
+		width: 580px;
+		width: clamp(115px, calc((580 / 1280) * 100vw), 580px);
+		aspect-ratio: 580 / 115;
+	}
+	.rectangleH1_1 {
+		position: absolute;
+		right: 7%;
+		bottom: 13%;
+		width: clamp(170px, calc((221 / 1280) * 100vw), 221px);
+		aspect-ratio: 221 / 75;
+	}
+	.heroTitle {
+		color: var(--content-primary);
+		font-family: var(--font-family);
+		font-size: clamp(56px, calc((120 / 1280) * 100vw), 120px);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120px;
+		letter-spacing: -2px;
+	}
 }

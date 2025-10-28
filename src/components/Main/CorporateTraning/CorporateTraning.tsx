@@ -48,7 +48,10 @@ const CorporateTraning = () => {
 						<h6 className={s.titleSmall}>{t("title_small")}</h6>
 						<div className={s.title}>
 							<h2 className={s.titleHead}>{t("title_big_1")}</h2>
-							<h2 className={`${s.titleHead} ${s.left}`}>{t("title_big_2")}</h2>
+							<h2 className={`${s.titleHead} ${s.left}`}>
+								{t("title_big_2")}
+								<div className={s.rectangle}></div>
+							</h2>
 							<h2 className={s.titleHead}>{t("title_big_3")}</h2>
 						</div>
 					</div>

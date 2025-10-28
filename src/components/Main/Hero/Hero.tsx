@@ -8,7 +8,7 @@ import DescriptionHero from "./DescriptionHero/DescriptionHero";
 
 const Hero = () => {
 	return (
-		<WrapperForComponents>
+		<WrapperForComponents paddingBottom={40}>
 			<div className={s.heroWrapper}>
 				<Drone />
 				<HeroH1 />

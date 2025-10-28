@@ -4,6 +4,8 @@ import WrapperForComponents from "../UI/WrapperForComponents/WrapperForComponent
 import s from "./Footer.module.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import { LocalizedScrollLink } from "../Header/LocalizedScrollLink/LocalizedScrollLink";
 
 const Footer = () => {
 	const t = useTranslations("Footer");
@@ -14,11 +16,17 @@ const Footer = () => {
 				<WrapperForComponents paddingTop={0} paddingBottom={24}>
 					<div className={s.footerBlock}>
 						<ul className={s.footerContentList}>
-							<li className={s.footerContentItem}>
+							<li className={`${s.footerContentItem} ${s.notDisplay}`}>
 								<ul className={s.footerRightsList}>
-									<li className={s.footerRightsItem}>Privacy policy</li>
-									<li className={s.footerRightsItem}>cookie policy</li>
-									<li className={s.footerRightsItem}>terms & conditions</li>
+									<li className={s.footerRightsItem}>
+										<Link href="/privacy">Privacy policy</Link>
+									</li>
+									<li className={s.footerRightsItem}>
+										<Link href="/policy">cookie policy</Link>
+									</li>
+									<li className={s.footerRightsItem}>
+										<Link href="/terms">terms & conditions</Link>
+									</li>
 								</ul>
 							</li>
 							<li className={s.footerImageItem}>
@@ -33,10 +41,40 @@ const Footer = () => {
 							</li>
 							<li className={s.footerContentItem}>
 								<ul className={s.footerMenuList}>
-									<li className={s.footerMenuItem}>{t("menu.0")}</li>
-									<li className={s.footerMenuItem}>{t("menu.1")}</li>
-									<li className={s.footerMenuItem}>{t("menu.2")}</li>
-									<li className={s.footerMenuItem}>{t("menu.3")}</li>
+									<li className={s.footerMenuItem}>
+										<LocalizedScrollLink href="/" scrollId="#Programs">
+											{t("menu.0")}
+										</LocalizedScrollLink>
+										{/* <a href="#Programs">{t("menu.0")}</a> */}
+									</li>
+									<li className={s.footerMenuItem}>
+										<LocalizedScrollLink href="/" scrollId="#Corporate">
+											{t("menu.1")}
+										</LocalizedScrollLink>
+										{/* <a href="#Corporate">{t("menu.1")}</a> */}
+									</li>
+									<li className={s.footerMenuItem}>
+										<LocalizedScrollLink href="/" scrollId="#About">
+											{t("menu.2")}
+										</LocalizedScrollLink>
+										{/* <a href="#About">{t("menu.2")}</a> */}
+									</li>
+									<li className={s.footerMenuItem}>
+										<LocalizedScrollLink href="/" scrollId="#Contacts">
+											{t("menu.3")}
+										</LocalizedScrollLink>
+										{/* <a href="#Contacts">{t("menu.3")}</a> */}
+									</li>
+
+									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
+										<Link href="/privacy">Privacy policy</Link>
+									</li>
+									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
+										<Link href="/policy">cookie policy</Link>
+									</li>
+									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
+										<Link href="/terms">terms & conditions</Link>
+									</li>
 								</ul>
 							</li>
 						</ul>

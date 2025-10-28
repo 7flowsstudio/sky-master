@@ -1,0 +1,35 @@
+.navLinkBtn {
+	display: inline-flex;
+	padding: 8px 16px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	background: var(--background-brand);
+
+	color: var(--Content-Primary, #fff);
+	leading-trim: both;
+	text-edge: cap;
+
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0;
+}
+.font {
+	font-family: var(--second-family);
+	font-style: normal;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.navLinkWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+.navLinkIcon {
+	stroke: var(--content-icon);
+	fill: none;
+	width: 12px;
+	height: 12px;
+}

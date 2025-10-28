@@ -1,4 +1,4 @@
-.ourParthnersWrapper {
+.ourParthnersSwiper {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
@@ -28,11 +28,18 @@
 	gap: 120px;
 	margin: 0 auto;
 }
+
 .ourParthnersItem {
 	display: flex;
-	width: auto;
+	/* width: auto; */
 	align-items: center;
 	justify-content: center;
+}
+.slide {
+	width: auto !important; /* щоб slide підлаштовувався під зображення */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .imgParthners {
 	height: 50px;
