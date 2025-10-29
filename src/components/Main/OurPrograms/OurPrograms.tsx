@@ -1,16 +1,21 @@
+"use client";
 import React from "react";
 import s from "./OurPrograms.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import StartButton from "@/components/UI/StartButton/StartButton";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 const OurPrograms = () => {
 	const t = useTranslations("OurPrograms");
+	const isMobile = useIsMobile();
+	console.log("IsMobile", isMobile);
 	const cardList = [
 		{
 			id: 0,
 			src: "/img/ourPrograms/image_big_1.png",
+			src_mob: "/img/ourPrograms/image_mob_1.png",
 			title: t("cart_2.cart_name"),
 			local: t("cart_2.local"),
 			date: t("cart_2.date"),
@@ -19,6 +24,7 @@ const OurPrograms = () => {
 		{
 			id: 1,
 			src: "/img/ourPrograms/image_big_2.png",
+			src_mob: "/img/ourPrograms/image_mob_2.png",
 			title: t("cart_2.cart_name"),
 			local: t("cart_2.local"),
 			date: t("cart_2.date"),
@@ -27,6 +33,7 @@ const OurPrograms = () => {
 		{
 			id: 2,
 			src: "/img/ourPrograms/image_big_3.png",
+			src_mob: "/img/ourPrograms/image_mob_3.png",
 			title: t("cart_2.cart_name"),
 			local: t("cart_2.local"),
 			date: t("cart_2.date"),
@@ -46,7 +53,7 @@ const OurPrograms = () => {
 						{cardList.map((item) => (
 							<li key={item.id} className={s.programsCard}>
 								<Image
-									src={item.src}
+									src={isMobile ? item.src_mob : item.src}
 									width={325}
 									height={400}
 									alt={`image` + item.id}
