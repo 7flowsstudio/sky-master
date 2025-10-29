@@ -46,7 +46,10 @@ const OurPrograms = () => {
 				<div className={s.programsBlock}>
 					<h5 className={s.programsSmallTitle}>{t("titleSection")}</h5>
 					<div className={s.programsHeadTitle}>
-						<h3 className={`${s.programsTitle} ${s.left}`}>{t("tite_1")}</h3>
+						<h3 className={`${s.programsTitle} ${s.left}`}>
+							<div className={s.rectangle}></div>
+							{t("tite_1")}
+						</h3>
 						<h3 className={`${s.programsTitle} ${s.right}`}>{t("tite_2")}</h3>
 					</div>
 					<ul className={s.programsCardList}>

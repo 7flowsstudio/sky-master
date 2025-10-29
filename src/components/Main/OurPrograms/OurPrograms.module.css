@@ -45,9 +45,20 @@
 }
 .left {
 	text-align: left;
+	position: relative;
 }
 .right {
 	justify-content: flex-end;
+}
+.rectangle {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
+	height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
+	background: var(--background-brand);
+	mix-blend-mode: plus-lighter;
+	opacity: 0.3;
 }
 .programsCardList {
 	display: flex;

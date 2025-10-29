@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import s from "./HowItWorks.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
+import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
+import HowItWorksSwiper from "./HowItWorksSwiper/HowItWorksSwiper";
 
 const HowItWorks = () => {
 	const t = useTranslations("HowItWorks");
+	const { top, bottom } = useSizeWindows();
 
 	const cardLists = [
 		{
@@ -32,13 +36,16 @@ const HowItWorks = () => {
 
 	return (
 		<div className={s.howItWorksWrapper}>
-			<WrapperForComponents paddingTop={124} paddingBottom={124}>
+			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
 				<div className={s.howItWorksBlock}>
 					<div className={s.howTitleTop}>
 						<h6 className={s.titleTopSmall}>{t("h6")}</h6>
 						<div className={s.titleTopBigBlock}>
 							<h2 className={`${s.titleTopBig} ${s.left}`}>{t("h2_1")}</h2>
-							<h2 className={`${s.titleTopBig} ${s.right}`}>{t("h2_2")}</h2>
+							<h2 className={`${s.titleTopBig} ${s.right}`}>
+								<div className={s.rectangle}></div>
+								{t("h2_2")}
+							</h2>
 						</div>
 					</div>
 
@@ -58,6 +65,7 @@ const HowItWorks = () => {
 							</li>
 						))}
 					</ul>
+					<HowItWorksSwiper cardLists={cardLists} />
 				</div>
 			</WrapperForComponents>
 		</div>
