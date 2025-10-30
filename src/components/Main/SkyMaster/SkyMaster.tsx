@@ -3,6 +3,7 @@ import s from "./SkyMaster.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
 import StartButton from "@/components/UI/StartButton/StartButton";
+import Image from "next/image";
 
 const SkyMaster = () => {
 	const t = useTranslations("Skymaster");
@@ -18,7 +19,10 @@ const SkyMaster = () => {
 				<div className={s.skymasterBlock}>
 					<div className={s.titleH2}>
 						<h6 className={s.titleSmall}>{t("title_small")}</h6>
-						<h2 className={s.titleBig}>{t("title_big")}</h2>
+						<h2 className={s.titleBig}>
+							<div className={s.rectangle}></div>
+							{t("title_big")}
+						</h2>
 					</div>
 
 					<div className={s.content}>
@@ -40,6 +44,14 @@ const SkyMaster = () => {
 							))}
 						</ul>
 						<div className={s.imgAdventages}>
+							<Image
+								src="/img/skymaster/adventage.png"
+								width={355}
+								height={347}
+								alt="img_skymaster"
+								className={s.imgSkymaster}
+							/>
+
 							<div className={s.imgDescr}>
 								<h4 className={s.advTitle}>{t("flight_head.title")}</h4>
 								<p className={s.advText}>{t("flight_head.text")}</p>
