@@ -9,10 +9,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import s from "./TestimonialsSwiper.module.css";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import TestSlideItem from "./TestSlideItem/TestSlideItem";
+import useOffsetBefore from "@/lib/useOffsetBefore/useOffsetBefore";
 
 const Testimonials = () => {
 	const t = useTranslations("Testimonials");
+	const offsetBefore = useOffsetBefore();
 
 	const sliderList = [
 		{
@@ -59,48 +61,39 @@ const Testimonials = () => {
 				loop={true}
 				slidesPerView={4}
 				spaceBetween={20}
-				slidesOffsetBefore={-170} // зсуває перший слайд вправо
-				slidesOffsetAfter={0} // залишає місце для половини останнього
+				slidesOffsetBefore={-offsetBefore}
+				slidesOffsetAfter={0}
 				navigation={{
 					nextEl: ".test-next",
 					prevEl: ".test-prev",
 				}}
 				modules={[Navigation, Pagination]}
 				breakpoints={{
-					320: { slidesPerView: 1, spaceBetween: 4 },
-					768: { slidesPerView: 2, spaceBetween: 4 },
+					320: { slidesPerView: 2, spaceBetween: 4 },
+					768: { slidesPerView: 3, spaceBetween: 12 },
 					1280: { slidesPerView: 4, spaceBetween: 20 },
 				}}
 			>
-				{sliderList?.map((img, index) => (
+				{sliderList?.map((item, index) => (
 					<SwiperSlide key={index} className={s.slide}>
-						<div key={index} className={s.itemSlide}>
-							<div className={s.itemContent}>
-								<div className={s.info}>
-									<Image
-										src={img.img}
-										width={44}
-										height={44}
-										alt={`user_` + (img.id + 1)}
-									/>
-									<div className={s.infoUser}>
-										<h4 className={s.infoTitle}>{img.name}</h4>
-										<p className={s.infoText}>{img.civil}</p>
-									</div>
-								</div>
-								<div className={s.text}>{img.text}</div>
-							</div>
-						</div>
+						<TestSlideItem item={item} />
 					</SwiperSlide>
 				))}
+				<div className={s.rectangleBlure}></div>
 			</Swiper>
 			<div className={s.arrows}>
-				<button className={`test-prev ${s.navButton} ${s.prevButton}`}>
+				<button
+					type="button"
+					className={`test-prev ${s.navButton} ${s.prevButton}`}
+				>
 					<svg className={`${s.navButton_icon} ${s.left}`}>
 						<use href="/sprite.svg#icon-arrow-top-right"></use>
 					</svg>
 				</button>
-				<button className={`test-next ${s.navButton} ${s.nextButton}`}>
+				<button
+					type="button"
+					className={`test-next ${s.navButton} ${s.nextButton}`}
+				>
 					<svg className={`${s.navButton_icon} ${s.right}`}>
 						<use href="/sprite.svg#icon-arrow-top-right"></use>
 					</svg>

@@ -42,15 +42,27 @@
 	color: var(--content-primary);
 	text-align: right;
 	font-family: var(--font-family);
-	font-size: 88px;
+	font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
 	font-style: normal;
 	font-weight: 500;
-	line-height: 88px;
+	line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
 	letter-spacing: 0;
+	position: relative;
+}
+.rectangle {
+	position: absolute;
+	top: -10px;
+	left: -35px;
+	width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
+	height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
+	background: var(--background-brand);
+	mix-blend-mode: plus-lighter;
+	opacity: 0.3;
 }
 .subTitleBlock {
 	display: flex;
-	width: 735px;
+	width: 100%;
+	max-width: 735px;
 	padding: 10px;
 	justify-content: center;
 	align-items: center;
@@ -60,7 +72,7 @@
 	color: var(--content-secondary);
 	text-align: center;
 	font-family: var(--font-family);
-	font-size: 24px;
+	font-size: clamp(16px, calc((24 / 1280) * 100vw), 24px);
 	font-style: normal;
 	font-weight: 500;
 	line-height: 28px;

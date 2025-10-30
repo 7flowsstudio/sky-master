@@ -6,11 +6,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import StartButton from "@/components/UI/StartButton/StartButton";
 import useIsMobile from "@/lib/isMobile/isMobile";
+import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 
 const OurPrograms = () => {
 	const t = useTranslations("OurPrograms");
+	const { top, bottom } = useSizeWindows();
 	const isMobile = useIsMobile();
-	console.log("IsMobile", isMobile);
 	const cardList = [
 		{
 			id: 0,
@@ -42,7 +43,7 @@ const OurPrograms = () => {
 	];
 	return (
 		<div className={s.ourPrograms}>
-			<WrapperForComponents paddingTop={124} paddingBottom={124}>
+			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
 				<div className={s.programsBlock}>
 					<h5 className={s.programsSmallTitle}>{t("titleSection")}</h5>
 					<div className={s.programsHeadTitle}>
