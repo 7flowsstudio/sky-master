@@ -12,7 +12,10 @@ const Gallary = () => {
 				<div className={s.titleH2}>
 					<h6 className={s.titleSmall}>{t("title_small")}</h6>
 					<div className={s.titleBig}>
-						<h2 className={s.title_big_1}>{t("title_big_1")}</h2>
+						<h2 className={s.title_big_1}>
+							<div className={s.rectangle}></div>
+							{t("title_big_1")}
+						</h2>
 						<h2 className={s.title_big_2}>{t("title_big_2")}</h2>
 					</div>
 				</div>

@@ -51,7 +51,7 @@
 .title_big {
 	color: var(--content-primary);
 	font-family: var(--font-family);
-	font-size: clamp(calc((36 / 768) * 100vw), calc((88 / 1440) * 100vw), 88px);
+	font-size: clamp(36px, calc((88 / 1440) * 100vw), 88px);
 	font-style: normal;
 	font-weight: 500;
 	line-height: clamp(36px, calc((88 / 1440) * 100vw), 88px);

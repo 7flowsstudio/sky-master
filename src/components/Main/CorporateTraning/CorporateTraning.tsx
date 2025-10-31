@@ -5,9 +5,12 @@ import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperFo
 import { useTranslations } from "next-intl";
 import { Link, Pathnames } from "@/i18n/routing";
 import Image from "next/image";
+import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 
 const CorporateTraning = () => {
 	const t = useTranslations("CorparateTraning");
+	const { top, bottom } = useSizeWindows();
+
 	const programsList = [
 		{
 			id: 0,
@@ -42,7 +45,7 @@ const CorporateTraning = () => {
 	];
 	return (
 		<div className={s.corporateWrapper}>
-			<WrapperForComponents paddingTop={124} paddingBottom={124}>
+			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
 				<div className={s.corporateBlock}>
 					<div className={s.titleH2}>
 						<h6 className={s.titleSmall}>{t("title_small")}</h6>

@@ -1,12 +1,17 @@
+"use client";
 import React from "react";
 import s from "./SkyMaster.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
 import StartButton from "@/components/UI/StartButton/StartButton";
 import Image from "next/image";
+import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 
 const SkyMaster = () => {
 	const t = useTranslations("Skymaster");
+
+	const { top, bottom } = useSizeWindows();
+
 	const itemList = [
 		{ id: 0, title: t("flight.item_1.title"), text: t("flight.item_1.text") },
 		{ id: 1, title: t("flight.item_2.title"), text: t("flight.item_2.text") },
@@ -15,7 +20,7 @@ const SkyMaster = () => {
 	];
 	return (
 		<div className={s.skymasterWrapper}>
-			<WrapperForComponents paddingTop={124} paddingBottom={124}>
+			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
 				<div className={s.skymasterBlock}>
 					<div className={s.titleH2}>
 						<h6 className={s.titleSmall}>{t("title_small")}</h6>

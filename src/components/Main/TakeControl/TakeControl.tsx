@@ -1,15 +1,18 @@
+"use client";
 import React from "react";
 import s from "./TakeControl.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
 import StartButton from "@/components/UI/StartButton/StartButton";
 import Image from "next/image";
+import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 
 const TakeControl = () => {
 	const t = useTranslations("TakeControl");
+	const { top, bottom } = useSizeWindows();
 	return (
 		<div className={s.takeControlWrapper}>
-			<WrapperForComponents paddingBottom={124} paddingTop={124}>
+			<WrapperForComponents paddingBottom={top} paddingTop={bottom}>
 				<div className={s.takeControlBlock}>
 					<div className={s.takeControlLeft}>
 						<div className={s.takeControlDescr}>

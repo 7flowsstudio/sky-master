@@ -10,9 +10,16 @@ import "swiper/css/pagination";
 import s from "./SwiperGallery.module.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import useOffsetBefore from "@/lib/useOffsetBefore/useOffsetBefore";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 const SwiperGallery = () => {
 	const t = useTranslations("Gallery");
+	const isMobile = useIsMobile();
+	const offsetBeforeValue = useOffsetBefore();
+	const expectedOffset = isMobile
+		? (window.innerWidth - 16) / 4
+		: offsetBeforeValue;
 
 	const sliderList = [
 		{
@@ -51,17 +58,25 @@ const SwiperGallery = () => {
 		<div className={s.sliderContainer}>
 			<Swiper
 				className={s.swiper}
-				loop={true}
-				slidesPerView={4}
-				spaceBetween={20}
-				slidesOffsetBefore={150} // зсуває перший слайд вправо
-				slidesOffsetAfter={150} // залишає місце для половини останнього
 				modules={[Navigation, Pagination]}
-				// breakpoints={{
-				// 	320: { slidesPerView: 2, spaceBetween: 20 },
-				// 	768: { slidesPerView: 3, spaceBetween: 20 },
-				// 	1280: { slidesPerView: 4, spaceBetween: 20 },
-				// }}
+				loop={true}
+				slidesOffsetBefore={-expectedOffset}
+				onBeforeInit={(swiper) => {
+					const navigation = swiper.params.navigation;
+					if (navigation && typeof navigation !== "boolean") {
+						navigation.prevEl = ".gallery-prev";
+						navigation.nextEl = ".gallery-next";
+					}
+				}}
+				navigation={{
+					nextEl: ".gallery-next",
+					prevEl: ".gallery-prev",
+				}}
+				breakpoints={{
+					320: { slidesPerView: 2, spaceBetween: 4 },
+					768: { slidesPerView: 3, spaceBetween: 12 },
+					1280: { slidesPerView: 4, spaceBetween: 20 },
+				}}
 			>
 				{sliderList?.map((item, index) => (
 					<SwiperSlide key={item.id} className={s.slide}>
@@ -86,6 +101,24 @@ const SwiperGallery = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
+			<div className={s.arrows}>
+				<button
+					type="button"
+					className={`gallery-prev ${s.navButton} ${s.prevButton}`}
+				>
+					<svg className={`${s.navButton_icon} ${s.left}`}>
+						<use href="/sprite.svg#icon-arrow-top-right"></use>
+					</svg>
+				</button>
+				<button
+					type="button"
+					className={`gallery-next ${s.navButton} ${s.nextButton}`}
+				>
+					<svg className={`${s.navButton_icon} ${s.right}`}>
+						<use href="/sprite.svg#icon-arrow-top-right"></use>
+					</svg>
+				</button>
+			</div>
 		</div>
 	);
 };

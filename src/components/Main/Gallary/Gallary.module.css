@@ -1,7 +1,8 @@
 .gallaryWrapper {
 	padding-top: 1px solid var(--border-primary);
-	padding: 124px 0;
+	padding: 40px 0;
 }
+
 .gallaryBlock {
 	display: flex;
 	width: 100%;
@@ -32,17 +33,31 @@
 	text-transform: uppercase;
 }
 .titleBig {
-	width: 75%;
+	width: 100%;
+	padding: 0 8px;
+}
+.title_big_1 {
+	position: relative;
+}
+.rectangle {
+	position: absolute;
+	top: 40%;
+	left: -5%;
+	width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
+	height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
+	background: var(--background-brand);
+	mix-blend-mode: plus-lighter;
+	opacity: 0.3;
 }
 .title_big_1,
 .title_big_2 {
 	color: var(--content-primary);
 	text-align: left;
 	font-family: var(--font-family);
-	font-size: 88px;
+	font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
 	font-style: normal;
 	font-weight: 500;
-	line-height: 88px;
+	line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
 	letter-spacing: 0;
 }
 .title_big_2 {
@@ -51,6 +66,19 @@
 .gallerySwiperWrapper {
 	/* height: 545px; */
 	width: 100%;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 	padding: 2px;
+}
+@media screen and (min-width: 768px) {
+	.gallaryWrapper {
+		padding: 80px 0;
+	}
+	.titleBig {
+		width: 75%;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.gallaryWrapper {
+		padding: 120px 0;
+	}
 }
