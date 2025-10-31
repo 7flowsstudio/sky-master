@@ -22,7 +22,7 @@ const TakeControl = () => {
 					</div>
 					<div className={s.takeControlRight}>
 						<Image
-							src="/img/takecontrol/photo.png"
+							src="/img/takecontrol/photo_new.png"
 							width={780}
 							height={666}
 							alt="soldier"

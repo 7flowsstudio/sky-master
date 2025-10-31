@@ -4,7 +4,8 @@
 .takeControlBlock {
 	width: 100%;
 	max-width: 1360px;
-	height: 680px;
+	aspect-ratio: 1360 / 680;
+	/* height: 680px; */
 	flex-shrink: 0;
 	border: 6px solid var(--border-inverse);
 	display: flex;
@@ -21,7 +22,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 24px;
+	padding: 0 clamp(12px, calc((12 / 768) * 100vw), 24px);
 }
 .takeControlDescr {
 	display: flex;
@@ -52,10 +53,10 @@
 .title_big {
 	color: var(--content-primary);
 	font-family: var(--font-family);
-	font-size: 88px;
+	font-size: clamp(calc((36 / 768) * 100vw), calc((88 / 1440) * 100vw), 88px);
 	font-style: normal;
 	font-weight: 500;
-	line-height: 88px;
+	line-height: clamp(36px, calc((88 / 1440) * 100vw), 88px);
 	letter-spacing: 0;
 }
 .takeControlRight {
@@ -89,8 +90,10 @@
 	}
 }
 .soldier {
-	min-width: 780px;
-	height: 666px;
+	width: 100%;
+	max-width: 677px;
+	aspect-ratio: 677 / 666;
+	/* height: 666px; */
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -98,8 +101,12 @@
 .drone {
 	position: absolute;
 	top: 0;
-	left: -290px;
-	width: 632px;
-	height: 422px;
+	/* left: -290px; */
+	left: 5%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: clamp(223px, calc((632 / 1280) * 100vw), 632px);
+	aspect-ratio: 632 / 422;
+	/* height: 422px; */
 	z-index: 0;
 }
