@@ -17,7 +17,9 @@ const TakeControl = () => {
 								<h6 className={s.titleLitle}>{t("title_litle")}</h6>
 								<h2 className={s.title_big}>{t("title_big")}</h2>
 							</div>
-							<StartButton />
+							<div className={s.takeControlBtn}>
+								<StartButton />
+							</div>
 						</div>
 					</div>
 					<div className={s.takeControlRight}>
