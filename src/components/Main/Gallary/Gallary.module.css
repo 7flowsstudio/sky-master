@@ -34,6 +34,7 @@
 }
 .titleBig {
 	width: 100%;
+	max-width: 1360px;
 	padding: 0 8px;
 }
 .title_big_1 {
