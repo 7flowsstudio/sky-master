@@ -6,13 +6,16 @@
 	gap: 8px;
 	background: var(--background-brand);
 
-	color: var(--Content-Primary, #fff);
+	color: var(--content-primary);
 	leading-trim: both;
 	text-edge: cap;
 
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0;
+}
+.navLinkBtn:hover {
+	background: var(--background-brandhover);
 }
 .font {
 	font-family: var(--second-family);

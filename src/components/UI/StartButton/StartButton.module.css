@@ -17,6 +17,9 @@
 	letter-spacing: 0;
 	text-transform: uppercase;
 }
+.advBtn:hover {
+	background: var(--background-brandhover);
+}
 .iconWrapper {
 	width: 24px;
 	height: 24px;

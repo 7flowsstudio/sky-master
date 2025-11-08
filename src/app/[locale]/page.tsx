@@ -4,6 +4,7 @@ import Hero from "@/components/Main/Hero/Hero";
 import HowItWorks from "@/components/Main/HowItWorks/HowItWorks";
 import OurParthners from "@/components/Main/OurParthners/OurParthners";
 import OurPrograms from "@/components/Main/OurPrograms/OurPrograms";
+import OurProgramsAnimate from "@/components/Main/OurProgramsAnimate/OurProgramsAnimate";
 import SkyMaster from "@/components/Main/SkyMaster/SkyMaster";
 import TakeControl from "@/components/Main/TakeControl/TakeControl";
 import Testimonials from "@/components/Main/Testimonials/Testimonials";
@@ -22,8 +23,9 @@ export default async function IndexPage({ params }: Props) {
 
 	return (
 		<>
-			<Hero />
-			<OurParthners />
+			{/* <Hero />
+			<OurParthners /> */}
+			{/* <OurProgramsAnimate /> */}
 			<OurPrograms />
 			<HowItWorks />
 			<Testimonials />

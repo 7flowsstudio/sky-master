@@ -10,15 +10,15 @@ import "swiper/css/pagination";
 import s from "./HowItWorksSwiper.module.css";
 import SlideItem from "./SlideItem/SlideItem";
 
-type HowItWorksProps = { cardLists: ItemProps[] };
-
 export type ItemProps = {
-	id: number;
+	id: number | string;
 	count: string;
 	title_1: string;
 	title_2: string;
 	description: string;
 };
+
+type HowItWorksProps = { cardLists: ItemProps[] };
 
 const HowItWorksSwiper: React.FC<HowItWorksProps> = ({ cardLists }) => {
 	return (
