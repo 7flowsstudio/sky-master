@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -34,8 +34,13 @@ const SwiperFactBlocks = () => {
 						nextEl: ".hero-next",
 						prevEl: ".hero-prev",
 					}}
-					modules={[Pagination, Navigation]}
+					modules={[Pagination, Navigation, Autoplay]}
 					loop={true}
+					autoplay={{
+						delay: 1000, // час між автоперегортаннями у мс
+						disableOnInteraction: false, // щоб автоперегортання не зупинялось після ручного свайпу
+						pauseOnMouseEnter: true, // пауза при наведені миші
+					}}
 					onSlideChange={(swiper) => {
 						setActiveSlide(swiper.realIndex);
 					}}
