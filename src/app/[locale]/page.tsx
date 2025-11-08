@@ -23,8 +23,8 @@ export default async function IndexPage({ params }: Props) {
 
 	return (
 		<>
-			{/* <Hero />
-			<OurParthners /> */}
+			<Hero />
+			<OurParthners />
 			{/* <OurProgramsAnimate /> */}
 			<OurPrograms />
 			<HowItWorks />
