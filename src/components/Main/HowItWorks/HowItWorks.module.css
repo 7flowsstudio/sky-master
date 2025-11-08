@@ -189,7 +189,6 @@
 }
 
 /* Для кращого перфомансу на мобайлі — тонкий трюк (за бажанням) */
-
 @media (prefers-reduced-motion: reduce) {
 	.howItWorksCardsItem,
 	.howItWorksCardsItem .countHead,
