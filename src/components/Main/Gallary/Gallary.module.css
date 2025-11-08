@@ -6,6 +6,7 @@
 .gallaryBlock {
 	display: flex;
 	width: 100%;
+	max-width: 1360px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;

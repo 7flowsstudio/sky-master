@@ -37,7 +37,7 @@ const SwiperFactBlocks = () => {
 					modules={[Pagination, Navigation, Autoplay]}
 					loop={true}
 					autoplay={{
-						delay: 1000, // час між автоперегортаннями у мс
+						delay: 2000, // час між автоперегортаннями у мс
 						disableOnInteraction: false, // щоб автоперегортання не зупинялось після ручного свайпу
 						pauseOnMouseEnter: true, // пауза при наведені миші
 					}}

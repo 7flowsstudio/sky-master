@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -35,8 +35,13 @@ const OurParthners = () => {
 						nextEl: ".parthners-next",
 						prevEl: ".parthners-prev",
 					}}
-					modules={[Pagination, Navigation]}
+					modules={[Pagination, Navigation, Autoplay]}
 					loop={true}
+					autoplay={{
+						delay: 1500,
+						disableOnInteraction: false,
+						pauseOnMouseEnter: true,
+					}}
 					slidesOffsetBefore={-20}
 					slidesOffsetAfter={0}
 					onSlideChange={(swiper) => {
