@@ -11,6 +11,8 @@ const CorporateTraning = () => {
 	const t = useTranslations("CorparateTraning");
 	const { top, bottom } = useSizeWindows();
 
+	type StaticPathnames = Exclude<Pathnames, "/programs/[id]">;
+
 	const programsList = [
 		{
 			id: 0,
@@ -62,7 +64,7 @@ const CorporateTraning = () => {
 					<ul className={s.programList}>
 						{programsList.map((item) => (
 							<li key={item.id} className={s.programItem}>
-								<Link href={item.link as Pathnames} className={s.link}>
+								<Link href={item.link as StaticPathnames} className={s.link}>
 									{item.type}
 									<div className={s.iconBlock}>
 										<svg className={s.iconLink}>

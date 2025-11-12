@@ -2,7 +2,6 @@
 import React from "react";
 import s from "./StartButton.module.css";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
 
 const StartButton = () => {
 	const t = useTranslations("");
