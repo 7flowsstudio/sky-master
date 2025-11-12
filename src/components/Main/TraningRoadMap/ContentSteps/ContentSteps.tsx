@@ -24,7 +24,6 @@ const ContentSteps = () => {
 		HTMLLIElement
 	>(s.active);
 
-	// ✅ використовуємо наш хук
 	const dividerHeight = useItemsDistance(isMobile, listRef, s.stepSideItem);
 
 	const activeDividerHeight = useActiveDividerHeight(listRef, dividerHeight);
