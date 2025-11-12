@@ -34,23 +34,140 @@
 		"titleSection": "our programs",
 		"tite_1": "Training Designed",
 		"tite_2": "for Real Missions.",
+		"title_details": "Program Details",
+		"title_use": "drones in use:",
+		"info": "up to 16 trainees",
 		"cart_1": {
 			"cart_name": "FPV Basic",
 			"local": "kyiv",
 			"date": "sep 12 – 26, 2025",
-			"description_event": "FPV piloting from scratch: full theory, simulator practice, and daytime flights. Learn how to set up radio systems, video links, and batteries. Final test — accuracy and stability drills."
+			"description_event": "FPV piloting from scratch: full theory, simulator practice, and daytime flights. Learn how to set up radio systems, video links, and batteries. Final test — accuracy and stability drills.",
+			"drone_1": {
+				"name": "FPV racing drones",
+				"for_use": "for beginner training"
+			},
+			"drone_2": {
+				"name": "DJI Mavic MINI 2 multirotors",
+				"for_use": "for stability and aerial footage exercises"
+			}
 		},
 		"cart_2": {
 			"cart_name": "FPV Pro",
 			"local": "kyiv",
 			"date": "sep 24 – 29, 2025",
-			"description_event": "Advanced training for pilots with basic skills. Complex scenarios, recovery after failures, fast reboots. Intensive practice with timed routes and accuracy tasks."
+			"description_event": "Advanced training for pilots with basic skills. Complex scenarios, recovery after failures, fast reboots. Intensive practice with timed routes and accuracy tasks.",
+			"drone_1": {
+				"name": "FPV racing drones",
+				"for_use": "for beginner training"
+			},
+			"drone_2": {
+				"name": "DJI Mavic MINI 2 multirotors",
+				"for_use": "for stability and aerial footage exercises"
+			}
 		},
 		"cart_3": {
 			"cart_name": "Tactical Start",
 			"local": "kyiv",
 			"date": "oct 03 – 07, 2025",
-			"description_event": "Basic military drone training. Safe flight principles, quick launch, and aerial reconnaissance. Field tasks in small groups under instructor guidance."
+			"description_event": "Basic military drone training. Safe flight principles, quick launch, and aerial reconnaissance. Field tasks in small groups under instructor guidance.",
+			"drone_1": {
+				"name": "FPV racing drones",
+				"for_use": "for beginner training"
+			},
+			"drone_2": {
+				"name": "DJI Mavic MINI 2 multirotors",
+				"for_use": "for stability and aerial footage exercises"
+			}
+		},
+		"cart_4": {
+			"cart_name": "Night Ops",
+			"local": "kyiv",
+			"date": "sep 15 – 20, 2025",
+			"description_event": "Drone operation in low light and night conditions. Training with thermal vision and coordination in pairs. Emphasis on stealth and real combat situations.",
+			"drone_1": {
+				"name": "FPV racing drones",
+				"for_use": "for beginner training"
+			},
+			"drone_2": {
+				"name": "DJI Mavic MINI 2 multirotors",
+				"for_use": "for stability and aerial footage exercises"
+			}
+		},
+		"cart_5": {
+			"cart_name": "Civil Flight",
+			"local": "kyiv",
+			"date": "nov 05 – 09, 2025",
+			"description_event": "Training for commercial and NGO teams. Rules for safe flights, aerial shooting, and data transfer. Suitable for journalists, volunteers, and security services.",
+			"drone_1": {
+				"name": "FPV racing drones",
+				"for_use": "for beginner training"
+			},
+			"drone_2": {
+				"name": "DJI Mavic MINI 2 multirotors",
+				"for_use": "for stability and aerial footage exercises"
+			}
+		},
+		"cart_6": {
+			"cart_name": "Mapping Basics",
+			"local": "kyiv",
+			"date": "nov 18 – 22, 2025",
+			"description_event": "Introduction to aerial mapping and surveying. Learn how to plan flights, capture high-quality images, and build reliable ground maps. For beginners in civil drone use.",
+			"drone_1": {
+				"name": "FPV racing drones",
+				"for_use": "for beginner training"
+			},
+			"drone_2": {
+				"name": "DJI Mavic MINI 2 multirotors",
+				"for_use": "for stability and aerial footage exercises"
+			}
+		},
+		"btn": "See All"
+	},
+	"TrainingRoadMap": {
+		"title_small": "Program course",
+		"title_big": "The Training \u200BRoadmap.",
+		"step_1": {
+			"step": "step 01",
+			"name": "Theory (25%)",
+			"list": [
+				"Introduction, rules, and safety",
+				"Drone anatomy & systems (radio, video links, batteries)",
+				"Simulator basics: take-off, hovering, landing, orientation"
+			]
+		},
+		"step_2": {
+			"step": "step 02",
+			"name": "Practice (75%)",
+			"list": [
+				"Take-off, landing, and basic control in open field",
+				"Flying straight lines, circles, and square patterns",
+				"Speed training on simple FPV tracks",
+				"Navigating around obstacles",
+				"Developing smooth and stable flight control",
+				"Practicing basic FPV freestyle moves (simple flips, rolls)",
+				"Hovering in place and maintaining altitude",
+				"Precise landings and route-based flying",
+				"Simulator basics: take-off, hovering, landing, orientation",
+				"Practicing aerial footage: framing, panoramas, smooth movements",
+				"Combined exercises with both FPV and DJI for accuracy and stability",
+				"Teamwork drills with two pilots working together"
+			]
+		},
+		"step_3": {
+			"step": "step 03",
+			"name": "Knowledge Review",
+			"list": [
+				"Quick theory quiz (radio, video, batteries, safety)",
+				"Practical test: FPV track + DJI stability drill"
+			]
+		},
+		"step_4": {
+			"step": "step 04",
+			"name": "Certification",
+			"list": [
+				"Final evaluation and feedback",
+				"Certificate: FPV Basic Drone Piloting"
+			]
 		}
 	},
 	"HowItWorks": {

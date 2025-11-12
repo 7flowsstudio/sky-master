@@ -166,6 +166,37 @@
 	line-height: 24px;
 	letter-spacing: -1px;
 }
+.seeMoreWrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 16px;
+}
+.link {
+	border: 1px solid var(--border-primary);
+	padding: 12px 12px;
+	width: 115px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 133%;
+	letter-spacing: -0.06em;
+	color: var(--content-primary);
+	transform: scale(1);
+	transition: transform 500;
+}
+.iconLink {
+	width: 14px;
+	height: 14px;
+	stroke: var(--content-icon);
+}
 @media screen and (min-width: 768px) {
 	.programsCard {
 		height: 400px;

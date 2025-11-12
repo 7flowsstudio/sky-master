@@ -43,7 +43,7 @@ export default function LocaleSwitcherSelect({
 				{children}
 			</select>
 			<svg className={s.arrow_icon}>
-				<use href="/symbol-defs.svg#icon-arrow-bottom" />
+				<use href="/sprite.svg#icon-arrow-bottom" />
 			</svg>
 		</label>
 	);

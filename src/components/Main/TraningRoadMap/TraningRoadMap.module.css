@@ -1,0 +1,70 @@
+.trainingBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	padding: 40px 8px;
+	max-width: 1360px;
+	margin: 0 auto;
+}
+.titleH2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+.titleSmall {
+	color: var(--content-secondary);
+
+	font-family: var(--second-family);
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 16px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.titleBig {
+	color: var(--content-primary);
+
+	font-family: var(--font-family);
+	font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
+	font-weight: 500;
+	line-height: 48px;
+	letter-spacing: 0px;
+	text-align: left;
+
+	text-align-last: right;
+	white-space: pre-wrap;
+
+	position: relative;
+}
+.rectangle {
+	position: absolute;
+	top: 56px;
+	right: -34px;
+	width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
+	height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
+	background: var(--background-brand);
+	mix-blend-mode: plus-lighter;
+	opacity: 0.3;
+}
+@media screen and (min-width: 410px) {
+	.titleBig {
+		line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
+	}
+	.rectangle {
+		top: 0px;
+		right: -34px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.trainingBlock {
+		gap: 64px;
+		padding: 40px;
+	}
+	.rectangle {
+		right: -50px;
+	}
+}

@@ -1,0 +1,81 @@
+.dronesUse {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 40px;
+}
+.titleUse {
+	color: var(--content-primary);
+
+	font-family: var(--font-family);
+	font-size: clamp(32px, calc((40 / 1280) * 100vw), 40px);
+	font-weight: 700;
+	line-height: clamp(28px, calc((40 / 1280) * 100vw), 40px);
+	letter-spacing: 0px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.dronesList {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	gap: 16px;
+	flex-wrap: nowrap;
+}
+.dronesItem {
+	width: calc((100% - 16px) / 2);
+	max-width: 423px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	padding: 24px;
+
+	box-sizing: border-box;
+	border: 1px solid var(--border-primary);
+}
+.imageUse {
+	width: 100%;
+	max-width: 260px;
+	aspect-ratio: 260 / 165;
+	/* height: 165px; */
+}
+.infoDrones {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+}
+.infoTitle,
+.infoText {
+	color: var(--content-primary);
+	font-family: var(--font-family);
+	text-align: center;
+}
+.infoTitle {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0px;
+}
+.infoText {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -1px;
+}
+@media screen and (min-width: 1280px) {
+	.dronesList {
+		gap: 40px;
+	}
+	.dronesItem {
+		gap: 24px;
+	}
+}
