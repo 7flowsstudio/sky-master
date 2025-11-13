@@ -170,6 +170,24 @@
 			]
 		}
 	},
+	"Faq": {
+		"title_small": "FAQ",
+		"title_big": "Flight Ready \u200BAnswers.",
+		"accordion": {
+			"questions": [
+				"Is the equipment provided, or should I bring my own?",
+				"Are courses available in other cities?",
+				"Where exactly is the training field located?",
+				"Are there any discounts for active military personnel?"
+			],
+			"answers": [
+				"We provide all the necessary equipment on-site.",
+				"Yes, courses are available in the following cities: Kyiv, Lviv, Dnipro.",
+				"For safety reasons, the exact locations of our training fields are not publicly disclosed. Detailed information will be provided after registration.",
+				"Active military personnel are eligible for fully free training."
+			]
+		}
+	},
 	"HowItWorks": {
 		"h6": "How it Works",
 		"h2_1": "How the Training",
