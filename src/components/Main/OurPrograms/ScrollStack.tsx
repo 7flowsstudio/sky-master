@@ -288,7 +288,7 @@ const ScrollStack = ({
       }
       updateCardTransforms();
     };
-    setTimeout(scrollToEnd, 50);
+    setTimeout(scrollToEnd, 10);
 
     return () => {
       if (animationFrameRef.current)

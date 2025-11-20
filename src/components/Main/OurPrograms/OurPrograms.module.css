@@ -175,6 +175,8 @@
   align-items: center;
   justify-content: center;
   padding-top: 16px;
+  margin-bottom: -150px;
+  z-index: 1000;
 }
 .link {
   border: 1px solid var(--border-primary);
