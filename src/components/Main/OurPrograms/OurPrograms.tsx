@@ -60,7 +60,6 @@ const OurPrograms = () => {
 								threshold={0.4}
 								rootMargin="100px"
 								textAlign="right"
-								onLetterAnimationComplete={handleAnimationComplete}
 							/>
 						</h3>
 					</div>
