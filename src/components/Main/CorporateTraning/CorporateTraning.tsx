@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link, Pathnames } from "@/i18n/routing";
 import Image from "next/image";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
+import SplitText from "@/components/UI/SplitText/SplitText";
 
 const CorporateTraning = () => {
 	const t = useTranslations("CorparateTraning");
@@ -52,12 +53,55 @@ const CorporateTraning = () => {
 					<div className={s.titleH2}>
 						<h6 className={s.titleSmall}>{t("title_small")}</h6>
 						<div className={s.title}>
-							<h2 className={s.titleHead}>{t("title_big_1")}</h2>
+							<h2 className={s.titleHead}>
+								<SplitText
+									text={t("title_big_1")}
+									className={s.titleHead}
+									delay={100}
+									duration={0.1}
+									ease="bounce.out"
+									splitType="chars"
+									from={{ opacity: 0, y: 40 }}
+									to={{ opacity: 1, y: 0 }}
+									threshold={0.01}
+									rootMargin="-100px"
+									textAlign="right"
+								/>
+								{/* {t("title_big_1")} */}
+							</h2>
 							<h2 className={`${s.titleHead} ${s.left}`}>
-								{t("title_big_2")}
+								<SplitText
+									text={t("title_big_2")}
+									className={`${s.titleHead} ${s.left}`}
+									delay={100}
+									duration={0.1}
+									ease="bounce.out"
+									splitType="chars"
+									from={{ opacity: 0, y: 40 }}
+									to={{ opacity: 1, y: 0 }}
+									threshold={0.01}
+									rootMargin="-100px"
+									textAlign="left"
+								/>
+								{/* {t("title_big_2")} */}
 								<div className={s.rectangle}></div>
 							</h2>
-							<h2 className={s.titleHead}>{t("title_big_3")}</h2>
+							<h2 className={s.titleHead}>
+								<SplitText
+									text={t("title_big_3")}
+									className={s.titleHead}
+									delay={100}
+									duration={0.1}
+									ease="bounce.out"
+									splitType="chars"
+									from={{ opacity: 0, y: 40 }}
+									to={{ opacity: 1, y: 0 }}
+									threshold={0.01}
+									rootMargin="-100px"
+									textAlign="right"
+								/>
+								{/* {t("title_big_3")} */}
+							</h2>
 						</div>
 					</div>
 

@@ -2,6 +2,7 @@ import React from "react";
 import s from "./HeroH1.module.css";
 import SwiperFactBlocks from "./SwiperFactBlocks/SwiperFactBlocks";
 import { useTranslations } from "next-intl";
+import SplitText from "@/components/UI/SplitText/SplitText";
 
 const HeroH1 = () => {
 	const t = useTranslations("Hero");
@@ -9,7 +10,20 @@ const HeroH1 = () => {
 		<div className={s.hOneBlock}>
 			<div className={s.heroWraperTitleH1}>
 				<h1 className={s.heroTitle}>
-					{t("title_h1")}
+					<SplitText
+						text={t("title_h1")}
+						className={s.heroTitle}
+						delay={1000}
+						duration={0.1}
+						ease="bounce.out"
+						splitType="words"
+						from={{ opacity: 0, y: 40 }}
+						to={{ opacity: 1, y: 0 }}
+						threshold={0.01}
+						rootMargin="-100px"
+						textAlign="left"
+					/>
+					{/* {t("title_h1")} */}
 					<span>{t("title_h2")}</span>
 				</h1>
 				<div className={s.rectangleH1}></div>
