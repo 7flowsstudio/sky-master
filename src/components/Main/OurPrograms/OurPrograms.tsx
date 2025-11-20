@@ -11,7 +11,6 @@ import { Link, usePathname } from "@/i18n/routing";
 import { programsData } from "./programData";
 import ScrollStack, { ScrollStackItem } from "./ScrollStack";
 import SplitText from "@/components/UI/SplitText/SplitText";
-// import { ScrollStack, ScrollStackItem } from "react-bits";
 
 const OurPrograms = () => {
   const t = useTranslations("OurPrograms");
@@ -46,7 +45,6 @@ const OurPrograms = () => {
                 rootMargin="-100px"
                 textAlign="left"
               />
-              {/* {t("tite_1")} */}
             </h3>
             <h3 className={`${s.programsTitle} ${s.right}`}>
               <SplitText
