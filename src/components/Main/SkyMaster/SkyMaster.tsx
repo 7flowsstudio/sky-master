@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import StartButton from "@/components/UI/StartButton/StartButton";
 import Image from "next/image";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
+import SplitText from "@/components/UI/SplitText/SplitText";
 
 const SkyMaster = () => {
 	const t = useTranslations("Skymaster");
@@ -26,7 +27,20 @@ const SkyMaster = () => {
 						<h6 className={s.titleSmall}>{t("title_small")}</h6>
 						<h2 className={s.titleBig}>
 							<div className={s.rectangle}></div>
-							{t("title_big")}
+							<SplitText
+								text={t("title_big")}
+								className={s.titleBig}
+								delay={50}
+								duration={0.1}
+								ease="power3.out"
+								splitType="chars"
+								from={{ opacity: 0, y: 40 }}
+								to={{ opacity: 1, y: 0 }}
+								threshold={0.01}
+								rootMargin="-100px"
+								textAlign="center"
+							/>
+							{/* {t("title_big")} */}
 						</h2>
 					</div>
 

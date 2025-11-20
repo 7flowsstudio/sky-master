@@ -9,6 +9,7 @@ import useIsMobile from "@/lib/isMobile/isMobile";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import { Link, usePathname } from "@/i18n/routing";
 import { programsData } from "./programData";
+import SplitText from "@/components/UI/SplitText/SplitText";
 
 const OurPrograms = () => {
 	const t = useTranslations("OurPrograms");
@@ -22,6 +23,10 @@ const OurPrograms = () => {
 		date: t(item.dateKey),
 		descr: t(item.descrKey),
 	}));
+
+	const handleAnimationComplete = () => {
+		console.log("All letters have animated!");
+	};
 	return (
 		<div className={s.ourPrograms}>
 			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
@@ -30,9 +35,38 @@ const OurPrograms = () => {
 					<div className={s.programsHeadTitle}>
 						<h3 className={`${s.programsTitle} ${s.left}`}>
 							<div className={s.rectangle}></div>
-							{t("tite_1")}
+							<SplitText
+								text={t("tite_1")}
+								className={`${s.programsTitle} ${s.left}`}
+								delay={100}
+								duration={0.6}
+								ease="power3.out"
+								splitType="chars"
+								from={{ opacity: 0, y: 40 }}
+								to={{ opacity: 1, y: 0 }}
+								threshold={0.1}
+								rootMargin="-100px"
+								textAlign="left"
+								onLetterAnimationComplete={handleAnimationComplete}
+							/>
+							{/* {t("tite_1")} */}
 						</h3>
-						<h3 className={`${s.programsTitle} ${s.right}`}>{t("tite_2")}</h3>
+						<h3 className={`${s.programsTitle} ${s.right}`}>
+							<SplitText
+								text={t("tite_2")}
+								className={`${s.programsTitle} ${s.right}`}
+								delay={100}
+								duration={0.06}
+								ease="power3.out"
+								splitType="chars"
+								from={{ opacity: 0, y: 40 }}
+								to={{ opacity: 1, y: 0 }}
+								threshold={0.4}
+								rootMargin="100px"
+								textAlign="right"
+								onLetterAnimationComplete={handleAnimationComplete}
+							/>
+						</h3>
 					</div>
 					<ul className={s.programsCardList}>
 						{cardList
