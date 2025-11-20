@@ -280,15 +280,15 @@ const ScrollStack = ({
 
     // код для скролу вниз при завантаженні //
 
-    const scrollToEnd = () => {
-      if (useWindowScroll) {
-        window.scrollTo(0, document.body.scrollHeight);
-      } else {
-        scroller.scrollTop = scroller.scrollHeight;
-      }
-      updateCardTransforms();
-    };
-    setTimeout(scrollToEnd, 10);
+    // const scrollToEnd = () => {
+    //   if (useWindowScroll) {
+    //     window.scrollTo(0, document.body.scrollHeight);
+    //   } else {
+    //     scroller.scrollTop = scroller.scrollHeight;
+    //   }
+    //   updateCardTransforms();
+    // };
+    // setTimeout(scrollToEnd, 10);
 
     return () => {
       if (animationFrameRef.current)
