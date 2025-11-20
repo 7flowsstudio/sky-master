@@ -24,9 +24,6 @@ const OurPrograms = () => {
 		descr: t(item.descrKey),
 	}));
 
-	const handleAnimationComplete = () => {
-		console.log("All letters have animated!");
-	};
 	return (
 		<div className={s.ourPrograms}>
 			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
@@ -47,7 +44,6 @@ const OurPrograms = () => {
 								threshold={0.1}
 								rootMargin="-100px"
 								textAlign="left"
-								onLetterAnimationComplete={handleAnimationComplete}
 							/>
 							{/* {t("tite_1")} */}
 						</h3>
