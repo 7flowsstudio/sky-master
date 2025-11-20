@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import HowItWorksSwiper from "./HowItWorksSwiper/HowItWorksSwiper";
 import { useScrollActiveList } from "@/lib/hooks/useScrollActiveList";
+import SplitText from "@/components/UI/SplitText/SplitText";
 
 type CardItem = {
 	id: number | string;
@@ -48,6 +49,10 @@ const HowItWorks = () => {
 		cardLists.length,
 	]);
 
+	const handleAnimationComplete = () => {
+		console.log("All letters have animated!");
+	};
+
 	return (
 		<div className={s.howItWorksWrapper}>
 			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
@@ -55,10 +60,40 @@ const HowItWorks = () => {
 					<div className={s.howTitleTop}>
 						<h6 className={s.titleTopSmall}>{t("h6")}</h6>
 						<div className={s.titleTopBigBlock}>
-							<h2 className={`${s.titleTopBig} ${s.left}`}>{t("h2_1")}</h2>
+							<h2 className={`${s.titleTopBig} ${s.left}`}>
+								<SplitText
+									text={t("h2_1")}
+									className={`${s.titleTopBig} ${s.left}`}
+									delay={100}
+									duration={0.06}
+									ease="power3.out"
+									splitType="chars"
+									from={{ opacity: 0, y: 40 }}
+									to={{ opacity: 1, y: 0 }}
+									threshold={0.4}
+									rootMargin="100px"
+									textAlign="left"
+									onLetterAnimationComplete={handleAnimationComplete}
+								/>
+								{/* {t("h2_1")} */}
+							</h2>
 							<h2 className={`${s.titleTopBig} ${s.right}`}>
 								<div className={s.rectangle}></div>
-								{t("h2_2")}
+								<SplitText
+									text={t("h2_2")}
+									className={`${s.titleTopBig} ${s.right}`}
+									delay={100}
+									duration={0.06}
+									ease="power3.out"
+									splitType="chars"
+									from={{ opacity: 0, y: 40 }}
+									to={{ opacity: 1, y: 0 }}
+									threshold={0.4}
+									rootMargin="100px"
+									textAlign="right"
+									onLetterAnimationComplete={handleAnimationComplete}
+								/>
+								{/* {t("h2_2")} */}
 							</h2>
 						</div>
 					</div>
