@@ -36,6 +36,16 @@ const OurPrograms = () => {
             </h3>
             <h3 className={`${s.programsTitle} ${s.right}`}>{t("tite_2")}</h3>
           </div>
+          {pathname !== "programs" && (
+            <div className={s.seeMoreWrapper}>
+              <Link href="/programs" className={s.link}>
+                <svg className={s.iconLink}>
+                  <use href="/sprite.svg#icon-arrow-top-right"></use>
+                </svg>
+                {t("btn")}
+              </Link>
+            </div>
+          )}
           <ScrollStack
             itemDistance={120} // відстань між картками
             itemScale={0.05} // наскільки зменшується картка позаду
@@ -97,7 +107,7 @@ const OurPrograms = () => {
                 </ScrollStackItem>
               ))}
           </ScrollStack>
-          {pathname !== "programs" && (
+          {/* {pathname !== "programs" && (
             <div className={s.seeMoreWrapper}>
               <Link href="/programs" className={s.link}>
                 <svg className={s.iconLink}>
@@ -106,7 +116,7 @@ const OurPrograms = () => {
                 {t("btn")}
               </Link>
             </div>
-          )}
+          )} */}
         </div>
       </WrapperForComponents>
     </div>

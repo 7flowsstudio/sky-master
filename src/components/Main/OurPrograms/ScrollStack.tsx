@@ -278,6 +278,18 @@ const ScrollStack = ({
     setupLenis();
     updateCardTransforms();
 
+    // код для скролу вниз при завантаженні //
+
+    const scrollToEnd = () => {
+      if (useWindowScroll) {
+        window.scrollTo(0, document.body.scrollHeight);
+      } else {
+        scroller.scrollTop = scroller.scrollHeight;
+      }
+      updateCardTransforms();
+    };
+    setTimeout(scrollToEnd, 50);
+
     return () => {
       if (animationFrameRef.current)
         cancelAnimationFrame(animationFrameRef.current);
