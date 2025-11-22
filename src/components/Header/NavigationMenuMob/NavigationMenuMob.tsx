@@ -8,6 +8,7 @@ import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 import StartButtonMob from "@/components/UI/StartButtonMob/StartButtonMob";
 
 type MyComponentProps = {
+	setOpenModal: React.Dispatch<SetStateAction<boolean>>;
 	setOpenMenu: React.Dispatch<SetStateAction<boolean>>;
 	openMenu: boolean;
 };
@@ -15,6 +16,7 @@ type MyComponentProps = {
 export const NavigationMenuMob = ({
 	setOpenMenu,
 	openMenu,
+	setOpenModal,
 }: MyComponentProps) => {
 	return (
 		<div className={s.menuWrapper}>
@@ -26,7 +28,7 @@ export const NavigationMenuMob = ({
 				<MenuList setOpenMenu={setOpenMenu} />
 				<LocaleSwitcher />
 			</div>
-			<StartButtonMob />
+			<StartButtonMob setOpenModal={setOpenModal} setOpenMenu={setOpenMenu} />
 		</div>
 	);
 };

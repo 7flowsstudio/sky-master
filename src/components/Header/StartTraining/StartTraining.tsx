@@ -1,11 +1,18 @@
-import React from "react";
+import React, { SetStateAction } from "react";
 import { useTranslations } from "next-intl";
 import s from "./StartTraining.module.css";
 
-const StartTraining = () => {
+type StartTraningProps = {
+	setOpenModal: React.Dispatch<SetStateAction<boolean>>;
+};
+
+const StartTraining: React.FC<StartTraningProps> = ({ setOpenModal }) => {
 	const t = useTranslations("Header");
 	return (
-		<button className={`${s.navLinkBtn} ${s.font}`}>
+		<button
+			className={`${s.navLinkBtn} ${s.font}`}
+			onClick={() => setOpenModal(true)}
+		>
 			{t("link")}
 			<div className={s.navLinkWrapper}>
 				<svg className={s.navLinkIcon}>

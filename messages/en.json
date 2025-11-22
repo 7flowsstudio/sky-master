@@ -298,6 +298,26 @@
 			"Mapping Basics"
 		]
 	},
+
+	"ContactForm": {
+		"name": "name",
+		"email": "email",
+		"military": "are you a military personnel?",
+		"yes": "Yes",
+		"no": "No",
+		"select": "Select a program",
+		"select_variant": [
+			"FPV Basic",
+			"FPV Pro",
+			"Tactical Start",
+			"Night Ops",
+			"Civil Flight",
+			"Mapping Basics"
+		],
+		"message": "You Message",
+		"btn": "send"
+	},
+
 	"Footer": {
 		"menu": ["Programs", "Corporate", "About skymaster", "Contacts"],
 		"rights": "© 2025 SkyMaster. All rights reserved."
