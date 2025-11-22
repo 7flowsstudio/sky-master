@@ -8,9 +8,17 @@ import NavigationMenu from "./NavigationMenu/NavigationMenu";
 import StartTraining from "./StartTraining/StartTraining";
 import BurgerButton from "./BurgerButton/BurgerButton";
 import { NavigationMenuMob } from "./NavigationMenuMob/NavigationMenuMob";
+import ModalWrapper from "../UI/ModalWrapper/ModalWrapper";
+import ContactsForm from "../UI/ContactsForm/ContactsForm";
 
 const Header = () => {
+	const [openModal, setOpenModal] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
+
+	const CloseModal = () => {
+		setOpenModal(false);
+	};
+
 	return (
 		<>
 			<WrapperForComponents paddingTop={17} paddingBottom={15}>
@@ -22,15 +30,24 @@ const Header = () => {
 						<div className={s.localSwitcher}>
 							<LocaleSwitcher />
 						</div>
-						<StartTraining />
+						<StartTraining setOpenModal={setOpenModal} />
 					</div>
 					<BurgerButton openMenu={openMenu} setOpenMenu={setOpenMenu} />
 				</nav>
 			</WrapperForComponents>
 			<div className={s.lineBottom}></div>
 			<div className={`${s.menuHead} ${openMenu ? s.open : ""}`}>
-				<NavigationMenuMob setOpenMenu={setOpenMenu} openMenu={openMenu} />
+				<NavigationMenuMob
+					setOpenMenu={setOpenMenu}
+					openMenu={openMenu}
+					setOpenModal={setOpenModal}
+				/>
 			</div>
+			{openModal && (
+				<ModalWrapper onClose={CloseModal}>
+					<ContactsForm onClose={CloseModal} />
+				</ModalWrapper>
+			)}
 		</>
 	);
 };
