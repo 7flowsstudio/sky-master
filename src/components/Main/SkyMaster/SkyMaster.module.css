@@ -95,12 +95,7 @@
   flex-shrink: 0;
   /* border: 1px solid green; */
   background: var(--background-inverse);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.advItem:hover,
-.imgAdventages:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  /* transition: transform 0.5s ease, box-shadow 0.5s ease; */
 }
 
 .advWrap {
@@ -149,6 +144,10 @@
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   /* height: 624px; */
   /* border: 1px solid blue; */
+}
+.imgAdventages:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .imgSkymaster {
