@@ -25,7 +25,11 @@ const OurPrograms = () => {
     descr: t(item.descrKey),
   }));
   return (
-    <div className={s.ourPrograms}>
+    <div
+      className={`${s.ourPrograms} ${
+        pathname === "programs" ? "scrollstack-fullpage" : ""
+      }`}
+    >
       <WrapperForComponents paddingTop={top} paddingBottom={bottom}>
         <div className={s.programsBlock}>
           <h5 className={s.programsSmallTitle}>{t("titleSection")}</h5>
@@ -62,7 +66,7 @@ const OurPrograms = () => {
               />
             </h3>
           </div>
-          {pathname !== "programs" && (
+          {/* {pathname !== "programs" && (
             <div className={s.seeMoreWrapper}>
               <Link href="/programs" className={s.link}>
                 <svg className={s.iconLink}>
@@ -71,7 +75,7 @@ const OurPrograms = () => {
                 {t("btn")}
               </Link>
             </div>
-          )}
+          )} */}
           <ScrollStack
             itemDistance={120} // відстань між картками
             // itemScale={0.05} // наскільки зменшується картка позаду
@@ -133,7 +137,7 @@ const OurPrograms = () => {
                 </ScrollStackItem>
               ))}
           </ScrollStack>
-          {/* {pathname !== "programs" && (
+          {pathname !== "programs" && (
             <div className={s.seeMoreWrapper}>
               <Link href="/programs" className={s.link}>
                 <svg className={s.iconLink}>
@@ -142,7 +146,7 @@ const OurPrograms = () => {
                 {t("btn")}
               </Link>
             </div>
-          )} */}
+          )}
         </div>
       </WrapperForComponents>
     </div>

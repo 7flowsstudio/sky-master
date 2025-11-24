@@ -1,5 +1,6 @@
 .ourPrograms {
   border-top: 1px solid #242424;
+  padding-bottom: 120px;
 }
 .programsBlock {
   display: flex;
