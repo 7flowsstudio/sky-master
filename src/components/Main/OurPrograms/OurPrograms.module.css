@@ -182,7 +182,7 @@
 .link {
   border: 1px solid var(--border-primary);
   padding: 12px 12px;
-  width: 115px;
+  /* width: 115px; */
   height: 48px;
   display: flex;
   align-items: center;
