@@ -1,47 +1,77 @@
-.ourParthnersSwiper {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px 0px;
-	gap: 24px;
-	border-top: 1px solid #242424;
-}
 .ourParthnersTitle {
-	color: var(--content-secondary);
-	text-align: center;
-	leading-trim: both;
-	text-edge: cap;
-	font-family: var(--second-family);
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 120%;
-	letter-spacing: 1.12px;
-	text-transform: uppercase;
+  color: var(--content-secondary);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--second-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: 1.12px;
+  text-transform: uppercase;
 }
 .ourParthnersList {
-	display: flex;
-	width: 100%;
-	max-width: 1360px;
-	align-items: center;
-	gap: 120px;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.imgParthners {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.ourParthnersSwiper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  gap: 24px;
+  border-top: 1px solid #242424;
+}
+
+.sliderContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 70px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .ourParthnersItem {
-	display: flex;
-	/* width: auto; */
-	align-items: center;
-	justify-content: center;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.slide {
-	width: auto !important; /* щоб slide підлаштовувався під зображення */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.imgParthners {
-	height: 50px;
-	width: auto;
+
+/* .imgParthners {
+  width: 120px;
+  height: 50px;
+  object-fit: contain;
+} */
+@media screen and (min-width: 768px) {
+  .sliderTrack {
+    gap: 120px;
+  }
+  .imgParthners {
+    height: 50px;
+  }
 }
