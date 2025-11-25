@@ -13,6 +13,7 @@
   will-change: scroll-position;
   scrollbar-width: none; /* для Firefox */
   -ms-overflow-style: none;
+  padding: 0 20px;
 }
 
 .scroll-stack-inner {
@@ -21,6 +22,8 @@
 }
 .scrollstack-fullpage .scroll-stack-scroller {
   height: 100vh !important;
+  margin-top: -150px;
+  margin-bottom: -100px;
 }
 
 .scrollstack-fullpage .scroll-stack-inner {
@@ -36,15 +39,11 @@
   will-change: transform, filter;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
   height: 20rem;
-  /* height: calc((100vh - 2 * 30px) / 3); */
   width: 100%;
-  /* margin: 30px 0; */
   padding: 0rem;
   border-radius: 40px;
   box-sizing: border-box;
-  /* Improve mobile performance */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   position: relative;
@@ -59,4 +58,17 @@
 }
 .scroll-stack-scroller::-webkit-scrollbar {
   display: none; /* для Chrome, Safari, Edge */
+}
+@media screen and (max-width: 554px) {
+  .scroll-stack-card {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 555px) and (max-width: 768px) {
+  .scroll-stack-card {
+    height: 60vh;
+  }
+  .scroll-stack-scroller {
+    padding: 0 30px;
+  }
 }
