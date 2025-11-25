@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import s from "./ScrollStack.module.css";
 import Image from "next/image";
 import useIsMobile from "@/lib/isMobile/isMobile";
 import StartButton from "@/components/UI/StartButton/StartButton";
+import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
+import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
 
 interface Card {
 	id?: string | number;
@@ -22,8 +24,13 @@ interface ScrollStackProps {
 }
 
 const ScrollStack = ({ cardList, cardGap = 20 }: ScrollStackProps) => {
+	const [openModal, setOpenModal] = useState(false);
 	const containerRef = useRef<HTMLUListElement | null>(null);
 	const isMobile = useIsMobile();
+
+	const CloseModal = () => {
+		setOpenModal(false);
+	};
 
 	// useEffect(() => {
 	// 	const container = containerRef.current;
@@ -64,46 +71,54 @@ const ScrollStack = ({ cardList, cardGap = 20 }: ScrollStackProps) => {
 	// }, [cardList, cardGap]);
 
 	return (
-		<ul className={s.programsCardList} ref={containerRef}>
-			{cardList.map((item) => (
-				<li key={item.id} className={s.card}>
-					<div className={s.cardInner}>
-						<Image
-							src={isMobile ? item.src_mob : item.src}
-							width={325}
-							height={400}
-							alt={`image` + item.id}
-							className={s.programsImage}
-						/>
-						<div className={s.programsContent}>
-							<div className={s.programsContentTop}>
-								<h4 className={s.cardTitle}>{item.title}</h4>
-								<div className={s.horizontSeparator}></div>
-								<div className={s.programsInfo}>
-									<svg className={s.cardIcon}>
-										<use href="/sprite.svg#icon-teenyicons-location"></use>
-									</svg>
-									{item.local}
-									<svg className={s.cardIcon}>
-										<use href="sprite.svg#icon-slash"></use>
-									</svg>
-									<svg className={s.cardIcon}>
-										<use href="/sprite.svg#icon-tdesign-calendar-filled"></use>
-									</svg>
-									{item.date}
+		<>
+			{" "}
+			<ul className={s.programsCardList} ref={containerRef}>
+				{cardList.map((item) => (
+					<li key={item.id} className={s.card}>
+						<div className={s.cardInner}>
+							<Image
+								src={isMobile ? item.src_mob : item.src}
+								width={325}
+								height={400}
+								alt={`image` + item.id}
+								className={s.programsImage}
+							/>
+							<div className={s.programsContent}>
+								<div className={s.programsContentTop}>
+									<h4 className={s.cardTitle}>{item.title}</h4>
+									<div className={s.horizontSeparator}></div>
+									<div className={s.programsInfo}>
+										<svg className={s.cardIcon}>
+											<use href="/sprite.svg#icon-teenyicons-location"></use>
+										</svg>
+										{item.local}
+										<svg className={s.cardIcon}>
+											<use href="sprite.svg#icon-slash"></use>
+										</svg>
+										<svg className={s.cardIcon}>
+											<use href="/sprite.svg#icon-tdesign-calendar-filled"></use>
+										</svg>
+										{item.date}
+									</div>
 								</div>
-							</div>
-							<div className={s.programsContentBottom}>
-								<h4 className={s.cardDescription}>{item.descr}</h4>
-								<div className={s.cardBtnBlock}>
-									<StartButton />
+								<div className={s.programsContentBottom}>
+									<h4 className={s.cardDescription}>{item.descr}</h4>
+									<div className={s.cardBtnBlock}>
+										<StartButton setOpenModal={setOpenModal} />
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</li>
-			))}
-		</ul>
+					</li>
+				))}
+			</ul>
+			{openModal && (
+				<ModalWrapper onClose={CloseModal}>
+					<ContactsForm onClose={CloseModal} />
+				</ModalWrapper>
+			)}
+		</>
 	);
 };
 
