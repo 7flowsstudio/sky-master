@@ -23,6 +23,7 @@
 .scrollstack-fullpage .scroll-stack-scroller {
   height: 100vh !important;
   margin-top: -150px;
+  margin-bottom: -100px;
 }
 
 .scrollstack-fullpage .scroll-stack-inner {
