@@ -132,9 +132,8 @@ const ContactsForm = ({ onClose }: CloseProps) => {
 
 					{/* PROGRAM SELECT */}
 					<label className={s.label}>
-						<span className={s.labelText}>{t("select")}*</span>
 						<Field as="select" className={s.select} name="program">
-							<option value="">— choose —</option>
+							<option value="">{t("select")}*</option>
 							<option value="FPV Basic">{t("select_variant.0")}</option>
 							<option value="FPV Pro">{t("select_variant.1")}</option>
 							<option value="Tactical Start">{t("select_variant.2")}</option>
