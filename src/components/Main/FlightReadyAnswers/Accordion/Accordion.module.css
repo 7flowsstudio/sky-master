@@ -64,6 +64,7 @@
 	flex-shrink: 0;
 	gap: 8px;
 	padding: 4px;
+	position: relative;
 
 	box-sizing: border-box;
 	border: 1px solid var(--border-disabled);
@@ -71,7 +72,24 @@
 	background: rgba(0, 0, 0, 0.1);
 }
 .accordionIcon {
+	position: absolute;
 	width: 24px;
 	height: 24px;
 	fill: var(--content-icon);
+
+	opacity: 0;
+	transition: opacity 0.7s ease;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+/* Ключове! — нема transition */
+.noAnimation {
+	transition: none !important;
 }
