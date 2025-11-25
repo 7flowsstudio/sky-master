@@ -13,6 +13,9 @@
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	position: relative;
 }
+.navItemLink:hover {
+	color: var(--content-linkhover);
+}
 .navItemLink::after {
 	position: absolute;
 	content: "";
@@ -22,7 +25,7 @@
 	transform: translate(-50%);
 	bottom: -4px;
 	font-size: 20px;
-	background-color: var(--border-hover);
+	background-color: var(--content-linkhover);
 	display: block;
 	opacity: 0;
 	transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
