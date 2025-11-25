@@ -167,6 +167,14 @@ const ScrollStack = ({
         translateY = pinEnd - cardTop + stackPositionPx + itemStackDistance * i;
       }
 
+      // if (i === cardsRef.current.length - 1) {
+      //   if (scrollTop > pinEnd) {
+      //     // просто відпускаємо останню карту
+      //     translateY =
+      //       pinEnd - cardTop + stackPositionPx + itemStackDistance * i;
+      //   }
+      // }
+
       const newTransform = {
         translateY: Math.round(translateY * 100) / 100,
         scale: Math.round(scale * 1000) / 1000,
