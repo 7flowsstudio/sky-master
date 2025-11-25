@@ -47,7 +47,7 @@ const CorporateTraning = () => {
 		},
 	];
 	return (
-		<div className={s.corporateWrapper}>
+		<div id="Corporate" className={s.corporateWrapper}>
 			<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
 				<div className={s.corporateBlock}>
 					<div className={s.titleH2}>

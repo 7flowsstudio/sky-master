@@ -1,3 +1,4 @@
 .takeControlWrapper {
 	padding-top: 1px solid var(--background-primary);
+	border-bottom: 1px solid var(--border-primary);
 }
