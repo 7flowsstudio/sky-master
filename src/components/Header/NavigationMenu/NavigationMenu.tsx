@@ -10,8 +10,8 @@ const NavigationMenu = () => {
 	const navList = [
 		{ id: 0, name: t("menu.0"), link: "/programs" },
 		{ id: 1, name: t("menu.1"), link: "#Corporate" },
-		{ id: 2, name: t("menu.2"), link: "/about" },
-		{ id: 3, name: t("menu.3"), link: "/contacts" },
+		{ id: 2, name: t("menu.2"), link: "/" },
+		{ id: 3, name: t("menu.3"), link: "/" },
 	] as const;
 
 	const searchParams = useSearchParams();
@@ -30,7 +30,7 @@ const NavigationMenu = () => {
 
 	return (
 		<ul className={s.navigationList}>
-			{navList.map((item, index) => {
+			{navList.map((item) => {
 				const isScroll = item.link.startsWith("#Corporate");
 				return (
 					<li key={item.id} className={s.navigationItem}>
