@@ -18,9 +18,9 @@ const HeroH1 = () => {
 					<SplitText
 						text={t("title_h1")}
 						className={s.heroTitle}
-						delay={1000}
-						duration={0.1}
-						ease="bounce.out"
+						delay={500}
+						duration={0.3}
+						ease="power3.out"
 						splitType="words"
 						from={{ opacity: 0, y: 50 }}
 						to={{ opacity: 1, y: 0 }}

@@ -58,6 +58,24 @@
 	bottom: 0;
 	right: 0;
 }
+/* herotext */
+.heroText {
+	position: relative;
+	z-index: 1;
+}
+
+.animateText {
+	opacity: 0;
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animateText {
+	transform: translateY(50px);
+}
+.animateText.visible {
+	opacity: 1;
+	transform: translate(0);
+}
+
 @media screen and (max-width: 767px) {
 	.heroWraperTitleH1 {
 		height: calc((300 / 375) * 100vw);
@@ -106,24 +124,6 @@
 		font-weight: 700;
 		line-height: 120px;
 		letter-spacing: -2px;
-	}
-
-	/* herotext */
-	.heroText {
-		position: relative;
-		z-index: 1;
-	}
-
-	.animateText {
-		opacity: 0;
-		transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-	}
-	.animateText {
-		transform: translateY(50px);
-	}
-	.animateText.visible {
-		opacity: 1;
-		transform: translate(0);
 	}
 }
 @media screen and (max-width: 420px) {
