@@ -19,13 +19,13 @@ const Footer = () => {
 							<li className={`${s.footerContentItem} ${s.notDisplay}`}>
 								<ul className={s.footerRightsList}>
 									<li className={s.footerRightsItem}>
-										<Link href="/privacy">Privacy policy</Link>
+										<Link href="/">Privacy policy</Link>
 									</li>
 									<li className={s.footerRightsItem}>
-										<Link href="/policy">cookie policy</Link>
+										<Link href="/">cookie policy</Link>
 									</li>
 									<li className={s.footerRightsItem}>
-										<Link href="/terms">terms & conditions</Link>
+										<Link href="/">terms & conditions</Link>
 									</li>
 								</ul>
 							</li>
@@ -42,9 +42,10 @@ const Footer = () => {
 							<li className={s.footerContentItem}>
 								<ul className={s.footerMenuList}>
 									<li className={s.footerMenuItem}>
-										<LocalizedScrollLink href="/" scrollId="#Programs">
+										{/* <LocalizedScrollLink href="/" scrollId="#Programs">
 											{t("menu.0")}
-										</LocalizedScrollLink>
+										</LocalizedScrollLink> */}
+										<Link href="/programs">{t("menu.0")}</Link>
 										{/* <a href="#Programs">{t("menu.0")}</a> */}
 									</li>
 									<li className={s.footerMenuItem}>
@@ -67,13 +68,13 @@ const Footer = () => {
 									</li>
 
 									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
-										<Link href="/privacy">Privacy policy</Link>
+										<Link href="/">Privacy policy</Link>
 									</li>
 									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
-										<Link href="/policy">cookie policy</Link>
+										<Link href="/">cookie policy</Link>
 									</li>
 									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
-										<Link href="/terms">terms & conditions</Link>
+										<Link href="/">terms & conditions</Link>
 									</li>
 								</ul>
 							</li>
@@ -82,14 +83,17 @@ const Footer = () => {
 				</WrapperForComponents>
 			</div>
 			<div className={s.AllRights}>
-				<div className={s.footerLogo}>
-					<svg className={`${s.logoIcon} ${s.leftIcon}`}>
-						<use href="/sprite.svg#icon-symbol_logo"></use>
-					</svg>
-					<svg className={`${s.logoIcon} ${s.rightIcon}`}>
-						<use href="/sprite.svg#icon-skymaster"></use>
-					</svg>
-				</div>
+				<Link href="/">
+					<div className={s.footerLogo}>
+						<svg className={`${s.logoIcon} ${s.leftIcon}`}>
+							<use href="/sprite.svg#icon-symbol_logo"></use>
+						</svg>
+						<svg className={`${s.logoIcon} ${s.rightIcon}`}>
+							<use href="/sprite.svg#icon-skymaster"></use>
+						</svg>
+					</div>
+				</Link>
+
 				<h6 className={s.textAllRights}>{t("rights")}</h6>
 			</div>
 		</>
