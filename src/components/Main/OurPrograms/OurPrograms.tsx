@@ -13,6 +13,7 @@ import ScrollStack, { ScrollStackItem } from "./ScrollStack";
 import SplitText from "@/components/UI/SplitText/SplitText";
 import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
 import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
+import StartButtonLink from "@/components/UI/StartButtonLink/StartButtonLink";
 
 const OurPrograms = () => {
 	const [openModal, setOpenModal] = useState(false);
@@ -106,14 +107,14 @@ const OurPrograms = () => {
 
 											<div className={s.programsContent}>
 												<div className={s.programsContentTop}>
-													<Link
+													{/* <Link
 														href={{
 															pathname: "/programs/[id]",
 															params: { id: String(item.id) },
 														}}
-													>
-														<h4 className={s.cardTitle}>{item.title}</h4>
-													</Link>
+													> */}
+													<h4 className={s.cardTitle}>{item.title}</h4>
+													{/* </Link> */}
 
 													<div className={s.horizontSeparator}></div>
 
@@ -138,7 +139,8 @@ const OurPrograms = () => {
 												<div className={s.programsContentBottom}>
 													<h4 className={s.cardDescription}>{item.descr}</h4>
 													<div className={s.cardBtnBlock}>
-														<StartButton setOpenModal={setOpenModal} />
+														<StartButtonLink id={item.id} />
+														{/* <StartButton setOpenModal={setOpenModal} /> */}
 													</div>
 												</div>
 											</div>

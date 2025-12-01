@@ -1,0 +1,43 @@
+.link {
+	width: 100%;
+	max-width: 226px;
+	height: 56px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	padding: 16px 24px;
+	background: var(--background-brand);
+
+	color: var(--content-primary);
+
+	font-family: var(--second-family);
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-align: left;
+	text-transform: uppercase;
+
+	transform: scale(1);
+	transition: transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.link:hover {
+	transform: scale(1.04);
+	transition: transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.iconBlock {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.iconLink {
+	width: 12px;
+	height: 12px;
+	stroke: var(--content-icon);
+}
