@@ -4,7 +4,7 @@ import s from "./OurPrograms.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import StartButton from "@/components/UI/StartButton/StartButton";
+// import StartButton from "@/components/UI/StartButton/StartButton";
 import useIsMobile from "@/lib/isMobile/isMobile";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import { Link, usePathname } from "@/i18n/routing";
@@ -15,7 +15,11 @@ import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
 import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
 import StartButtonLink from "@/components/UI/StartButtonLink/StartButtonLink";
 
-const OurPrograms = () => {
+type Props = {
+	type?: string;
+};
+
+const OurPrograms = ({ type }: Props) => {
 	const [openModal, setOpenModal] = useState(false);
 	const t = useTranslations("OurPrograms");
 	const pathname = usePathname().split("/")[1];
@@ -37,10 +41,15 @@ const OurPrograms = () => {
 		<>
 			<div
 				className={`${s.ourPrograms} ${
-					pathname === "programs" ? "scrollstack-fullpage" : ""
+					pathname === "programs"
+						? "scrollstack-fullpage"
+						: "scrollstack-fullpage-section"
 				}`}
 			>
-				<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
+				<WrapperForComponents
+					paddingTop={type ? 40 : top}
+					paddingBottom={type ? 40 : bottom}
+				>
 					<div className={s.programsBlock}>
 						<h5 className={s.programsSmallTitle}>{t("titleSection")}</h5>
 						<div className={s.programsHeadTitle}>
