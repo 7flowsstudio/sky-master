@@ -22,7 +22,7 @@
 }
 .scrollstack-fullpage .scroll-stack-scroller {
 	height: 100vh !important;
-	margin-top: -150px;
+	margin-top: -200px;
 	margin-bottom: -100px;
 }
 
@@ -31,13 +31,13 @@
 }
 
 .scrollstack-fullpage-section .scroll-stack-scroller {
-	height: 68vh !important;
-	margin-top: -110px;
+	height: 52vh !important;
+	margin-top: -90px;
 	margin-bottom: 0px;
 }
 
 .scrollstack-fullpage-section .scroll-stack-inner {
-	padding: 20vh 1 50vh !important;
+	padding: 0vh 10 50vh !important;
 }
 
 .scroll-stack-card-wrapper {
