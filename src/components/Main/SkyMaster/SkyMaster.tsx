@@ -9,10 +9,19 @@ import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import SplitText from "@/components/UI/SplitText/SplitText";
 import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
 import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
+import useScrollAnimation from "@/lib/hooks/useScrollAnimation";
 
 const SkyMaster = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const t = useTranslations("Skymaster");
+	const [adventagesRef, adventagesVisible] = useScrollAnimation() as [
+		React.RefObject<HTMLDivElement>,
+		boolean
+	];
+	const [adventagesListRef, adventagesListVisible] = useScrollAnimation() as [
+		React.RefObject<HTMLUListElement>,
+		boolean
+	];
 
 	const { top, bottom } = useSizeWindows();
 
@@ -53,7 +62,12 @@ const SkyMaster = () => {
 						</div>
 
 						<div className={s.content}>
-							<ul className={s.adventagesList}>
+							<ul
+								ref={adventagesListRef}
+								className={`${s.adventagesList} ${s.animateAdventagesList} ${
+									adventagesListVisible ? s.visible : ""
+								}`}
+							>
 								{itemList.map((item) => (
 									<li key={item.id} className={s.advItem}>
 										<div className={s.advWrap}>
@@ -70,7 +84,12 @@ const SkyMaster = () => {
 									</li>
 								))}
 							</ul>
-							<div className={s.imgAdventages}>
+							<div
+								ref={adventagesRef}
+								className={`${s.imgAdventages} ${s.animateAdventages} ${
+									adventagesVisible ? s.visible : ""
+								}`}
+							>
 								<Image
 									src="/img/skymaster/adventage.png"
 									width={355}

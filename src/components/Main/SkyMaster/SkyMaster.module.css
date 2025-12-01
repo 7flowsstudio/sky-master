@@ -84,6 +84,24 @@
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
+.animateAdventages,
+.animateAdventagesList {
+	opacity: 0;
+	transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.animateAdventages {
+	transform: translateY(100px);
+}
+
+.animateAdventagesList {
+	transform: translateY(100px);
+}
+.animateAdventages.visible,
+.animateAdventagesList.visible {
+	opacity: 1;
+	transform: translate(0);
+}
+
 .advItem {
 	display: flex;
 	width: 300px;
@@ -213,10 +231,20 @@
 		height: 624px;
 		/* border: 1px solid blue; */
 	}
+
+	.animateAdventages {
+		transform: translateX(50px);
+	}
+
+	.animateAdventagesList {
+		transform: translateX(-50px);
+	}
+
 	.adventagesList {
 		flex-wrap: wrap;
 		gap: 20px;
 	}
+
 	.advItem {
 		width: calc((100% - 20px) / 2);
 	}
