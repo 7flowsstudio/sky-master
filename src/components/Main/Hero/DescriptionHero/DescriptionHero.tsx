@@ -5,14 +5,26 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import StartTrainingHero from "../StartTrainingHero/StartTrainingHero";
+import TextType from "@/lib/TextType/TextType";
 
 const DescriptionHero = () => {
-	const [hover, setHover] = useState(false);
+	// const [hover, setHover] = useState(false);
 	const t = useTranslations("Hero");
 	return (
 		<ul className={s.descriptionList}>
 			<li className={s.descrText}>
-				{t("descr_bottom_text_1")}
+				<TextType
+					text={[
+						t("descr_bottom_text_1"),
+						t("descr_bottom_text_1"),
+						t("descr_bottom_text_1"),
+					]}
+					typingSpeed={75}
+					pauseDuration={1500}
+					showCursor={true}
+					cursorCharacter="|"
+				/>
+				{/* {t("descr_bottom_text_1")} */}
 				<span>{t("descr_bottom_text_2")}</span>
 			</li>
 			<li
