@@ -10,6 +10,7 @@ import SplitText from "@/components/UI/SplitText/SplitText";
 import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
 import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
 import useScrollAnimation from "@/lib/hooks/useScrollAnimation";
+import SeePrograms from "@/components/UI/SeePrograms/SeePrograms";
 
 const SkyMaster = () => {
 	const [openModal, setOpenModal] = useState(false);
@@ -101,7 +102,8 @@ const SkyMaster = () => {
 								<div className={s.imgDescr}>
 									<h4 className={s.advTitle}>{t("flight_head.title")}</h4>
 									<p className={s.advText}>{t("flight_head.text")}</p>
-									<StartButton setOpenModal={setOpenModal} />
+									<SeePrograms />
+									{/* <StartButton setOpenModal={setOpenModal} /> */}
 								</div>
 							</div>
 						</div>
