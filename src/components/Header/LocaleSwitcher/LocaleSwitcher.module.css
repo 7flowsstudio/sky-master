@@ -10,6 +10,15 @@
 	align-items: center;
 	justify-content: center;
 }
+.nav__select {
+	appearance: none;
+	-webkit-appearance: none; /* Safari/Chrome */
+	-moz-appearance: none; /* Firefox */
+	background-image: none; /* Прибрати фонову стрілку */
+}
+.nav__select::-ms-expand {
+	display: none; /* IE/Edge старі */
+}
 
 .label__select {
 	display: flex;
@@ -25,11 +34,14 @@
 .arrow_icon {
 	fill: none;
 	stroke: var(--content-secondary);
-	width: 16px;
-	height: 16px;
+	width: 12px;
+	height: 12px;
 	position: absolute;
 	right: 0px;
 	pointer-events: none;
+}
+.mob {
+	stroke: var(--content-primary);
 }
 .label__select:hover .nav__select {
 	font-size: 14px;
@@ -43,7 +55,7 @@
 	border: none;
 
 	height: 16px;
-	width: 38px;
+	width: 40px;
 	font-family: var(--second-family);
 	font-size: 14px;
 	font-style: normal;
