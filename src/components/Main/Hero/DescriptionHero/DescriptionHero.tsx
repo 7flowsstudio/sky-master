@@ -17,7 +17,7 @@ const DescriptionHero = () => {
 			</li>
 			<li
 				className={s.descrBaner}
-				style={{ transform: hover ? "scale(1.02)" : "scale(1)" }}
+				// style={{ transform: hover ? "scale(1.02)" : "scale(1)" }}
 			>
 				<Image
 					src="/img/hero/soldier.png"
@@ -31,8 +31,8 @@ const DescriptionHero = () => {
 						<Link href="/programs">
 							<div
 								className={s.linkIconWrap}
-								onMouseEnter={() => setHover(true)}
-								onMouseLeave={() => setHover(false)}
+								// onMouseEnter={() => setHover(true)}
+								// onMouseLeave={() => setHover(false)}
 							>
 								<svg className={s.linkIcon}>
 									<use href="/sprite.svg#icon-arrow-top-right"></use>

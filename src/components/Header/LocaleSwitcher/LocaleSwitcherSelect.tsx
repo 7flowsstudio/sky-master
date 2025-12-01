@@ -8,11 +8,13 @@ import s from "./LocaleSwitcher.module.css";
 type Props = {
 	children: ReactNode;
 	defaultValue: string;
+	type?: string;
 };
 
 export default function LocaleSwitcherSelect({
 	children,
 	defaultValue,
+	type,
 }: Props) {
 	const router = useRouter();
 	const [isPending, startTransition] = useTransition();
@@ -42,7 +44,7 @@ export default function LocaleSwitcherSelect({
 			>
 				{children}
 			</select>
-			<svg className={s.arrow_icon}>
+			<svg className={`${s.arrow_icon} ${type === "mob" ? s.mob : ""}`}>
 				<use href="/sprite.svg#icon-arrow-bottom" />
 			</svg>
 		</label>

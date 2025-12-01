@@ -26,7 +26,7 @@ export const NavigationMenuMob = ({
 			</div>
 			<div className={s.menuBody}>
 				<MenuList setOpenMenu={setOpenMenu} />
-				<LocaleSwitcher />
+				<LocaleSwitcher type="mob" />
 			</div>
 			<StartButtonMob setOpenModal={setOpenModal} setOpenMenu={setOpenMenu} />
 		</div>
