@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import s from "./SkyMaster.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
-import StartButton from "@/components/UI/StartButton/StartButton";
+// import StartButton from "@/components/UI/StartButton/StartButton";
 import Image from "next/image";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import SplitText from "@/components/UI/SplitText/SplitText";
