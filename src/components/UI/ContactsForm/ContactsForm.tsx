@@ -40,10 +40,7 @@ const ContactsForm = ({ onClose }: CloseProps) => {
 			.required("Введіть коректний email!"),
 		program: Yup.string().required("Оберіть програму"),
 		military: Yup.string().required("Оберіть варіант"),
-		message: Yup.string()
-			.min(10, "Від 10 до 500 символів!")
-			.max(500, "Від 10 до 500 символів!")
-			.required("Це поле обов'язкове!"),
+		message: Yup.string().optional(),
 	});
 
 	const handleAdd = async (
