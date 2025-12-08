@@ -26,7 +26,7 @@
 }
 
 .input {
-	background: transparent;
+	background: var(--background-brand);
 	border: none;
 	border-bottom: 3px solid var(--white);
 	color: var(--white);
@@ -43,6 +43,15 @@
 	letter-spacing: 1px;
 	text-align: left;
 	text-transform: uppercase;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 1000px var(--background-brand) inset !important;
+	-webkit-text-fill-color: var(--white) !important;
+	background: var(--background-brand) !important;
 }
 .error {
 	color: var(--red-100);
@@ -61,6 +70,19 @@
 	border: none;
 	border-bottom: 3px solid var(--white);
 	padding: 6px 0;
+}
+
+/* Стилі для опцій у списку */
+.select option {
+	background-color: var(--background-brand);
+	color: var(--white);
+	padding: 8px;
+}
+
+/* Активна обрана опція (іноді працює в Safari/Firefox) */
+.select option:checked {
+	background-color: var(--background-brand);
+	color: var(--white);
 }
 
 .radioGroup {
