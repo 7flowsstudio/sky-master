@@ -62,7 +62,7 @@ const SwiperGallery = () => {
         modules={[Navigation, Pagination, Keyboard]}
         keyboard={{ enabled: true }}
         speed={800}
-        loop={false}
+        loop={true}
         slidesOffsetBefore={0}
         onBeforeInit={(swiper) => {
           const navigation = swiper.params.navigation;
