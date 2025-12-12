@@ -1,7 +1,7 @@
 .navLinkBtn {
 	display: inline-flex;
 	padding: 8px 16px;
-	width: calc((325 / 375) * 100vw);
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	gap: 8px;
