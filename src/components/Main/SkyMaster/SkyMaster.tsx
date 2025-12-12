@@ -1,19 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import s from "./SkyMaster.module.css";
 import WrapperForComponents from "@/components/UI/WrapperForComponents/WrapperForComponents";
 import { useTranslations } from "next-intl";
-// import StartButton from "@/components/UI/StartButton/StartButton";
 import Image from "next/image";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import SplitText from "@/components/UI/SplitText/SplitText";
-import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
-import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
 import useScrollAnimation from "@/lib/hooks/useScrollAnimation";
 import SeePrograms from "@/components/UI/SeePrograms/SeePrograms";
 
 const SkyMaster = () => {
-	const [openModal, setOpenModal] = useState(false);
 	const t = useTranslations("Skymaster");
 	const [adventagesRef, adventagesVisible] = useScrollAnimation() as [
 		React.RefObject<HTMLDivElement>,
@@ -33,9 +29,6 @@ const SkyMaster = () => {
 		{ id: 3, title: t("flight.item_4.title"), text: t("flight.item_4.text") },
 	];
 
-	const CloseModal = () => {
-		setOpenModal(false);
-	};
 	return (
 		<>
 			<div className={s.skymasterWrapper}>
@@ -103,18 +96,12 @@ const SkyMaster = () => {
 									<h4 className={s.advTitle}>{t("flight_head.title")}</h4>
 									<p className={s.advText}>{t("flight_head.text")}</p>
 									<SeePrograms />
-									{/* <StartButton setOpenModal={setOpenModal} /> */}
 								</div>
 							</div>
 						</div>
 					</div>
 				</WrapperForComponents>
 			</div>
-			{openModal && (
-				<ModalWrapper onClose={CloseModal}>
-					<ContactsForm onClose={CloseModal} />
-				</ModalWrapper>
-			)}
 		</>
 	);
 };

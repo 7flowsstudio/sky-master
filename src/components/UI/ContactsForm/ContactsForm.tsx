@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SetStateAction } from "react";
 import s from "./ContactsForm.module.css";
 import * as Yup from "yup";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
@@ -13,10 +13,10 @@ export type InitialValuesType = {
 };
 
 type CloseProps = {
-	onClose: () => void;
+	successfull: React.Dispatch<SetStateAction<boolean>>;
 };
 
-const ContactsForm = ({ onClose }: CloseProps) => {
+const ContactsForm = ({ successfull }: CloseProps) => {
 	const t = useTranslations("ContactForm");
 
 	const initialValues: InitialValuesType = {
@@ -55,10 +55,10 @@ const ContactsForm = ({ onClose }: CloseProps) => {
 			});
 
 			if (response.ok) {
-				onClose();
+				successfull(true);
 				resetForm();
 			} else {
-				onClose();
+				successfull(false);
 			}
 		} catch (error) {
 			console.error("Помилка:", error);

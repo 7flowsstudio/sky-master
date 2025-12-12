@@ -7,12 +7,15 @@ import { useTranslations } from "next-intl";
 import SplitText from "@/components/UI/SplitText/SplitText";
 import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
 import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
+import Successfull from "@/components/UI/Successfull/Successfull";
 
 const TakeControlBlock = () => {
 	const [openModal, setOpenModal] = useState(false);
+	const [successfull, setSuccsessfull] = useState(false);
 	const t = useTranslations("TakeControl");
 	const CloseModal = () => {
 		setOpenModal(false);
+		setSuccsessfull(false);
 	};
 	return (
 		<>
@@ -62,8 +65,15 @@ const TakeControlBlock = () => {
 				</div>
 			</div>
 			{openModal && (
-				<ModalWrapper onClose={CloseModal}>
-					<ContactsForm onClose={CloseModal} />
+				<ModalWrapper
+					onClose={CloseModal}
+					text={successfull ? "Message delivered." : "Contact Form"}
+				>
+					{successfull ? (
+						<Successfull onClose={CloseModal} />
+					) : (
+						<ContactsForm successfull={setSuccsessfull} />
+					)}
 				</ModalWrapper>
 			)}
 		</>
