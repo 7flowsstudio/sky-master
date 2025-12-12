@@ -4,8 +4,16 @@
 	align-items: flex-end;
 	justify-content: flex-end;
 
+	min-height: 310px;
+	max-height: 520px;
+
 	/* height: 520px; */
-	height: clamp(375px, calc((450 / 375) * 100vw), 520px);
+	/* height: clamp(375px, calc((450 / 375) * 100vw), 520px); */
+}
+@media screen and (min-width: 510px) {
+	.hOneBlock {
+		min-height: 245px;
+	}
 }
 .heroWraperTitleH1 {
 	display: flex;
@@ -78,7 +86,9 @@
 
 @media screen and (max-width: 767px) {
 	.heroWraperTitleH1 {
-		height: calc((300 / 375) * 100vw);
+		min-height: 150px;
+		max-height: 200px;
+		/* height: calc((300 / 375) * 100vw); */
 	}
 	.heroTitle {
 		color: var(--content-primary);
@@ -90,7 +100,11 @@
 		);
 		font-style: normal;
 		font-weight: 700;
-		line-height: 120px;
+		line-height: clamp(
+			56px,
+			calc((56 / 375) * 100vw),
+			calc((120 / 1280) * 100vw)
+		);
 		letter-spacing: -2px;
 	}
 }
@@ -98,8 +112,8 @@
 	.hOneBlock {
 		display: flex;
 		justify-content: space-between;
-		/* height: 520px; */
-		height: clamp(375px, calc((520 / 1280) * 100vw), 520px);
+		min-height: 250px;
+		max-height: 520px;
 	}
 	.rectangleH1 {
 		position: absolute;
@@ -124,6 +138,12 @@
 		font-weight: 700;
 		line-height: 120px;
 		letter-spacing: -2px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.hOneBlock {
+		min-height: 375px;
+		max-height: 520px;
 	}
 }
 @media screen and (max-width: 420px) {
