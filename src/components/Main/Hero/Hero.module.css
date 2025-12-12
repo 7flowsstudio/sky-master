@@ -5,3 +5,11 @@
 	margin: 0 auto;
 	position: relative;
 }
+@media screen and (min-width: 768px) {
+	.heroWrapper {
+		height: calc(100dvh - 72px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
