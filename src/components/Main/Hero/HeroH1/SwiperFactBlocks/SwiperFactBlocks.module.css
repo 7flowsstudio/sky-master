@@ -1,75 +1,75 @@
 .heroSwiper {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-start;
-  gap: 15px;
-  width: 181px;
-  height: 107px;
-  position: absolute;
-  top: 10%;
-  right: 0%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-start;
+	gap: 15px;
+	width: 181px;
+	height: 107px;
+	position: absolute;
+	top: 5%;
+	right: 0%;
 }
 
 .sliderContainer {
-  width: 100%;
-  margin: auto;
-  padding: 0;
-  margin: 0;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	margin: 0;
 }
 .heroItem {
-  display: flex;
-  width: 181px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  flex-shrink: 0;
+	display: flex;
+	width: 181px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+	flex-shrink: 0;
 }
 .heroSwiperTitle,
 .heroSwiperText {
-  color: var(--content-primary);
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 700;
+	color: var(--content-primary);
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: 700;
 }
 .heroSwiperTitle {
-  font-size: 40px;
-  line-height: 100%;
-  text-transform: uppercase;
+	font-size: 40px;
+	line-height: 100%;
+	text-transform: uppercase;
 }
 .heroSwiperText {
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: -1px;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: -1px;
 }
 
 .paginationBlock {
-  display: flex;
-  height: 2px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  position: relative;
+	display: flex;
+	height: 2px;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+	position: relative;
 }
 @media screen and (min-width: 768px) {
-  .heroSwiper {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 15px;
-    width: 181px;
-    height: 107px;
-    position: absolute;
-    top: 8%;
-    /* right: 10%; */
-  }
+	.heroSwiper {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		gap: 15px;
+		width: 181px;
+		height: 107px;
+		position: absolute;
+		top: 8%;
+		/* right: 10%; */
+	}
 }
 @media screen and (min-width: 511px) and (max-width: 615px) {
-  .heroSwiper {
-    right: -10%;
-  }
+	.heroSwiper {
+		right: -10%;
+	}
 }
 @media screen and (min-width: 1280px) {
-  .heroSwiper {
-    right: 10%;
-  }
+	.heroSwiper {
+		right: 10%;
+	}
 }
