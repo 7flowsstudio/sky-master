@@ -54,7 +54,7 @@
 }
 @media screen and (min-width: 768px) {
 	.content {
-		width: 100%;
+		width: auto;
 		padding: 40px;
 	}
 }

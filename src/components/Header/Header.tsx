@@ -9,14 +9,17 @@ import StartTraining from "./StartTraining/StartTraining";
 import BurgerButton from "./BurgerButton/BurgerButton";
 import { NavigationMenuMob } from "./NavigationMenuMob/NavigationMenuMob";
 import ModalWrapper from "../UI/ModalWrapper/ModalWrapper";
+import Successfull from "../UI/Successfull/Successfull";
 import ContactsForm from "../UI/ContactsForm/ContactsForm";
 
 const Header = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
+	const [successfull, setSuccsessfull] = useState(false);
 
 	const CloseModal = () => {
 		setOpenModal(false);
+		setSuccsessfull(false);
 	};
 
 	return (
@@ -44,8 +47,15 @@ const Header = () => {
 				/>
 			</div>
 			{openModal && (
-				<ModalWrapper onClose={CloseModal}>
-					<ContactsForm onClose={CloseModal} />
+				<ModalWrapper
+					onClose={CloseModal}
+					text={successfull ? "Message delivered." : "Contact Form"}
+				>
+					{successfull ? (
+						<Successfull onClose={CloseModal} />
+					) : (
+						<ContactsForm successfull={setSuccsessfull} />
+					)}
 				</ModalWrapper>
 			)}
 		</>
