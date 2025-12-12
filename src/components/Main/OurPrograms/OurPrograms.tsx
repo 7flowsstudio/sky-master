@@ -20,7 +20,6 @@ type Props = {
 };
 
 const OurPrograms = ({ type }: Props) => {
-	const [openModal, setOpenModal] = useState(false);
 	const t = useTranslations("OurPrograms");
 	const pathname = usePathname().split("/")[1];
 	const { top, bottom } = useSizeWindows();
@@ -32,10 +31,6 @@ const OurPrograms = ({ type }: Props) => {
 		date: t(item.dateKey),
 		descr: t(item.descrKey),
 	}));
-
-	const CloseModal = () => {
-		setOpenModal(false);
-	};
 
 	return (
 		<>
@@ -149,7 +144,6 @@ const OurPrograms = ({ type }: Props) => {
 													<h4 className={s.cardDescription}>{item.descr}</h4>
 													<div className={s.cardBtnBlock}>
 														<StartButtonLink id={item.id} />
-														{/* <StartButton setOpenModal={setOpenModal} /> */}
 													</div>
 												</div>
 											</div>
@@ -170,11 +164,6 @@ const OurPrograms = ({ type }: Props) => {
 					</div>
 				</WrapperForComponents>
 			</div>
-			{openModal && (
-				<ModalWrapper onClose={CloseModal}>
-					<ContactsForm onClose={CloseModal} />
-				</ModalWrapper>
-			)}
 		</>
 	);
 };
