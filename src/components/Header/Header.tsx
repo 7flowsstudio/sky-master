@@ -11,11 +11,17 @@ import { NavigationMenuMob } from "./NavigationMenuMob/NavigationMenuMob";
 import ModalWrapper from "../UI/ModalWrapper/ModalWrapper";
 import Successfull from "../UI/Successfull/Successfull";
 import ContactsForm from "../UI/ContactsForm/ContactsForm";
+import { usePathname } from "@/i18n/routing";
+import { isValidRoute } from "@/lib/isValidRoute/isValidRoute";
 
 const Header = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
 	const [successfull, setSuccsessfull] = useState(false);
+
+	const pathname = usePathname();
+	const is404 = pathname ? !isValidRoute(pathname) : false;
+	if (is404) return null;
 
 	const CloseModal = () => {
 		setOpenModal(false);
