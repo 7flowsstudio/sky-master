@@ -26,13 +26,19 @@ const Footer = () => {
 							<li className={`${s.footerContentItem} ${s.notDisplay}`}>
 								<ul className={s.footerRightsList}>
 									<li className={s.footerRightsItem}>
-										<Link href="/">Privacy policy</Link>
+										<Link href={"/fhfg-nonexistent" as unknown as "/"}>
+											Privacy policy
+										</Link>
 									</li>
 									<li className={s.footerRightsItem}>
-										<Link href="/">cookie policy</Link>
+										<Link href={"/fhfg-nonexistent" as unknown as "/"}>
+											cookie policy
+										</Link>
 									</li>
 									<li className={s.footerRightsItem}>
-										<Link href="/">terms & conditions</Link>
+										<Link href={"/fhfg-nonexistent" as unknown as "/"}>
+											terms & conditions
+										</Link>
 									</li>
 								</ul>
 							</li>
@@ -70,7 +76,10 @@ const Footer = () => {
 										{/* <a href="#Corporate">{t("menu.1")}</a> */}
 									</li>
 									<li className={s.footerMenuItem}>
-										<LocalizedScrollLink href="/" scrollId="#About">
+										<LocalizedScrollLink
+											href={"/fhfg-nonexistent" as unknown as "/"}
+											scrollId="#About"
+										>
 											{t("menu.2")}
 										</LocalizedScrollLink>
 										{/* <a href="#About">{t("menu.2")}</a> */}
@@ -83,13 +92,19 @@ const Footer = () => {
 									</li>
 
 									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
-										<Link href="/">Privacy policy</Link>
+										<Link href={"/fhfg-nonexistent" as unknown as "/"}>
+											Privacy policy
+										</Link>
 									</li>
 									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
-										<Link href="/">cookie policy</Link>
+										<Link href={"/fhfg-nonexistent" as unknown as "/"}>
+											cookie policy
+										</Link>
 									</li>
 									<li className={`${s.footerMenuItem} ${s.displayMob}`}>
-										<Link href="/">terms & conditions</Link>
+										<Link href={"/fhfg-nonexistent" as unknown as "/"}>
+											terms & conditions
+										</Link>
 									</li>
 								</ul>
 							</li>
