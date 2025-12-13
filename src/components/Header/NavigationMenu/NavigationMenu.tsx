@@ -10,8 +10,8 @@ const NavigationMenu = () => {
 	const navList = [
 		{ id: 0, name: t("menu.0"), link: "/programs" },
 		{ id: 1, name: t("menu.1"), link: "#Corporate" },
-		{ id: 2, name: t("menu.2"), link: "/" },
-		{ id: 3, name: t("menu.3"), link: "/" },
+		{ id: 2, name: t("menu.2"), link: "/fhfg-nonexistent" },
+		{ id: 3, name: t("menu.3"), link: "/fhfg-nonexistent" },
 	] as const;
 
 	const searchParams = useSearchParams();

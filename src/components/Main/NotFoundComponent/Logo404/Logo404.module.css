@@ -1,0 +1,23 @@
+.navLogo,
+.navigationLink {
+	width: 100%;
+}
+.navLogo {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.navLogoIcon {
+	fill: none;
+	stroke: var(--content-primary);
+}
+.leftIcon {
+	width: 25px;
+	height: 25px;
+}
+.rightIcon {
+	width: 102px;
+	height: 20px;
+	/* stroke: var(--black); */
+	fill: var(--content-primary);
+}

@@ -3,6 +3,7 @@ import { LocalizedScrollLink } from "../../LocalizedScrollLink/LocalizedScrollLi
 import { useTranslations } from "next-intl";
 import { routing, Pathnames } from "@/i18n/routing"; // підлаштуй шлях імпорту
 import s from "./MenuList.module.css";
+import { useRouter } from "next/navigation";
 
 type MenuListProps = {
 	setOpenMenu: React.Dispatch<SetStateAction<boolean>>;
@@ -56,13 +57,14 @@ const getHref = (link: string | Pathnames): StaticPathnames | "/" => {
 
 const MenuList = ({ setOpenMenu }: MenuListProps) => {
 	const t = useTranslations("MenuMobile");
+	const router = useRouter();
 
 	const linkDatas: LinkData[] = [
 		{ id: 0, link: "/", text: t("0") },
 		{ id: 1, link: "/programs", text: t("1") },
 		{ id: 2, link: "corporate", text: t("2") },
-		{ id: 3, link: "about", text: t("3") },
-		{ id: 4, link: "contacts", text: t("4") },
+		{ id: 3, link: "/fhfg-nonexistent", text: t("3") },
+		{ id: 4, link: "/fhfg-nonexistent", text: t("4") },
 	];
 
 	return (
@@ -71,18 +73,31 @@ const MenuList = ({ setOpenMenu }: MenuListProps) => {
 				const isPageLink =
 					typeof item.link === "string" && item.link.startsWith("/");
 
+				// для “404” пунктів використовуємо client-side router.push
+				const is404 = item.link === "/fhfg-nonexistent";
+
 				return (
 					<li key={item.id} className={s.menuItem}>
-						<LocalizedScrollLink
-							// getHref гарантує, що ми НЕ повертатимемо динамічний маршрут
-							href={getHref(item.link)}
-							// scrollId використовуємо коли лінк — не сторінка
-							scrollId={!isPageLink ? item.link : undefined}
-							className={s.navMenuLink}
-							onClick={() => setOpenMenu(false)}
-						>
-							{item.text}
-						</LocalizedScrollLink>
+						{is404 ? (
+							<button
+								className={s.navMenuLink}
+								onClick={() => {
+									setOpenMenu(false);
+									router.push(item.link);
+								}}
+							>
+								{item.text}
+							</button>
+						) : (
+							<LocalizedScrollLink
+								href={getHref(item.link)}
+								scrollId={!isPageLink ? item.link : undefined}
+								className={s.navMenuLink}
+								onClick={() => setOpenMenu(false)}
+							>
+								{item.text}
+							</LocalizedScrollLink>
+						)}
 					</li>
 				);
 			})}
