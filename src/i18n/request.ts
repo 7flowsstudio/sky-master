@@ -12,10 +12,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
 	return {
 		locale,
-		messages: (
-			await (locale === "ua"
-				? import("../../messages/ua.json")
-				: import(`../../messages/${locale}.json`))
-		).default,
+		messages:
+			// : import(`../../messages/${locale}.json`))
+			(
+				await (locale === "en"
+					? import("../../messages/en.json")
+					: import(`../../messages/en.json`))
+			).default,
 	};
 });

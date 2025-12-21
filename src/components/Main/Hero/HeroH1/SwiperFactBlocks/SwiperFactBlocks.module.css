@@ -6,7 +6,7 @@
 	width: 181px;
 	height: 90px;
 	position: absolute;
-	top: 5%;
+	top: 0%;
 	right: 0%;
 }
 
@@ -50,6 +50,12 @@
 	align-self: stretch;
 	position: relative;
 }
+@media screen and (min-width: 549px) and (max-width: 767px) {
+	.heroSwiper {
+		top: 25px;
+		right: 0%;
+	}
+}
 @media screen and (min-width: 768px) {
 	.heroSwiper {
 		display: flex;
@@ -63,11 +69,12 @@
 		/* right: 10%; */
 	}
 }
-@media screen and (min-width: 511px) and (max-width: 615px) {
+
+/* @media screen and (min-width: 511px) and (max-width: 615px) {
 	.heroSwiper {
 		right: -10%;
 	}
-}
+} */
 @media screen and (min-width: 1280px) {
 	.heroSwiper {
 		right: 10%;

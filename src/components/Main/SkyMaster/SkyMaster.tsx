@@ -8,9 +8,11 @@ import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import SplitText from "@/components/UI/SplitText/SplitText";
 import useScrollAnimation from "@/lib/hooks/useScrollAnimation";
 import SeePrograms from "@/components/UI/SeePrograms/SeePrograms";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 const SkyMaster = () => {
 	const t = useTranslations("Skymaster");
+	const isMobile = useIsMobile();
 	const [adventagesRef, adventagesVisible] = useScrollAnimation() as [
 		React.RefObject<HTMLDivElement>,
 		boolean
@@ -41,10 +43,10 @@ const SkyMaster = () => {
 								<SplitText
 									text={t("title_big")}
 									className={s.titleBig}
-									delay={50}
-									duration={0.1}
+									delay={isMobile ? 10 : 50}
+									duration={0.01}
 									ease="power3.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.01}

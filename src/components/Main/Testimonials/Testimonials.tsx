@@ -6,10 +6,12 @@ import { useTranslations } from "next-intl";
 import TestimonialsSwiper from "./TestimonialsSwiper/TestimonialsSwiper";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import SplitText from "@/components/UI/SplitText/SplitText";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 const Testimonials = () => {
 	const t = useTranslations("Testimonials");
 	const { top, bottom } = useSizeWindows();
+	const isMobile = useIsMobile();
 
 	const handleAnimationComplete = () => {
 		console.log("All letters have animated!");
@@ -26,10 +28,10 @@ const Testimonials = () => {
 								<SplitText
 									text={t("title_large")}
 									className={s.titleBig}
-									delay={100}
+									delay={isMobile ? 20 : 100}
 									duration={0.01}
 									ease="power3.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.01}

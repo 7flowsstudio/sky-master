@@ -8,6 +8,7 @@ import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import HowItWorksSwiper from "./HowItWorksSwiper/HowItWorksSwiper";
 import { useScrollActiveList } from "@/lib/hooks/useScrollActiveList";
 import SplitText from "@/components/UI/SplitText/SplitText";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 type CardItem = {
 	id: number | string;
@@ -20,6 +21,7 @@ type CardItem = {
 const HowItWorks = () => {
 	const t = useTranslations("HowItWorks");
 	const { top, bottom } = useSizeWindows();
+	const isMobile = useIsMobile();
 
 	const cardLists: CardItem[] = [
 		{
@@ -64,10 +66,10 @@ const HowItWorks = () => {
 								<SplitText
 									text={t("h2_1")}
 									className={`${s.titleTopBig} ${s.left}`}
-									delay={100}
+									delay={isMobile ? 20 : 100}
 									duration={0.06}
 									ease="power3.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.4}
@@ -82,10 +84,10 @@ const HowItWorks = () => {
 								<SplitText
 									text={t("h2_2")}
 									className={`${s.titleTopBig} ${s.right}`}
-									delay={100}
+									delay={isMobile ? 20 : 100}
 									duration={0.06}
 									ease="power3.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.4}

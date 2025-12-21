@@ -7,10 +7,12 @@ import { Link, Pathnames } from "@/i18n/routing";
 import Image from "next/image";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import SplitText from "@/components/UI/SplitText/SplitText";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 const CorporateTraning = () => {
 	const t = useTranslations("CorparateTraning");
 	const { top, bottom } = useSizeWindows();
+	const isMobile = useIsMobile();
 
 	type StaticPathnames = Exclude<Pathnames, "/programs/[id]">;
 
@@ -57,10 +59,10 @@ const CorporateTraning = () => {
 								<SplitText
 									text={t("title_big_1")}
 									className={s.titleHead}
-									delay={100}
-									duration={0.1}
+									delay={isMobile ? 20 : 100}
+									duration={0.01}
 									ease="bounce.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.01}
@@ -73,10 +75,10 @@ const CorporateTraning = () => {
 								<SplitText
 									text={t("title_big_2")}
 									className={`${s.titleHead} ${s.left}`}
-									delay={100}
+									delay={isMobile ? 20 : 100}
 									duration={0.1}
 									ease="bounce.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.01}

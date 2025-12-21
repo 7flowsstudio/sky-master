@@ -328,7 +328,7 @@
 	},
 	"LocaleSwitcher": {
 		"label": "Change language",
-		"locale": "{locale, select, en {en} ua {ua} other {Unknown}}"
+		"locale": "{locale, select, en {en} ua {en} other {Unknown}}"
 	},
 	"Manifest": {
 		"description": "Become an operator prepared for real missions.",
