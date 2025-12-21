@@ -8,11 +8,13 @@ import SplitText from "@/components/UI/SplitText/SplitText";
 import ModalWrapper from "@/components/UI/ModalWrapper/ModalWrapper";
 import ContactsForm from "@/components/UI/ContactsForm/ContactsForm";
 import Successfull from "@/components/UI/Successfull/Successfull";
+import useIsMobile from "@/lib/isMobile/isMobile";
 
 const TakeControlBlock = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const [successfull, setSuccsessfull] = useState(false);
 	const t = useTranslations("TakeControl");
+	const isMobile = useIsMobile();
 	const CloseModal = () => {
 		setOpenModal(false);
 		setSuccsessfull(false);
@@ -29,10 +31,10 @@ const TakeControlBlock = () => {
 								<SplitText
 									text={t("title_big")}
 									className={s.title_big}
-									delay={25}
-									duration={0.1}
+									delay={isMobile ? 10 : 25}
+									duration={0.01}
 									ease="power3.out"
-									splitType="chars"
+									splitType={isMobile ? "words" : "chars"}
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.01}

@@ -2,7 +2,7 @@
 	.droneImg {
 		position: absolute;
 		/* top: 25%; */
-		top: 15%;
+		top: 10%;
 		left: 50%;
 		transform: translateX(-45%);
 		z-index: -1;
@@ -11,7 +11,7 @@
 @media screen and (min-width: 500px) and (max-width: 767px) {
 	.droneImg {
 		position: absolute;
-		top: 5%;
+		top: 10%;
 		left: 50%;
 		transform: translateX(-45%);
 		z-index: -1;
@@ -59,9 +59,9 @@
 @media screen and (min-width: 768px) {
 	.droneImg {
 		position: absolute;
-		top: 0;
+		top: 50%;
 		left: 50%;
-		transform: translateX(-45%);
+		transform: translate(-45%, -50%);
 		z-index: -1;
 	}
 }
