@@ -53,10 +53,10 @@ const OurPrograms = ({ type }: Props) => {
 								<SplitText
 									text={t("tite_1")}
 									className={`${s.programsTitle} ${s.left}`}
-									delay={isMobile ? 20 : 80}
-									duration={0.04}
+									delay={100}
+									duration={0.6}
 									ease="power3.out"
-									splitType={isMobile ? "words" : "chars"}
+									splitType="chars"
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.1}
@@ -68,10 +68,10 @@ const OurPrograms = ({ type }: Props) => {
 								<SplitText
 									text={t("tite_2")}
 									className={`${s.programsTitle} ${s.right}`}
-									delay={isMobile ? 20 : 80}
-									duration={0.4}
+									delay={100}
+									duration={0.06}
 									ease="power3.out"
-									splitType={isMobile ? "words" : "chars"}
+									splitType="chars"
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.4}
