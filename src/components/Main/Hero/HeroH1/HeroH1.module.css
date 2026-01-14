@@ -112,7 +112,7 @@
 	.hOneBlock {
 		display: flex;
 		justify-content: space-between;
-		min-height: 250px;
+		min-height: 340px;
 		max-height: 520px;
 	}
 	.rectangleH1 {
