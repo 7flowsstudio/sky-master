@@ -11,7 +11,7 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: scroll-position;
-  scrollbar-width: none; /* для Firefox */
+  scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 0 20px;
   margin-top: -140px;
@@ -22,7 +22,6 @@
   min-height: 100vh;
 }
 .scrollstack-fullpage .scroll-stack-scroller {
-  /* height: 100vh !important; */
   height: 800px;
   margin-top: -160px;
   margin-bottom: -100px;
@@ -32,16 +31,6 @@
   padding: 22vh 0 50vh;
   padding: 15vh 0 25vh !important;
 }
-
-/* .scrollstack-fullpage-section .scroll-stack-scroller {
-  height: 80vh !important;
-  margin-top: -90px;
-  margin-bottom: 0px;
-} */
-
-/* .scrollstack-fullpage-section .scroll-stack-inner {
-  padding: 0vh 10 50vh !important;
-} */
 
 .scroll-stack-card-wrapper {
   position: relative;
@@ -70,18 +59,26 @@
   height: 1px;
 }
 .scroll-stack-scroller::-webkit-scrollbar {
-  display: none; /* для Chrome, Safari, Edge */
+  display: none;
 }
 @media screen and (max-width: 554px) {
   .scroll-stack-card {
-    height: 50vh;
+    height: 55vh;
   }
 }
 @media screen and (min-width: 555px) and (max-width: 767px) {
   .scroll-stack-card {
-    height: 60vh; /* 30 iPad mini - 768px*/
+    height: 60vh;
   }
   .scroll-stack-scroller {
     padding: 0 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .scroll-stack-card {
+    margin-bottom: 10px !important;
+  }
+  .scroll-stack-inner {
+    padding: 15vh 0rem 15vh;
   }
 }

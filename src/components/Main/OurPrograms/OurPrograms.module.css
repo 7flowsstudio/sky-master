@@ -1,240 +1,270 @@
 .ourPrograms {
-	border-top: 1px solid #242424;
-	padding-bottom: 120px;
+  border-top: 1px solid #242424;
+  padding-bottom: 120px;
 }
 .programsBlock {
-	display: flex;
-	width: 100%;
-	max-width: 1036px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 24px;
-	margin: 0 auto;
-	/* border: 1px solid red; */
+  display: flex;
+  width: 100%;
+  max-width: 1036px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
 }
 .programsSmallTitle {
-	color: var(--content-secondary);
-	text-align: center;
-	leading-trim: both;
-	text-edge: cap;
+  color: var(--content-secondary);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
 
-	font-family: var(--second-family);
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 16px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+  font-family: var(--second-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .programsHeadTitle {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 .programsTitle {
-	display: flex;
-	width: 100%;
-	color: var(--content-primary);
+  display: flex;
+  width: 100%;
+  color: var(--content-primary);
 
-	font-family: var(--font-family);
-	font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
-	font-style: normal;
-	font-weight: 500;
-	line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
-	letter-spacing: 0;
+  font-family: var(--font-family);
+  font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
+  letter-spacing: 0;
 }
 .left {
-	text-align: left;
-	position: relative;
+  text-align: left;
+  position: relative;
 }
 .right {
-	justify-content: flex-end;
-	background: var(--background-primary);
-	z-index: 9;
+  justify-content: flex-end;
+  background: var(--background-primary);
+  z-index: 9;
 }
 .rectangle {
-	position: absolute;
-	top: -10px;
-	left: -10px;
-	width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
-	height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
-	background: var(--background-brand);
-	mix-blend-mode: plus-lighter;
-	opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
+  height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
+  background: var(--background-brand);
+  mix-blend-mode: plus-lighter;
+  opacity: 0.3;
 }
 .programsCardList {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	align-items: center;
-	gap: 24px;
-	margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 24px;
+  margin-top: 16px;
 }
 .programsCard {
-	display: flex;
-	width: 100%;
-	/* height: 400px; */
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	/* border: 1px solid green; */
-	/* position: sticky;
-	top: 0; */
-	/* padding-top: 20px; */
-	position: relative; /* видаляємо sticky */
-	margin-bottom: 30px; /* itemDistance вже передається через ScrollStack */
-	flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* видаляємо sticky */
+  margin-bottom: 30px; /* itemDistance вже передається через ScrollStack */
+  flex-shrink: 0;
 }
 
 .programsImage {
-	display: flex;
-	width: 100%;
-	/* height: 196px; */
-	aspect-ratio: 355 / 196;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  width: 100%;
+  /* height: 196px; */
+  aspect-ratio: 355 / 196;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .programsContent {
-	width: 100%;
-	height: 100%;
-	padding: 24px 20px;
-	background: var(--background-inverse);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 105px;
+  width: 100%;
+  height: 100%;
+  padding: 24px 20px;
+  background: var(--background-inverse);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 105px;
 }
 
 .programsContentTop {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 20px;
-	align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
 }
 .cardTitle {
-	color: var(--content-primaryinverse);
+  color: var(--content-primaryinverse);
 
-	/* Heading/Heading L */
-	font-family: var(--font-family);
-	font-size: clamp(32px, calc((40 / 768) * 100vw), 40px);
-	font-style: normal;
-	font-weight: 700;
-	line-height: 40px;
-	letter-spacing: 0;
-	text-transform: uppercase;
+  /* Heading/Heading L */
+  font-family: var(--font-family);
+  font-size: clamp(24px, calc((40 / 768) * 100vw), 40px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 .horizontSeparator {
-	height: 3px;
-	align-self: stretch;
-	background: var(--border-primary);
+  height: 3px;
+  align-self: stretch;
+  background: var(--border-primary);
 }
 .programsInfo {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-	color: var(--content-secondaryinverse);
-	leading-trim: both;
-	text-edge: cap;
+  color: var(--content-secondaryinverse);
+  leading-trim: both;
+  text-edge: cap;
 
-	/* Heading/Heading XS */
-	font-family: var(--second-family);
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 16px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+  /* Heading/Heading XS */
+  font-family: var(--second-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .cardIcon {
-	width: 12px;
-	height: 12px;
-	aspect-ratio: 1/1;
-	fill: var(--content-iconinverse);
+  width: 12px;
+  height: 12px;
+  aspect-ratio: 1/1;
+  fill: var(--content-iconinverse);
 }
 .programsContentBottom {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 24px;
-	align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
 }
 .cardDescription {
-	color: var(--content-primaryinverse);
-	font-family: var(--font-family);
-	font-size: clamp(16px, calc((18 / 768) * 100vw), 18px);
-	font-style: normal;
-	font-weight: 400;
-	line-height: 24px;
-	letter-spacing: -1px;
+  color: var(--content-primaryinverse);
+  font-family: var(--font-family);
+  font-size: clamp(14px, calc((18 / 768) * 100vw), 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -1px;
 }
 .seeMoreWrapper {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 16px;
-	margin-bottom: -150px;
-	z-index: 10000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  margin-bottom: -150px;
+  z-index: 10000;
 }
 .link {
-	border: 1px solid var(--border-primary);
-	padding: 12px 12px;
-	/* width: 115px; */
-	height: 48px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
+  border: 1px solid var(--border-primary);
+  padding: 12px 12px;
+  /* width: 115px; */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-	font-family: var(--font-family);
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 133%;
-	letter-spacing: -0.06em;
-	color: var(--content-primary);
-	transform: scale(1);
-	transition: transform 500;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: -0.06em;
+  color: var(--content-primary);
+  transform: scale(1);
+  transition: transform 500;
 }
 .link:hover {
-	box-sizing: border-box;
-	border: 1px solid var(--Border-Primary, rgba(54, 54, 54, 1));
-	box-shadow: inset 0px -1px 8px 0px rgba(255, 255, 255, 0.2);
-	background: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  border: 1px solid var(--Border-Primary, rgba(54, 54, 54, 1));
+  box-shadow: inset 0px -1px 8px 0px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 .iconLink {
-	width: 14px;
-	height: 14px;
-	stroke: var(--content-icon);
+  width: 14px;
+  height: 14px;
+  stroke: var(--content-icon);
+}
+
+@media screen and (max-width: 767px) {
+  .programsContent {
+    width: 100%;
+    height: 215px;
+    padding: 10px;
+    background: var(--background-inverse);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .programsContentTop {
+    height: 67px;
+    gap: 2px;
+  }
+  .programsContentBottom {
+    gap: 2px;
+  }
+  .programsInfo {
+    font-size: 10px;
+  }
+  .programsImage {
+    max-height: 145px;
+    object-fit: cover;
+  }
+  .cardDescription {
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -1px;
+  }
+  .seeMoreWrapper {
+    padding-top: 0px;
+  }
 }
 @media screen and (min-width: 768px) {
-	.programsCard {
-		height: 400px;
-		flex-direction: row;
-	}
-	.programsImage {
-		display: flex;
-		width: 325px;
-		height: 400px;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.programsContent {
-		width: 100%;
-		height: 100%;
-		padding: 24px 20px;
-		background: var(--background-inverse);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: 0;
-	}
-	.horizontSeparator {
-		height: 6px;
-	}
+  .programsCard {
+    height: 400px;
+    flex-direction: row;
+  }
+  .programsImage {
+    display: flex;
+    width: 325px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .programsContent {
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+    background: var(--background-inverse);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .horizontSeparator {
+    height: 6px;
+  }
 }
