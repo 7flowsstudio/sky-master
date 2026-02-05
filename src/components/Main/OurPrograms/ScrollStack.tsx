@@ -61,7 +61,7 @@ const ScrollStack = ({
       if (scrollTop > end) return 1;
       return (scrollTop - start) / (end - start);
     },
-    []
+    [],
   );
 
   const parsePercentage = useCallback(
@@ -71,7 +71,7 @@ const ScrollStack = ({
       }
       return Number(value);
     },
-    []
+    [],
   );
 
   const getScrollData = useCallback(() => {
@@ -100,7 +100,7 @@ const ScrollStack = ({
         return element.offsetTop;
       }
     },
-    [useWindowScroll]
+    [useWindowScroll],
   );
 
   const updateCardTransforms = useCallback(() => {
@@ -112,7 +112,7 @@ const ScrollStack = ({
     const stackPositionPx = parsePercentage(stackPosition, containerHeight);
     const scaleEndPositionPx = parsePercentage(
       scaleEndPosition,
-      containerHeight
+      containerHeight,
     );
 
     const endElement = useWindowScroll
@@ -135,7 +135,7 @@ const ScrollStack = ({
       const scaleProgress = calculateProgress(
         scrollTop,
         triggerStart,
-        triggerEnd
+        triggerEnd,
       );
       const targetScale = baseScale + i * itemScale;
       const scale = 1 - scaleProgress * (1 - targetScale);
@@ -143,7 +143,6 @@ const ScrollStack = ({
 
       let opacity = 1;
       if (blurAmount) {
-        // тут використаємо колишню логіку blur, але для opacity
         let topCardIndex = 0;
         for (let j = 0; j < cardsRef.current.length; j++) {
           const jCardTop = getElementOffset(cardsRef.current[j]);
@@ -167,14 +166,6 @@ const ScrollStack = ({
         translateY = pinEnd - cardTop + stackPositionPx + itemStackDistance * i;
       }
 
-      // if (i === cardsRef.current.length - 1) {
-      //   if (scrollTop > pinEnd) {
-      //     // просто відпускаємо останню карту
-      //     translateY =
-      //       pinEnd - cardTop + stackPositionPx + itemStackDistance * i;
-      //   }
-      // }
-
       const newTransform = {
         translateY: Math.round(translateY * 100) / 100,
         scale: Math.round(scale * 1000) / 1000,
@@ -188,7 +179,7 @@ const ScrollStack = ({
         Math.abs(lastTransform.scale - newTransform.scale) > 0.001 ||
         Math.abs(lastTransform.rotation - newTransform.rotation) > 0.1 ||
         Math.abs(
-          (card.style.opacity ? parseFloat(card.style.opacity) : 1) - opacity
+          (card.style.opacity ? parseFloat(card.style.opacity) : 1) - opacity,
         ) > 0.01;
 
       if (hasChanged) {
@@ -236,19 +227,31 @@ const ScrollStack = ({
 
     const contentEl: HTMLElement | undefined = useWindowScroll
       ? undefined
-      : (scroller.querySelector(".scroll-stack-inner") as HTMLElement | null) ??
-        undefined;
+      : ((scroller.querySelector(
+          ".scroll-stack-inner",
+        ) as HTMLElement | null) ?? undefined);
+
+    // const lenis = new Lenis({
+    //   wrapper: useWindowScroll ? undefined : scroller,
+    //   content: contentEl,
+    //   duration: 1.2,
+    //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    //   smoothWheel: true,
+    //   touchMultiplier: 2,
+    //   infinite: false,
+    //   wheelMultiplier: 1,
+    //   lerp: 0.1,
+    // });
 
     const lenis = new Lenis({
       wrapper: useWindowScroll ? undefined : scroller,
       content: contentEl,
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 1.6, // збільшуємо, щоб скрол був м’якший
+      easing: (t) => t, // лінійне або можна легке прискорення
       smoothWheel: true,
-      touchMultiplier: 2,
-      infinite: false,
-      wheelMultiplier: 1,
-      lerp: 0.1,
+      wheelMultiplier: 1.2, // зменшити різкість прокрутки коліщатком
+      touchMultiplier: 1.2, // плавніше для тачпада
+      lerp: 0.15, // трохи більше, щоб анімація була м’яка
     });
 
     lenis.on("scroll", handleScroll);
@@ -269,7 +272,7 @@ const ScrollStack = ({
     const cards = Array.from(
       useWindowScroll
         ? document.querySelectorAll(".scroll-stack-card")
-        : scroller.querySelectorAll(".scroll-stack-card")
+        : scroller.querySelectorAll(".scroll-stack-card"),
     ) as HTMLDivElement[];
 
     cardsRef.current = cards;
@@ -285,18 +288,6 @@ const ScrollStack = ({
 
     setupLenis();
     updateCardTransforms();
-
-    // код для скролу вниз при завантаженні //
-
-    // const scrollToEnd = () => {
-    //   if (useWindowScroll) {
-    //     window.scrollTo(0, document.body.scrollHeight);
-    //   } else {
-    //     scroller.scrollTop = scroller.scrollHeight;
-    //   }
-    //   updateCardTransforms();
-    // };
-    // setTimeout(scrollToEnd, 10);
 
     return () => {
       if (animationFrameRef.current)
@@ -323,3 +314,119 @@ const ScrollStack = ({
 };
 
 export default ScrollStack;
+
+// import { ReactNode, useLayoutEffect, useRef, useCallback } from "react";
+// import "./ScrollStack.css";
+
+// interface ScrollStackItemProps {
+//   children: ReactNode;
+//   itemClassName?: string;
+// }
+
+// export const ScrollStackItem = ({
+//   children,
+//   itemClassName = "",
+// }: ScrollStackItemProps) => (
+//   <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
+// );
+
+// interface ScrollStackProps {
+//   children: ReactNode;
+//   className?: string;
+//   itemScale?: number;
+//   itemStackDistance?: number;
+//   baseScale?: number;
+//   blurAmount?: number;
+//   onStackComplete?: () => void;
+// }
+
+// const ScrollStack = ({
+//   children,
+//   className = "",
+//   itemScale = 0.03,
+//   itemStackDistance = 30,
+//   baseScale = 0.85,
+//   blurAmount = 0,
+//   onStackComplete,
+// }: ScrollStackProps) => {
+//   const scrollerRef = useRef<HTMLDivElement>(null);
+//   const cardsRef = useRef<HTMLDivElement[]>([]);
+//   const lastTransformsRef = useRef<
+//     Map<number, { scale: number; opacity: number }>
+//   >(new Map());
+
+//   const updateTransforms = useCallback(() => {
+//     if (!cardsRef.current.length) return;
+
+//     const scrollTop = scrollerRef.current?.scrollTop || 0;
+//     const containerHeight = scrollerRef.current?.clientHeight || 0;
+
+//     cardsRef.current.forEach((card, i) => {
+//       const cardOffset = card.offsetTop;
+//       const progress = Math.min(
+//         1,
+//         Math.max(
+//           0,
+//           (scrollTop - cardOffset + containerHeight / 2) / containerHeight,
+//         ),
+//       );
+
+//       const scale = 1 - progress * (1 - (baseScale + i * itemScale));
+//       let opacity = 1;
+//       if (blurAmount) {
+//         opacity = Math.max(0.2, 1 - progress * (i + 1) * 0.3);
+//       }
+
+//       const last = lastTransformsRef.current.get(i);
+//       if (
+//         !last ||
+//         Math.abs(last.scale - scale) > 0.001 ||
+//         Math.abs(last.opacity - opacity) > 0.01
+//       ) {
+//         card.style.transform = `scale(${scale})`;
+//         card.style.opacity = opacity.toString();
+//         lastTransformsRef.current.set(i, { scale, opacity });
+//       }
+//     });
+//   }, [baseScale, itemScale, blurAmount]);
+
+//   useLayoutEffect(() => {
+//     const scroller = scrollerRef.current;
+//     if (!scroller) return;
+
+//     const cards = Array.from(
+//       scroller.querySelectorAll(".scroll-stack-card"),
+//     ) as HTMLDivElement[];
+//     cardsRef.current = cards;
+
+//     cards.forEach((card, i) => {
+//       card.style.marginBottom = `${itemStackDistance}px`;
+//       card.style.willChange = "transform, opacity";
+//       card.style.transformOrigin = "top center";
+//       card.style.backfaceVisibility = "hidden";
+//     });
+
+//     scroller.addEventListener("scroll", updateTransforms);
+//     updateTransforms();
+
+//     return () => {
+//       scroller.removeEventListener("scroll", updateTransforms);
+//       cardsRef.current = [];
+//       lastTransformsRef.current.clear();
+//     };
+//   }, [updateTransforms, itemStackDistance]);
+
+//   return (
+//     <div
+//       className={`scroll-stack-scroller ${className}`.trim()}
+//       ref={scrollerRef}
+//     >
+//       <div className="scroll-stack-inner">
+//         {children}
+//         <div className="scroll-stack-end" />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ScrollStack;
