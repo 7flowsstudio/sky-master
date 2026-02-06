@@ -47,6 +47,8 @@
 .left {
   text-align: left;
   position: relative;
+  background: var(--background-primary);
+  z-index: 9;
 }
 .right {
   justify-content: flex-end;
@@ -62,6 +64,7 @@
   background: var(--background-brand);
   mix-blend-mode: plus-lighter;
   opacity: 0.3;
+  z-index: 100;
 }
 .programsCardList {
   display: flex;
@@ -78,7 +81,7 @@
   justify-content: center;
   align-items: center;
   position: relative; /* видаляємо sticky */
-  margin-bottom: 30px; /* itemDistance вже передається через ScrollStack */
+  /* margin-bottom: 30px;  */
   flex-shrink: 0;
 }
 
@@ -206,6 +209,9 @@
   height: 14px;
   stroke: var(--content-icon);
 }
+.cardBtnBlockMob {
+  width: 100%;
+}
 
 @media screen and (max-width: 767px) {
   .programsContent {
@@ -239,6 +245,16 @@
   }
   .seeMoreWrapper {
     padding-top: 0px;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 519px) {
+  .programsImage {
+    max-height: 165px;
+  }
+}
+@media screen and (min-width: 520px) and (max-width: 767px) {
+  .programsImage {
+    max-height: 200px;
   }
 }
 @media screen and (min-width: 768px) {

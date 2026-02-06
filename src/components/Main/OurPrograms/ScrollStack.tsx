@@ -39,7 +39,6 @@ const ScrollStack = ({
   stackPosition = "20%",
   scaleEndPosition = "10%",
   baseScale = 0.85,
-  scaleDuration = 0.5,
   rotationAmount = 0,
   blurAmount = 0,
   useWindowScroll = false,
@@ -231,25 +230,13 @@ const ScrollStack = ({
           ".scroll-stack-inner",
         ) as HTMLElement | null) ?? undefined);
 
-    // const lenis = new Lenis({
-    //   wrapper: useWindowScroll ? undefined : scroller,
-    //   content: contentEl,
-    //   duration: 1.2,
-    //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    //   smoothWheel: true,
-    //   touchMultiplier: 2,
-    //   infinite: false,
-    //   wheelMultiplier: 1,
-    //   lerp: 0.1,
-    // });
-
     const lenis = new Lenis({
       wrapper: useWindowScroll ? undefined : scroller,
       content: contentEl,
-      duration: 1.6, // збільшуємо, щоб скрол був м’якший
+      duration: 1.4, // збільшуємо, щоб скрол був м’якший
       easing: (t) => t, // лінійне або можна легке прискорення
       smoothWheel: true,
-      wheelMultiplier: 1.2, // зменшити різкість прокрутки коліщатком
+      wheelMultiplier: 1, // зменшити різкість прокрутки коліщатком
       touchMultiplier: 1.2, // плавніше для тачпада
       lerp: 0.15, // трохи більше, щоб анімація була м’яка
     });
@@ -347,7 +334,6 @@ export default ScrollStack;
 //   itemStackDistance = 30,
 //   baseScale = 0.85,
 //   blurAmount = 0,
-//   onStackComplete,
 // }: ScrollStackProps) => {
 //   const scrollerRef = useRef<HTMLDivElement>(null);
 //   const cardsRef = useRef<HTMLDivElement[]>([]);
@@ -399,7 +385,7 @@ export default ScrollStack;
 //     ) as HTMLDivElement[];
 //     cardsRef.current = cards;
 
-//     cards.forEach((card, i) => {
+//     cards.forEach((card) => {
 //       card.style.marginBottom = `${itemStackDistance}px`;
 //       card.style.willChange = "transform, opacity";
 //       card.style.transformOrigin = "top center";

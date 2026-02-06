@@ -1,6 +1,6 @@
 .link {
   width: 100%;
-  max-width: 226px;
+  /* max-width: 226px; */
   height: 56px;
   display: flex;
   flex-direction: row;
@@ -40,4 +40,15 @@
   width: 12px;
   height: 12px;
   stroke: var(--content-icon);
+}
+@media screen and (max-width: 360px) {
+  .link {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .link {
+    max-width: 226px;
+  }
 }
