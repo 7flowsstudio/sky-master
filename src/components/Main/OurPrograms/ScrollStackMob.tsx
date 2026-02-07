@@ -1,10 +1,11 @@
-import { ReactNode, useLayoutEffect, useRef, useCallback } from "react";
+import React, { ReactNode, useLayoutEffect, useRef, useCallback } from "react";
 import "./ScrollStackMob.css";
 
 interface ScrollStackItemProps {
   children: ReactNode;
   itemClassName?: string;
 }
+export const ScrollStackContext = React.createContext<HTMLElement | null>(null);
 
 export const ScrollStackItemMob = ({
   children,
@@ -99,17 +100,19 @@ const ScrollStackMob = ({
   }, [updateTransforms, itemStackDistance]);
 
   return (
-    <div className="wrapp">
-      <div
-        className={`scroll-stack-scroller ${className}`.trim()}
-        ref={scrollerRef}
-      >
-        <div className="scroll-stack-inner">
-          {children}
-          <div className="scroll-stack-end" />
+    <ScrollStackContext.Provider value={scrollerRef.current}>
+      <div className="wrapp">
+        <div
+          className={`scroll-stack-scroller ${className}`.trim()}
+          ref={scrollerRef}
+        >
+          <div className="scroll-stack-inner">
+            {children}
+            <div className="scroll-stack-end" />
+          </div>
         </div>
       </div>
-    </div>
+    </ScrollStackContext.Provider>
   );
 };
 
