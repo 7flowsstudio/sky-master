@@ -82,16 +82,6 @@ const OurPrograms = ({ type }: Props) => {
                 />
               </h3>
             </div>
-            {/* {pathname !== "programs" && (
-				<div className={s.seeMoreWrapper}>
-					<Link href="/programs" className={s.link}>
-						<svg className={s.iconLink}>
-							<use href="/sprite.svg#icon-arrow-top-right"></use>
-						</svg>
-						{t("btn")}
-					</Link>
-				</div>
-			)} */}
 
             <ScrollStackMob>
               {cardList
@@ -108,14 +98,7 @@ const OurPrograms = ({ type }: Props) => {
                       />
                       <div className={s.programsContent}>
                         <div className={s.programsContentTop}>
-                          {/* <Link
-														href={{
-															pathname: "/programs/[id]",
-															params: { id: String(item.id) },
-														}}
-													> */}
                           <h4 className={s.cardTitle}>{item.title}</h4>
-                          {/* </Link> */}
 
                           <div className={s.horizontSeparator}></div>
 
