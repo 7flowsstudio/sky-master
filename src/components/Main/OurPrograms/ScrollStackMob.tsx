@@ -5,7 +5,8 @@ interface ScrollStackItemProps {
   children: ReactNode;
   itemClassName?: string;
 }
-export const ScrollStackContext = React.createContext<HTMLElement | null>(null);
+export const ScrollStackContext =
+  React.createContext<React.RefObject<HTMLDivElement | null> | null>(null);
 
 export const ScrollStackItemMob = ({
   children,
@@ -100,7 +101,7 @@ const ScrollStackMob = ({
   }, [updateTransforms, itemStackDistance]);
 
   return (
-    <ScrollStackContext.Provider value={scrollerRef.current}>
+    <ScrollStackContext.Provider value={scrollerRef}>
       <div className="wrapp">
         <div
           className={`scroll-stack-scroller ${className}`.trim()}
