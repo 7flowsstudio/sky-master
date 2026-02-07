@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect, useState, useContext } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -109,7 +111,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         onSplit: (self: GSAPSplitText) => {
           assignTargets(self);
 
-          gsap.set(targets, { opacity: 1, y: 0 });
+          gsap.set(el, { opacity: 1 });
 
           return gsap.fromTo(
             targets,
@@ -124,6 +126,7 @@ const SplitText: React.FC<SplitTextProps> = ({
                 start: "top 95%",
                 markers: true,
                 scroller: scrollerRef?.current || window,
+
                 once: true,
                 fastScrollEnd: true,
                 anticipatePin: 0.4,
@@ -176,6 +179,7 @@ const SplitText: React.FC<SplitTextProps> = ({
       whiteSpace: "normal",
       wordWrap: "break-word",
       willChange: "transform, opacity",
+      opacity: 1,
     };
     const classes = `split-parent ${className}`;
     switch (tag) {
