@@ -9,7 +9,7 @@ import useIsMobile from "@/lib/isMobile/isMobile";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import { Link, usePathname } from "@/i18n/routing";
 import { programsData } from "./programData";
-import ScrollStack, { ScrollStackItem } from "./ScrollStack";
+
 import SplitText from "@/components/UI/SplitText/SplitText";
 
 import StartButtonLink from "@/components/UI/StartButtonLink/StartButtonLink";
@@ -92,124 +92,62 @@ const OurPrograms = ({ type }: Props) => {
 					</Link>
 				</div>
 			)} */}
-            {isMobile ? (
-              <ScrollStackMob>
-                {cardList
-                  .slice(0, pathname === "programs" ? cardList.length : 3)
-                  .map((item) => (
-                    <ScrollStackItemMob key={item.id}>
-                      <li className={s.programsCard}>
-                        <Image
-                          src={item.src_mob}
-                          width={325}
-                          height={400}
-                          alt={`image` + item.id}
-                          className={s.programsImage}
-                        />
-                        <div className={s.programsContent}>
-                          <div className={s.programsContentTop}>
-                            {/* <Link
+
+            <ScrollStackMob>
+              {cardList
+                .slice(0, pathname === "programs" ? cardList.length : 3)
+                .map((item) => (
+                  <ScrollStackItemMob key={item.id}>
+                    <li className={s.programsCard}>
+                      <Image
+                        src={isMobile ? item.src_mob : item.src}
+                        width={325}
+                        height={400}
+                        alt={`image` + item.id}
+                        className={s.programsImage}
+                      />
+                      <div className={s.programsContent}>
+                        <div className={s.programsContentTop}>
+                          {/* <Link
 														href={{
 															pathname: "/programs/[id]",
 															params: { id: String(item.id) },
 														}}
 													> */}
-                            <h4 className={s.cardTitle}>{item.title}</h4>
-                            {/* </Link> */}
+                          <h4 className={s.cardTitle}>{item.title}</h4>
+                          {/* </Link> */}
 
-                            <div className={s.horizontSeparator}></div>
+                          <div className={s.horizontSeparator}></div>
 
-                            <div className={s.programsInfo}>
-                              <svg className={s.cardIcon}>
-                                <use href="/sprite.svg#icon-teenyicons-location"></use>
-                              </svg>
-                              {item.local}
+                          <div className={s.programsInfo}>
+                            <svg className={s.cardIcon}>
+                              <use href="/sprite.svg#icon-teenyicons-location"></use>
+                            </svg>
+                            {item.local}
 
-                              <svg className={s.cardIcon}>
-                                <use href="/sprite.svg#icon-slash"></use>
-                              </svg>
+                            <svg className={s.cardIcon}>
+                              <use href="/sprite.svg#icon-slash"></use>
+                            </svg>
 
-                              <svg className={s.cardIcon}>
-                                <use href="/sprite.svg#icon-tdesign-calendar-filled"></use>
-                              </svg>
+                            <svg className={s.cardIcon}>
+                              <use href="/sprite.svg#icon-tdesign-calendar-filled"></use>
+                            </svg>
 
-                              {item.date}
-                            </div>
-                          </div>
-
-                          <div className={s.programsContentBottom}>
-                            <h4 className={s.cardDescription}>{item.descr}</h4>
-                            <div className={s.cardBtnBlockMob}>
-                              <StartButtonLink id={item.id} />
-                            </div>
+                            {item.date}
                           </div>
                         </div>
-                      </li>
-                    </ScrollStackItemMob>
-                  ))}
-              </ScrollStackMob>
-            ) : (
-              <ScrollStack
-                // itemDistance={120} // відстань між картками
-                // itemScale={0.05} // наскільки зменшується картка позаду
-                blurAmount={2} // легке розмиття
-                // startOffset={0.2} // коли починає працювати анімація
-              >
-                {cardList
-                  .slice(0, pathname === "programs" ? cardList.length : 3)
-                  .map((item) => (
-                    <ScrollStackItem key={item.id}>
-                      <li className={s.programsCard}>
-                        <Image
-                          src={item.src}
-                          width={325}
-                          height={400}
-                          alt={`image` + item.id}
-                          className={s.programsImage}
-                        />
-                        <div className={s.programsContent}>
-                          <div className={s.programsContentTop}>
-                            {/* <Link
-														href={{
-															pathname: "/programs/[id]",
-															params: { id: String(item.id) },
-														}}
-													> */}
-                            <h4 className={s.cardTitle}>{item.title}</h4>
-                            {/* </Link> */}
 
-                            <div className={s.horizontSeparator}></div>
-
-                            <div className={s.programsInfo}>
-                              <svg className={s.cardIcon}>
-                                <use href="/sprite.svg#icon-teenyicons-location"></use>
-                              </svg>
-                              {item.local}
-
-                              <svg className={s.cardIcon}>
-                                <use href="/sprite.svg#icon-slash"></use>
-                              </svg>
-
-                              <svg className={s.cardIcon}>
-                                <use href="/sprite.svg#icon-tdesign-calendar-filled"></use>
-                              </svg>
-
-                              {item.date}
-                            </div>
-                          </div>
-
-                          <div className={s.programsContentBottom}>
-                            <h4 className={s.cardDescription}>{item.descr}</h4>
-                            <div className={s.cardBtnBlock}>
-                              <StartButtonLink id={item.id} />
-                            </div>
+                        <div className={s.programsContentBottom}>
+                          <h4 className={s.cardDescription}>{item.descr}</h4>
+                          <div className={s.cardBtnBlockMob}>
+                            <StartButtonLink id={item.id} />
                           </div>
                         </div>
-                      </li>
-                    </ScrollStackItem>
-                  ))}
-              </ScrollStack>
-            )}
+                      </div>
+                    </li>
+                  </ScrollStackItemMob>
+                ))}
+            </ScrollStackMob>
 
             {pathname !== "programs" && (
               <div className={s.seeMoreWrapper}>

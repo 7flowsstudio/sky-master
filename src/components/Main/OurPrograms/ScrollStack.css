@@ -61,6 +61,13 @@
 .scroll-stack-scroller::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 767px) {
+  .scroll-stack-scroller {
+    padding: 0;
+  }
+}
+
 /* @media screen and (max-width: 554px) {
   .scroll-stack-card {
     height: 55vh;

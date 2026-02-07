@@ -99,13 +99,15 @@ const ScrollStackMob = ({
   }, [updateTransforms, itemStackDistance]);
 
   return (
-    <div
-      className={`scroll-stack-scroller ${className}`.trim()}
-      ref={scrollerRef}
-    >
-      <div className="scroll-stack-inner">
-        {children}
-        <div className="scroll-stack-end" />
+    <div className="wrapp">
+      <div
+        className={`scroll-stack-scroller ${className}`.trim()}
+        ref={scrollerRef}
+      >
+        <div className="scroll-stack-inner">
+          {children}
+          <div className="scroll-stack-end" />
+        </div>
       </div>
     </div>
   );
