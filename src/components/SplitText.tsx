@@ -1,8 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText as GSAPSplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import { ScrollStackContext } from "./Main/OurPrograms/ScrollStackMob";
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
 
@@ -40,6 +41,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const ref = useRef<HTMLParagraphElement>(null);
   const animationCompletedRef = useRef(false);
   const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
+  const scroller = useContext(ScrollStackContext);
 
   useEffect(() => {
     if (document.fonts.status === "loaded") {
@@ -116,7 +118,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               scrollTrigger: {
                 trigger: el,
                 start: "top 50%",
-                scroller: ".scroll-stack-scroller",
+                scroller: scroller ?? undefined,
                 once: true,
                 fastScrollEnd: true,
                 anticipatePin: 0.4,
