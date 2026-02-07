@@ -42,7 +42,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const animationCompletedRef = useRef(false);
   const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
   // const scroller = useContext(ScrollStackContext);
-  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const scrollerRef = useContext(ScrollStackContext);
 
   useEffect(() => {
     if (document.fonts.status === "loaded") {
@@ -118,7 +118,8 @@ const SplitText: React.FC<SplitTextProps> = ({
               stagger: delay / 1000,
               scrollTrigger: {
                 trigger: el,
-                start: "top 50%",
+                start: "top 95%",
+                markers: true,
                 scroller: scrollerRef?.current ?? undefined,
                 once: true,
                 fastScrollEnd: true,
