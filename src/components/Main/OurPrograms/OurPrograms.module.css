@@ -48,7 +48,7 @@
 .left {
   text-align: left;
   position: relative;
-  /* background: var(--background-primary); */
+  background: var(--background-primary);
   z-index: 9;
 }
 .right {
