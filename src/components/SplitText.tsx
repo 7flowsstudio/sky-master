@@ -108,6 +108,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         reduceWhiteSpace: false,
         onSplit: (self: GSAPSplitText) => {
           assignTargets(self);
+          gsap.set(el, { opacity: 1 });
           return gsap.fromTo(
             targets,
             { ...from },
@@ -120,7 +121,7 @@ const SplitText: React.FC<SplitTextProps> = ({
                 trigger: el,
                 start: "top 95%",
                 markers: true,
-                scroller: scrollerRef?.current ?? undefined,
+                scroller: scrollerRef?.current || window,
                 once: true,
                 fastScrollEnd: true,
                 anticipatePin: 0.4,
