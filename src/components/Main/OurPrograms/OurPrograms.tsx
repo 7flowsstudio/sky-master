@@ -59,7 +59,7 @@ const OurPrograms = ({ type }: Props) => {
                   duration={0.6}
                   ease="power3.out"
                   splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
+                  from={{ opacity: 0.5, y: 40 }}
                   to={{ opacity: 1, y: 0 }}
                   threshold={0.1}
                   rootMargin="-100px"
@@ -74,7 +74,7 @@ const OurPrograms = ({ type }: Props) => {
                   duration={0.06}
                   ease="power3.out"
                   splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
+                  from={{ opacity: 0.5, y: 40 }}
                   to={{ opacity: 1, y: 0 }}
                   threshold={0.4}
                   rootMargin="100px"
