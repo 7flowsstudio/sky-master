@@ -108,7 +108,9 @@ const SplitText: React.FC<SplitTextProps> = ({
         reduceWhiteSpace: false,
         onSplit: (self: GSAPSplitText) => {
           assignTargets(self);
-          gsap.set(el, { opacity: 1 });
+
+          gsap.set(targets, { opacity: 1, y: 0 });
+
           return gsap.fromTo(
             targets,
             { ...from },
