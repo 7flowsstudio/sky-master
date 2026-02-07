@@ -124,7 +124,6 @@ const SplitText: React.FC<SplitTextProps> = ({
               scrollTrigger: {
                 trigger: el,
                 start: "top 95%",
-                markers: true,
                 scroller: scrollerRef?.current || window,
 
                 once: true,
