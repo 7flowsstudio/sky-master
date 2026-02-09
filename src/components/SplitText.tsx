@@ -51,6 +51,13 @@ const SplitText: React.FC<SplitTextProps> = ({
     }
   }, []);
 
+  // Після повного завантаження сторінки оновлюємо ScrollTrigger
+  useEffect(() => {
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", onLoad);
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
+
   useGSAP(
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
