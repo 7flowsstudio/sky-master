@@ -9,8 +9,12 @@ import useIsMobile from "@/lib/isMobile/isMobile";
 import useSizeWindows from "@/lib/useSizeWindows/useSizeWindows";
 import { Link, usePathname } from "@/i18n/routing";
 import { programsData } from "./programData";
+import dynamic from "next/dynamic";
 
-import SplitText from "@/components/UI/SplitText/SplitText";
+// import SplitText from "@/components/UI/SplitText/SplitText";
+const SplitText = dynamic(() => import("@/components/UI/SplitText/SplitText"), {
+  ssr: false,
+});
 
 import StartButtonLink from "@/components/UI/StartButtonLink/StartButtonLink";
 import ScrollStackMob, { ScrollStackItemMob } from "./ScrollStackMob";
