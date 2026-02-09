@@ -73,17 +73,17 @@ const SplitText: React.FC<SplitTextProps> = ({
         el._rbsplitInstance = undefined;
       }
 
-      const startPct = (1 - threshold) * 100;
-      const marginMatch = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin);
-      const marginValue = marginMatch ? parseFloat(marginMatch[1]) : 0;
-      const marginUnit = marginMatch ? marginMatch[2] || "px" : "px";
-      const sign =
-        marginValue === 0
-          ? ""
-          : marginValue < 0
-            ? `-=${Math.abs(marginValue)}${marginUnit}`
-            : `+=${marginValue}${marginUnit}`;
-      const start = `top ${startPct}%${sign}`;
+      // const startPct = (1 - threshold) * 100;
+      // const marginMatch = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin);
+      // const marginValue = marginMatch ? parseFloat(marginMatch[1]) : 0;
+      // const marginUnit = marginMatch ? marginMatch[2] || "px" : "px";
+      // const sign =
+      //   marginValue === 0
+      //     ? ""
+      //     : marginValue < 0
+      //       ? `-=${Math.abs(marginValue)}${marginUnit}`
+      //       : `+=${marginValue}${marginUnit}`;
+      // const start = `top ${startPct}%${sign}`;
       let targets: Element[] = [];
       const assignTargets = (self: GSAPSplitText) => {
         if (splitType.includes("chars") && self.chars.length)
@@ -117,7 +117,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               stagger: delay / 1000,
               scrollTrigger: {
                 trigger: el,
-                start,
+                start: "top 95%",
                 once: true,
                 fastScrollEnd: true,
                 anticipatePin: 0.4,
