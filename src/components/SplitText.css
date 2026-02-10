@@ -7,3 +7,8 @@
 .split-char {
   white-space: normal !important;
 }
+.split-parent-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}

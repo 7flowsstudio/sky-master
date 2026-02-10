@@ -1,67 +1,63 @@
+/* .heroDroneWrapper {
+  position: relative;
+  overflow-x: hidden;
+} */
+
 @media screen and (min-width: 375px) and (max-width: 499px) {
-	.droneImg {
-		position: absolute;
-		/* top: 25%; */
-		top: 10%;
-		left: 50%;
-		transform: translateX(-45%);
-		z-index: -1;
-	}
+  .droneImg {
+    position: absolute;
+    /* top: 25%; */
+    top: 10%;
+    left: 50%;
+    transform: translateX(-45%);
+    z-index: -1;
+  }
 }
 @media screen and (min-width: 500px) and (max-width: 767px) {
-	.droneImg {
-		position: absolute;
-		top: 10%;
-		left: 50%;
-		transform: translateX(-45%);
-		z-index: -1;
-	}
+  .droneImg {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-45%);
+    z-index: -1;
+  }
 }
 
-/* .adWrap {
-	background-color: transparent;
-	width: 1026.885px;
-	height: 684.59px;
-	transform: rotate(2.462deg);
-	flex-shrink: 0;
-	aspect-ratio: 1026.89/684.59;
-	opacity: 0.6;
-} */
 .adWrap {
-	background-color: transparent;
-	width: clamp(454px, calc((1026 / 1280) * 100vw), 1026px);
-	transform: rotate(2.462deg);
-	flex-shrink: 0;
-	aspect-ratio: 1026 / 684;
-	opacity: 0.6;
+  background-color: transparent;
+  width: clamp(344px, calc((1026 / 1280) * 100vw), 1026px);
+  transform: rotate(2.462deg);
+  flex-shrink: 0;
+  aspect-ratio: 1026 / 684;
+  opacity: 0.6;
 }
 @media screen and (min-width: 375px) {
-	.adWrap.lazyLoaded {
-		/* background-color: lightgray; */
-		background-image: url("/img/hero/drone_transparent_x1.png");
-		background-size: 100% 100%;
-		background-position: 50% center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	@media screen and (min-resolution: 2dppx),
-		(min-resolution: 192dpi),
-		(-webkit-min-device-pixel-ratio: 2) {
-		.adWrap.lazyLoaded {
-			background-image: url("/img/hero/drone_transparent_x2.png");
-			background-size: 100% 100%;
-			background-position: 50% center;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-	}
+  .adWrap.lazyLoaded {
+    /* background-color: lightgray; */
+    background-image: url("/img/hero/drone_transparent_x1.png");
+    background-size: 100% 100%;
+    background-position: 50% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
+    .adWrap.lazyLoaded {
+      background-image: url("/img/hero/drone_transparent_x2.png");
+      background-size: 100% 100%;
+      background-position: 50% center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 @media screen and (min-width: 768px) {
-	.droneImg {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-45%, -50%);
-		z-index: -1;
-	}
+  .droneImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    z-index: -1;
+  }
 }

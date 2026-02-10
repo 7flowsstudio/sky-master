@@ -1,158 +1,161 @@
 .hOneBlock {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 
-	min-height: 250px;
-	/* max-height: 520px; */
+  min-height: 250px;
+  /* max-height: 520px; */
 
-	/* height: 520px; */
-	/* height: clamp(375px, calc((450 / 375) * 100vw), 520px); */
+  /* height: 520px; */
+  /* height: clamp(375px, calc((450 / 375) * 100vw), 520px); */
 }
 @media screen and (min-width: 510px) {
-	.hOneBlock {
-		min-height: 245px;
-	}
+  .hOneBlock {
+    min-height: 245px;
+  }
 }
 .heroWraperTitleH1 {
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	white-space: nowrap;
-	width: 100%;
-	height: calc((300 / 375) * 100vw);
-	position: relative;
-	padding-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  width: 100%;
+  height: calc((300 / 375) * 100vw);
+  position: relative;
+  padding-top: 100px;
 }
 
 .rectangleH1,
 .rectangleH1_1 {
-	flex-shrink: 0;
-	opacity: 0.3;
-	background: var(--background-brand);
-	mix-blend-mode: plus-lighter;
+  flex-shrink: 0;
+  opacity: 0.3;
+  background: var(--background-brand);
+  mix-blend-mode: plus-lighter;
 }
 .rectangleH1 {
-	position: absolute;
-	left: -5%;
-	top: 30%;
-	width: 580px;
-	width: clamp(115px, calc((181 / 375) * 100vw), 580px);
-	aspect-ratio: 181 / 40;
+  position: absolute;
+  left: -5%;
+  top: 30%;
+  width: 580px;
+  width: clamp(115px, calc((181 / 375) * 100vw), 580px);
+  aspect-ratio: 181 / 40;
 }
 .rectangleH1_1 {
-	position: absolute;
-	right: -15%;
-	bottom: 5%;
-	width: clamp(170px, calc((170 / 375) * 100vw), 221px);
-	aspect-ratio: 170 / 32;
+  position: absolute;
+  /* right: -15%; */
+  left: clamp(198px, calc((575 / 1280) * 100vw), 575px);
+  bottom: 5%;
+  width: clamp(170px, calc((170 / 375) * 100vw), 221px);
+  aspect-ratio: 170 / 32;
 }
 .heroTitle {
-	color: var(--content-primary);
-	font-family: var(--font-family);
-	font-size: clamp(56px, calc((56 / 375) * 100vw), calc((120 / 1280) * 100vw));
-	font-style: normal;
-	font-weight: 700;
-	line-height: 120px;
-	letter-spacing: -2px;
+  color: var(--content-primary);
+  font-family: var(--font-family);
+  font-size: clamp(56px, calc((56 / 375) * 100vw), calc((120 / 1280) * 100vw));
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120px;
+  letter-spacing: -2px;
 }
 .heroTitle span {
-	white-space: normal;
-	line-height: normal;
-	text-align-last: right;
-	white-space: pre-wrap;
-	position: absolute;
-	bottom: 0;
-	right: 0;
+  white-space: normal;
+  line-height: normal;
+  text-align-last: right;
+  white-space: pre-wrap;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 /* herotext */
 .heroText {
-	position: relative;
-	z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .animateText {
-	opacity: 0;
-	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  opacity: 0;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 .animateText {
-	transform: translateY(50px);
+  transform: translateY(50px);
 }
 .animateText.visible {
-	opacity: 1;
-	transform: translate(0);
+  opacity: 1;
+  transform: translate(0);
 }
 
 @media screen and (max-width: 767px) {
-	.heroWraperTitleH1 {
-		/* min-height: 150px;
+  .heroWraperTitleH1 {
+    /* min-height: 150px;
 		max-height: 200px; */
-		/* height: calc((300 / 375) * 100vw); */
-	}
-	.heroTitle {
-		color: var(--content-primary);
-		font-family: var(--font-family);
-		font-size: clamp(
-			56px,
-			calc((56 / 375) * 100vw),
-			calc((120 / 1280) * 100vw)
-		);
-		font-style: normal;
-		font-weight: 700;
-		line-height: clamp(
-			56px,
-			calc((56 / 375) * 100vw),
-			calc((120 / 1280) * 100vw)
-		);
-		letter-spacing: -2px;
-	}
+    /* height: calc((300 / 375) * 100vw); */
+  }
+  .heroTitle {
+    color: var(--content-primary);
+    font-family: var(--font-family);
+    font-size: clamp(
+      56px,
+      calc((56 / 375) * 100vw),
+      calc((120 / 1280) * 100vw)
+    );
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(
+      56px,
+      calc((56 / 375) * 100vw),
+      calc((120 / 1280) * 100vw)
+    );
+    letter-spacing: -2px;
+  }
 }
 @media screen and (min-width: 768px) {
-	.hOneBlock {
-		display: flex;
-		justify-content: space-between;
-		min-height: 340px;
-		max-height: 520px;
-	}
-	.rectangleH1 {
-		position: absolute;
-		left: 10%;
-		top: 18%;
-		width: 580px;
-		width: clamp(115px, calc((580 / 1280) * 100vw), 580px);
-		aspect-ratio: 580 / 115;
-	}
-	.rectangleH1_1 {
-		position: absolute;
-		right: 7%;
-		bottom: 13%;
-		width: clamp(170px, calc((221 / 1280) * 100vw), 221px);
-		aspect-ratio: 221 / 75;
-	}
-	.heroTitle {
-		color: var(--content-primary);
-		font-family: var(--font-family);
-		font-size: clamp(56px, calc((120 / 1280) * 100vw), 120px);
-		font-style: normal;
-		font-weight: 700;
-		line-height: 120px;
-		letter-spacing: -2px;
-	}
+  .hOneBlock {
+    display: flex;
+    justify-content: space-between;
+    min-height: 340px;
+    max-height: 520px;
+  }
+  .rectangleH1 {
+    position: absolute;
+    left: 10%;
+    top: 18%;
+    width: 580px;
+    width: clamp(115px, calc((580 / 1280) * 100vw), 580px);
+    aspect-ratio: 580 / 115;
+  }
+  .rectangleH1_1 {
+    position: absolute;
+    right: 7%;
+    bottom: 13%;
+    width: clamp(170px, calc((221 / 1280) * 100vw), 221px);
+    aspect-ratio: 221 / 75;
+  }
+  .heroTitle {
+    color: var(--content-primary);
+    font-family: var(--font-family);
+    font-size: clamp(56px, calc((120 / 1280) * 100vw), 120px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120px;
+    letter-spacing: -2px;
+  }
 }
 @media screen and (min-width: 1280px) {
-	.hOneBlock {
-		min-height: 375px;
-		max-height: 520px;
-	}
+  .hOneBlock {
+    min-height: 375px;
+    max-height: 520px;
+  }
 }
 @media screen and (max-width: 420px) {
-	.heroTitle {
-		font-size: 42px;
-	}
+  .heroTitle {
+    font-size: 42px;
+  }
 }
 @media screen and (max-width: 368px) {
-	.hOneBlock {
-		justify-content: start;
-	}
+  .hOneBlock {
+    justify-content: start;
+  }
 }
