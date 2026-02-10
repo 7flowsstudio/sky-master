@@ -251,7 +251,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         );
     }
   };
-  return renderTag();
+  return <div className="split-parent-wrapper">{renderTag()}</div>;
 };
 
 export default SplitText;

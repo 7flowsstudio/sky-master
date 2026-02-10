@@ -121,6 +121,9 @@ body {
   margin: 0;
   /* width: 100%; */
 }
+/* * {
+  outline: 1px solid red;
+} */
 
 h1,
 h2,
@@ -199,6 +202,7 @@ textarea {
 img {
   display: block;
   max-width: 100%;
+  min-width: 44px;
   height: auto;
 }
 

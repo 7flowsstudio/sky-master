@@ -1,95 +1,97 @@
 .howItWorksWrapper {
-	border-top: 1px solid var(--border-primary);
-	border-bottom: 1px solid var(--border-primary);
+  border-top: 1px solid var(--border-primary);
+  border-bottom: 1px solid var(--border-primary);
 }
 .howItWorksBlock {
-	display: flex;
-	width: 100%;
-	max-width: 1015px;
-	flex-direction: column;
-	justify-content: center;
-	gap: 64px;
-	align-items: center;
-	margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1015px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  align-items: center;
+  margin: 0 auto;
 }
 .howTitleTop {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 24px;
-	align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
 }
 .titleTopSmall {
-	color: var(--content-secondary);
-	text-align: center;
-	leading-trim: both;
-	text-edge: cap;
-	font-family: var(--second-family);
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 16px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+  color: var(--content-secondary);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--second-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .titleTopBigBlock {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .titleTopBig {
-	color: var(--content-primary);
-	text-align: right;
-	font-family: var(--font-family);
-	font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
-	font-style: normal;
-	font-weight: 500;
-	line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
-	letter-spacing: 0;
+  color: var(--content-primary);
+  text-align: right;
+  font-family: var(--font-family);
+  font-size: clamp(36px, calc((88 / 1280) * 100vw), 88px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
+  letter-spacing: 0;
 }
 .left {
-	text-align: left;
+  text-align: left;
 }
 .right {
-	text-align: right;
-	position: relative;
+  text-align: right;
+  position: relative;
 }
 .rectangle {
-	position: absolute;
-	top: -15px;
-	right: -65px;
-	width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
-	height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
-	background: var(--background-brand);
-	mix-blend-mode: plus-lighter;
-	opacity: 0.3;
+  position: absolute;
+  top: -15px;
+  /* right: -65px; */
+  left: clamp(210px, calc((575 / 1280) * 100vw), 575px);
+  width: clamp(163px, calc((396 / 1280) * 100vw), 396px);
+  height: clamp(35px, calc((79 / 1280) * 100vw), 79px);
+  background: var(--background-brand);
+  mix-blend-mode: plus-lighter;
+  opacity: 0.3;
 }
 .howItWorksCardsList {
-	display: none;
+  display: none;
 }
 @media screen and (min-width: 768px) {
-	.howItWorksCardsList {
-		display: flex;
-		width: 100%;
-		max-width: 1015px;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 40px;
-	}
+  .howItWorksCardsList {
+    display: flex;
+    width: 100%;
+    max-width: 1015px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
 }
 .howItWorksCardsItem {
-	display: flex;
-	padding: clamp(24px, calc((80 / 1280) * 100vw), 80px);
-	align-items: stretch;
-	align-self: stretch;
-	gap: 10px;
-	/* border: 1px solid green; */
-	/* transition: background-color 320ms cubic-bezier(0.2, 0.9, 0.2, 1),
+  display: flex;
+  padding: clamp(24px, calc((80 / 1280) * 100vw), 80px);
+  align-items: stretch;
+  align-self: stretch;
+  gap: 10px;
+  /* border: 1px solid green; */
+  /* transition: background-color 320ms cubic-bezier(0.2, 0.9, 0.2, 1),
     transform 360ms cubic-bezier(0.2, 0.9, 0.2, 1); */
-	will-change: transform, background-color;
+  will-change: transform, background-color;
 
-	transition: background-color 500ms cubic-bezier(0.25, 0.1, 0.25, 1) 50ms,
-		transform 360ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition:
+    background-color 500ms cubic-bezier(0.25, 0.1, 0.25, 1) 50ms,
+    transform 360ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 /* .howItWorksCardsItem:hover {
 	background: var(--background-inverse);
@@ -103,8 +105,8 @@
 
 .howItWorksCardsItem:hover,
 .howItWorksCardsItem.active {
-	background: var(--background-inverse);
-	transform: translateY(-6px) scale(1.01);
+  background: var(--background-inverse);
+  transform: translateY(-6px) scale(1.01);
 }
 
 .howItWorksCardsItem:hover .countHead,
@@ -115,92 +117,96 @@
 .howItWorksCardsItem.active .titleBottom,
 .howItWorksCardsItem:hover .description,
 .howItWorksCardsItem.active .description {
-	transition: color 360ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 260ms ease;
-	will-change: color, opacity;
-	color: var(--content-primaryinverse);
+  transition:
+    color 360ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    opacity 260ms ease;
+  will-change: color, opacity;
+  color: var(--content-primaryinverse);
 }
 /* Трохи пом'якшуємо великий заголовок при активній карточці */
 .howItWorksCardsItem.active .countHead {
-	transform-origin: center;
-	transition: transform 360ms cubic-bezier(0.2, 0.9, 0.2, 1), color 360ms;
-	will-change: transform, color;
-	/* При бажанні можна трохи зменшити розмір числа */
-	transform: scale(1); /* змінюй значення, якщо хочеш більш виражений ефект */
+  transform-origin: center;
+  transition:
+    transform 360ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    color 360ms;
+  will-change: transform, color;
+  /* При бажанні можна трохи зменшити розмір числа */
+  transform: scale(1); /* змінюй значення, якщо хочеш більш виражений ефект */
 }
 
 .howItWorksCardsItem:nth-child(2) {
-	flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .blockDescription,
 .blockCount {
-	flex: 1;
-	will-change: transform;
-	/* width: 50%; */
-	/* border: 1px solid red; */
+  flex: 1;
+  will-change: transform;
+  /* width: 50%; */
+  /* border: 1px solid red; */
 }
 .blockDescription {
-	width: 45%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 24px;
-	flex: 1 0 0;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  flex: 1 0 0;
 }
 .blockH3 {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	color: var(--content-secondary);
-	font-family: var(--font-family);
-	font-size: 40px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 40px;
-	letter-spacing: 0;
-	text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  color: var(--content-secondary);
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 .titleBottom {
-	text-align: center;
+  text-align: center;
 }
 .description {
-	color: var(--content-secondary);
-	font-family: var(--font-family);
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 24px;
-	letter-spacing: -1px;
+  color: var(--content-secondary);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -1px;
 }
 .blockCount {
-	width: 55%;
-	display: flex;
-	position: relative;
-	justify-content: center;
-	height: 184px;
-	overflow: hidden;
+  width: 55%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 184px;
+  overflow: hidden;
 }
 
 .countHead {
-	color: var(--content-secondary);
-	leading-trim: both;
-	text-edge: cap;
-	font-family: var(--font-family);
-	font-size: clamp(180px, calc((366 / 1280) * 100vw), 366px);
-	font-style: normal;
-	font-weight: 500;
-	line-height: 287px;
-	letter-spacing: -3px;
+  color: var(--content-secondary);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--font-family);
+  font-size: clamp(180px, calc((366 / 1280) * 100vw), 366px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 287px;
+  letter-spacing: -3px;
 }
 
 /* Для кращого перфомансу на мобайлі — тонкий трюк (за бажанням) */
 @media (prefers-reduced-motion: reduce) {
-	.howItWorksCardsItem,
-	.howItWorksCardsItem .countHead,
-	.howItWorksCardsItem .titleTop,
-	.howItWorksCardsItem .titleBottom,
-	.howItWorksCardsItem .description {
-		transition: none !important;
-		transform: none !important;
-	}
+  .howItWorksCardsItem,
+  .howItWorksCardsItem .countHead,
+  .howItWorksCardsItem .titleTop,
+  .howItWorksCardsItem .titleBottom,
+  .howItWorksCardsItem .description {
+    transition: none !important;
+    transform: none !important;
+  }
 }

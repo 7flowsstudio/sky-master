@@ -10,11 +10,11 @@ import "swiper/css/pagination";
 import s from "./TestimonialsSwiper.module.css";
 import { useTranslations } from "next-intl";
 import TestSlideItem from "./TestSlideItem/TestSlideItem";
-import useOffsetBefore from "@/lib/useOffsetBefore/useOffsetBefore";
+// import useOffsetBefore from "@/lib/useOffsetBefore/useOffsetBefore";
 
 const Testimonials = () => {
   const t = useTranslations("Testimonials");
-  const offsetBefore = useOffsetBefore();
+  // const offsetBefore = useOffsetBefore();
 
   const sliderList = [
     {
