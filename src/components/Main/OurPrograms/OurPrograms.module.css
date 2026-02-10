@@ -33,8 +33,12 @@
   flex-direction: column;
   z-index: 10;
 }
-.programsTitle {
+.programsTitleWrapper {
   display: flex;
+  justify-content: flex-end;
+}
+.programsTitle {
+  display: block;
   width: 100%;
   color: var(--content-primary);
   font-family: var(--font-family);
@@ -43,7 +47,6 @@
   font-weight: 500;
   line-height: clamp(36px, calc((88 / 1280) * 100vw), 88px);
   letter-spacing: 0;
-  /* z-index: 10; */
 }
 .left {
   text-align: left;

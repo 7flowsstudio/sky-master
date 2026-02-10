@@ -54,23 +54,26 @@ const OurPrograms = ({ type }: Props) => {
               <h5 className={s.programsSmallTitle}>{t("titleSection")}</h5>
             </div>
             <div className={s.programsHeadTitle}>
-              <h3 className={`${s.programsTitle} ${s.left}`}>
-                <div className={s.rectangle}></div>
-                <h2>{t("tite_1")}</h2>
-                {/* <SplitText
-                  text={t("tite_1")}
-                  className={`${s.programsTitle} ${s.left}`}
-                  delay={100}
-                  duration={0.6}
-                  ease="power3.out"
-                  splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  rootMargin="-100px"
-                  textAlign="left"
-                /> */}
-              </h3>
+              {/* <h4>{t("tite_1")}</h4> */}
+              <div className={s.programsTitleWrapper}>
+                <h3 className={`${s.programsTitle} ${s.left}`}>
+                  <div className={s.rectangle}></div>
+
+                  <SplitText
+                    text={t("tite_1")}
+                    className={`${s.programsTitle} ${s.left}`}
+                    delay={100}
+                    duration={0.6}
+                    ease="power3.out"
+                    splitType="chars"
+                    from={{ opacity: 0, y: 40 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="-100px"
+                    textAlign="left"
+                  />
+                </h3>
+              </div>
               <h3 className={`${s.programsTitle} ${s.right}`}>
                 <SplitText
                   text={t("tite_2")}

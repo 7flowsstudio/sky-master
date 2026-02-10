@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText as GSAPSplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import "./SplitText.css";
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
 
@@ -104,7 +105,16 @@ const SplitText: React.FC<SplitTextProps> = ({
         onSplit: (self: GSAPSplitText) => {
           assignTargets(self);
 
-          gsap.set(el, { opacity: 1 });
+          self.chars?.forEach((char) => {
+            const el = char as HTMLElement;
+            el.style.whiteSpace = "normal";
+            el.style.display = "inline";
+          });
+
+          gsap.set(el, {
+            opacity: 1,
+            overflow: "visible",
+          });
 
           return gsap.fromTo(
             targets,
@@ -116,7 +126,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               stagger: delay / 1000,
               scrollTrigger: {
                 trigger: el,
-                start: "top 95%",
+                start: "top 90%",
                 once: true,
                 fastScrollEnd: true,
                 anticipatePin: 0.4,
@@ -163,8 +173,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const renderTag = () => {
     const style: React.CSSProperties = {
       textAlign,
-      overflow: "hidden",
-      display: "inline-block",
+      display: "block",
       whiteSpace: "normal",
       wordWrap: "break-word",
       willChange: "transform, opacity",

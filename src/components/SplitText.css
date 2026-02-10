@@ -1,0 +1,9 @@
+/* FIX для мобільних: текст не зникає */
+.split-parent {
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+.split-char {
+  white-space: normal !important;
+}
