@@ -139,6 +139,7 @@ p {
   color: var(--black);
   overflow: visible !important;
   display: block !important;
+  max-width: 100%;
 }
 span {
   white-space: normal !important;
