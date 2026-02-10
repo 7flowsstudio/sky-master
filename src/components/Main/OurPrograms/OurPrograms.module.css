@@ -97,6 +97,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .programsContent {
@@ -278,7 +279,8 @@
   }
   .programsImage {
     display: flex;
-    width: 325px;
+    min-width: 325px;
+    max-width: 325px;
     height: 400px;
     flex-direction: column;
     justify-content: center;
