@@ -107,7 +107,7 @@ body {
   height: 100svh;
   overflow-x: hidden;
   overflow-y: visible;
-  /* overflow: visible; */
+  overflow: visible;
 }
 
 body {
