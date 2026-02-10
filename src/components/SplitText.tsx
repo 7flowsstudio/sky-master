@@ -111,12 +111,7 @@ const SplitText: React.FC<SplitTextProps> = ({
             el.style.display = "inline";
           });
 
-          gsap.set(el, {
-            opacity: 1,
-            overflow: "visible",
-          });
-
-          return gsap.fromTo(
+          const tween = gsap.fromTo(
             targets,
             { ...from },
             {
@@ -139,6 +134,38 @@ const SplitText: React.FC<SplitTextProps> = ({
               force3D: true,
             },
           );
+
+          // 🔥 FALLBACK ДЛЯ МОБІЛКИ
+          setTimeout(() => {
+            if (!animationCompletedRef.current) {
+              gsap.set(targets, { opacity: 1, y: 0 });
+            }
+          }, 300);
+
+          return tween;
+          // return gsap.fromTo(
+          //   targets,
+          //   { ...from },
+          //   {
+          //     ...to,
+          //     duration,
+          //     ease,
+          //     stagger: delay / 1000,
+          //     scrollTrigger: {
+          //       trigger: el,
+          //       start: "top 90%",
+          //       once: true,
+          //       fastScrollEnd: true,
+          //       anticipatePin: 0.4,
+          //     },
+          //     onComplete: () => {
+          //       animationCompletedRef.current = true;
+          //       onLetterAnimationComplete?.();
+          //     },
+          //     willChange: "transform, opacity",
+          //     force3D: true,
+          //   },
+          // );
         },
       });
       el._rbsplitInstance = splitInstance;
