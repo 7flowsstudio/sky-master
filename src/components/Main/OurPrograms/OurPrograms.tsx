@@ -56,7 +56,8 @@ const OurPrograms = ({ type }: Props) => {
             <div className={s.programsHeadTitle}>
               <h3 className={`${s.programsTitle} ${s.left}`}>
                 <div className={s.rectangle}></div>
-                <SplitText
+                <h2>{t("tite_1")}</h2>
+                {/* <SplitText
                   text={t("tite_1")}
                   className={`${s.programsTitle} ${s.left}`}
                   delay={100}
@@ -68,7 +69,7 @@ const OurPrograms = ({ type }: Props) => {
                   threshold={0.1}
                   rootMargin="-100px"
                   textAlign="left"
-                />
+                /> */}
               </h3>
               <h3 className={`${s.programsTitle} ${s.right}`}>
                 <SplitText
