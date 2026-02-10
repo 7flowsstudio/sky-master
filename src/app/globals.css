@@ -106,7 +106,8 @@ body {
   max-width: 100dvw;
   height: 100svh;
   overflow-x: hidden;
-  overflow: visible;
+  overflow-y: visible;
+  /* overflow: visible; */
 }
 
 body {
