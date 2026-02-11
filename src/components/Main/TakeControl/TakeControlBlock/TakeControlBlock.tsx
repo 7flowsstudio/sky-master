@@ -32,7 +32,7 @@ const TakeControlBlock = () => {
 									delay={25}
 									duration={0.1}
 									ease="power3.out"
-									splitType="chars"
+									splitType="words, chars"
 									from={{ opacity: 0, y: 40 }}
 									to={{ opacity: 1, y: 0 }}
 									threshold={0.01}

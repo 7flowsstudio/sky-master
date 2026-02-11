@@ -53,6 +53,8 @@
 	font-weight: 500;
 	line-height: clamp(36px, calc((88 / 1440) * 100vw), 88px);
 	letter-spacing: 0;
+	/* заборонити перенос між символами */
+	word-break: keep-all;
 }
 .takeControlRight {
 	display: flex;
