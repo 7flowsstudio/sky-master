@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl";
 import TestSlideItem from "./TestSlideItem/TestSlideItem";
 // import useOffsetBefore from "@/lib/useOffsetBefore/useOffsetBefore";
 
+// const MIN_SLIDES = 8;
 const Testimonials = () => {
   const t = useTranslations("Testimonials");
   // const offsetBefore = useOffsetBefore();
@@ -54,36 +55,46 @@ const Testimonials = () => {
     },
   ];
 
+  // const slidesToRender = [...sliderList, ...sliderList];
+
   return (
     <div className={s.sliderContainer}>
-      <Swiper
-        className={s.swiper}
-        loop={true}
-        speed={800}
-        slidesPerView={4}
-        spaceBetween={20}
-        // slidesOffsetBefore={-offsetBefore}
-        slidesOffsetBefore={0}
-        slidesOffsetAfter={0}
-        navigation={{
-          nextEl: ".test-next",
-          prevEl: ".test-prev",
-        }}
-        modules={[Navigation, Pagination, Keyboard]}
-        keyboard={{ enabled: true }}
-        breakpoints={{
-          320: { slidesPerView: 2, spaceBetween: 4 },
-          768: { slidesPerView: 3, spaceBetween: 12 },
-          1280: { slidesPerView: 4, spaceBetween: 20 },
-        }}
-      >
-        {sliderList?.map((item, index) => (
-          <SwiperSlide key={index} className={s.slide}>
-            <TestSlideItem item={item} />
-          </SwiperSlide>
-        ))}
-        <div className={s.rectangleBlure}></div>
-      </Swiper>
+      <div className={s.blurWrapper}>
+        <Swiper
+          className={s.swiper}
+          loop={true}
+          speed={800}
+          slidesPerView={4}
+          // loopAdditionalSlides={sliderList.length}
+          // centeredSlides={false}
+          // centeredSlidesBounds={false}
+          // watchOverflow={true}
+
+          spaceBetween={20}
+          slidesPerGroup={1}
+          // slidesOffsetBefore={-offsetBefore}
+          // slidesOffsetBefore={0}
+          // slidesOffsetAfter={0}
+          navigation={{
+            nextEl: ".test-next",
+            prevEl: ".test-prev",
+          }}
+          modules={[Navigation, Pagination, Keyboard]}
+          keyboard={{ enabled: true }}
+          breakpoints={{
+            320: { slidesPerView: 2, spaceBetween: 4 },
+            768: { slidesPerView: 3, spaceBetween: 12 },
+            1280: { slidesPerView: 4, spaceBetween: 20 },
+          }}
+        >
+          {sliderList.map((item) => (
+            <SwiperSlide key={item.id} className={s.slide}>
+              <TestSlideItem item={item} />
+            </SwiperSlide>
+          ))}
+          <div className={s.rectangleBlure}></div>
+        </Swiper>
+      </div>
       <div className={s.arrows}>
         <button
           type="button"
