@@ -13,11 +13,11 @@ const SkyMaster = () => {
 	const t = useTranslations("Skymaster");
 	const [adventagesRef, adventagesVisible] = useScrollAnimation() as [
 		React.RefObject<HTMLDivElement>,
-		boolean
+		boolean,
 	];
 	const [adventagesListRef, adventagesListVisible] = useScrollAnimation() as [
 		React.RefObject<HTMLUListElement>,
-		boolean
+		boolean,
 	];
 
 	const { top, bottom } = useSizeWindows();
@@ -30,6 +30,7 @@ const SkyMaster = () => {
 	];
 
 	return (
+		// qwerty
 		<>
 			<div className={s.skymasterWrapper}>
 				<WrapperForComponents paddingTop={top} paddingBottom={bottom}>
