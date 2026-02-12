@@ -1,60 +1,60 @@
 .wrapper {
-	position: fixed;
-	inset: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: black;
-	z-index: 100;
-	backdrop-filter: blur(6px);
-	background: rgba(5, 5, 5, 0.1);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  z-index: 101;
+  backdrop-filter: blur(6px);
+  background: rgba(5, 5, 5, 0.1);
 }
 
 .content {
-	/* margin-top: 75px; */
-	position: relative;
-	overflow: hidden;
-	z-index: 9;
-	width: calc(100% - 20px);
-	max-width: 638px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 24px;
-	padding: 40px 25px;
+  /* margin-top: 75px; */
+  position: relative;
+  overflow: hidden;
+  z-index: 101;
+  width: calc(100% - 20px);
+  max-width: 638px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 25px;
 
-	background: var(--background-brand);
+  background: var(--background-brand);
 }
 
 .modalTitle {
-	font-family: var(--second-family);
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 114%;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-	text-align: center;
-	color: var(--content-primary);
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--content-primary);
 }
 .closeBtn {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .closeBtnIcon {
-	width: 20px;
-	height: 13px;
-	stroke: var(--content-icon);
+  width: 20px;
+  height: 13px;
+  stroke: var(--content-icon);
 }
 @media screen and (min-width: 768px) {
-	.content {
-		width: auto;
-		padding: 40px;
-	}
+  .content {
+    width: auto;
+    padding: 40px;
+  }
 }

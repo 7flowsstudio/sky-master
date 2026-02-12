@@ -1,6 +1,15 @@
 .ourPrograms {
   border-top: 1px solid #242424;
   padding-bottom: 120px;
+  animation: ani 1.5s forwards;
+}
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .programsBlock {
   display: flex;
@@ -31,7 +40,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  z-index: 10;
+  /* z-index: 10; */
 }
 .programsTitleWrapper {
   display: flex;
@@ -52,12 +61,12 @@
   text-align: left;
   position: relative;
   background: var(--background-primary);
-  z-index: 9;
+  z-index: 7;
 }
 .right {
   justify-content: flex-end;
   background: var(--background-primary);
-  z-index: 9;
+  z-index: 7;
 }
 .rectangle {
   position: absolute;
@@ -68,7 +77,7 @@
   background: var(--background-brand);
   mix-blend-mode: plus-lighter;
   opacity: 0.3;
-  z-index: 100;
+  z-index: 8;
 }
 .programsCardList {
   display: flex;
@@ -182,7 +191,7 @@
   justify-content: center;
   padding-top: 16px;
   margin-bottom: -150px;
-  z-index: 10000;
+  /* z-index: 10000; */
 }
 .link {
   border: 1px solid var(--border-primary);
