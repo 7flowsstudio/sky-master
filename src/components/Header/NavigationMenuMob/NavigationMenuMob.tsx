@@ -4,7 +4,7 @@ import s from "./NavigationMenuMob.module.css";
 import Logo from "../Logo/Logo";
 import BurgerButton from "../BurgerButton/BurgerButton";
 import MenuList from "./MenuList/MenuList";
-import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
+// import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 import StartButtonMob from "@/components/UI/StartButtonMob/StartButtonMob";
 
 type MyComponentProps = {
@@ -26,7 +26,7 @@ export const NavigationMenuMob = ({
 			</div>
 			<div className={s.menuBody}>
 				<MenuList setOpenMenu={setOpenMenu} />
-				<LocaleSwitcher type="mob" />
+				{/* <LocaleSwitcher type="mob" /> */}
 			</div>
 			<StartButtonMob setOpenModal={setOpenModal} setOpenMenu={setOpenMenu} />
 		</div>

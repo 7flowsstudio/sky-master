@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import WrapperForComponents from "../UI/WrapperForComponents/WrapperForComponents";
 import s from "./Header.module.css";
-import LocaleSwitcher from "./LocaleSwitcher/LocaleSwitcher";
+// import LocaleSwitcher from "./LocaleSwitcher/LocaleSwitcher";
 import Logo from "./Logo/Logo";
 import NavigationMenu from "./NavigationMenu/NavigationMenu";
 import StartTraining from "./StartTraining/StartTraining";
@@ -36,9 +36,9 @@ const Header = () => {
 					<NavigationMenu />
 
 					<div className={s.navigationLink}>
-						<div className={s.localSwitcher}>
+						{/* <div className={s.localSwitcher}>
 							<LocaleSwitcher />
-						</div>
+						</div> */}
 						<StartTraining setOpenModal={setOpenModal} />
 					</div>
 					<BurgerButton openMenu={openMenu} setOpenMenu={setOpenMenu} />
